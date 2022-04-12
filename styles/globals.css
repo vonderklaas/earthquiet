@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: sans-serif;
+  background-color: #111;
+  color: #f2f2f2;
 }
 
 a {
@@ -13,4 +14,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.problem-card {
+  border: 1px solid royalblue;
 }
