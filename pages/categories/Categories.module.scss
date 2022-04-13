@@ -1,0 +1,64 @@
+.categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .category {
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 0 0 30px 0;
+    box-shadow: 0px 0px 15px rgb(230, 230, 230);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &Image {
+      width: 100%;
+      max-height: 200px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    &Text {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &Title {
+        margin: 15px 0 5px 0;
+      }
+
+      &Description {
+        margin: 0;
+      }
+
+      &Issues {
+        background-color: $purple-background;
+        color: $purple-text;
+        padding: 7.5px 10px;
+        border-radius: 5px;
+        font-size: 13px;
+        box-shadow: 0px 0px 15px rgb(230, 230, 230);
+      }
+    }
+  }
+}
+
+.problems {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .problem {
+    max-width: 400px;
+    min-width: 400px;
+    border-radius: 15px;
+    margin: 0 0 30px 0;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgb(230, 230, 230);
+    transition: all 0.3s;
+  }
+}

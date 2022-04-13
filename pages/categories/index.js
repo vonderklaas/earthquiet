@@ -1,6 +1,9 @@
 // Importing GraphQL
 import Link from 'next/link';
 import { gql, GraphQLClient } from 'graphql-request';
+import Navbar from '../../components/Navbar/Navbar';
+
+import styles from './Categories.module.scss';
 
 export const getStaticProps = async (context) => {
   const url = process.env.API_CONTENT_URL;
@@ -33,24 +36,44 @@ export const getStaticProps = async (context) => {
 
 const Categories = ({ categories }) => {
   console.log(categories);
-  <h1>Categories</h1>;
+
   return (
-    <div>
-      {categories.map((category) => {
-        return (
-          <div key={category.slug}>
-            <h2>{category.title}</h2>
-            <img src={category.image.url} alt={category.title} />
-            <p>{category.description}</p>
-            <Link href={`/categories/${category.slug}`}>
-              <a>
-                <h3>View Issues</h3>
-              </a>
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <h1>Categories</h1>
+        <div className={styles.categories}>
+          {categories &&
+            categories.map((category) => {
+              return (
+                <div className={styles.category} key={category.slug}>
+                  <img
+                    className={styles.categoryImage}
+                    src={category.image.url}
+                    alt={category.title}
+                  />
+
+                  <div className={styles.categoryText}>
+                    <div>
+                      <Link href={`/categories/${category.slug}`}>
+                        <a className={styles.categoryTextIssues}>
+                          View Problems
+                        </a>
+                      </Link>
+                      <h3 className={styles.categoryTextTitle}>
+                        {category.title}
+                      </h3>
+                      <p className={styles.categoryTextDescription}>
+                        {category.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </main>
+    </>
   );
 };
 

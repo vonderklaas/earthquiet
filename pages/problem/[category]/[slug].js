@@ -1,5 +1,8 @@
 import { gql, GraphQLClient } from 'graphql-request';
 import Reactmarkdown from 'react-markdown';
+import Navbar from '../../../components/Navbar/Navbar';
+
+import styles from './Problem.module.scss';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -40,20 +43,35 @@ export const getServerSideProps = async (context) => {
 
 const Category = ({ problems }) => {
   return (
-    <div>
-      <h2>Problem</h2>
-      {problems.map((problem) => {
-        console.log(problem);
-        return (
-          <div className='problem-card' key={problem.slug}>
-            <h2>{problem.title}</h2>
-            <Reactmarkdown children={problem.body} />
-            <Reactmarkdown children={problem.aftermath} />
-            <Reactmarkdown children={problem.solutions} />
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <h1>Problem</h1>
+        {problems.map((problem) => {
+          return (
+            <div className={styles.problem} key={problem.slug}>
+              <h1>{problem.title}</h1>
+              <div>
+                <h3>Description</h3>
+                <Reactmarkdown children={problem.description} />
+              </div>
+              <div>
+                <h3>Body</h3>
+                <Reactmarkdown children={problem.body} />
+              </div>
+              <div>
+                <h3>Aftermath</h3>
+                <Reactmarkdown children={problem.aftermath} />
+              </div>
+              <div>
+                <h3>Solutions</h3>
+                <Reactmarkdown children={problem.solutions} />
+              </div>
+            </div>
+          );
+        })}
+      </main>
+    </>
   );
 };
 

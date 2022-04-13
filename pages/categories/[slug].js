@@ -1,6 +1,8 @@
 import { gql, GraphQLClient } from 'graphql-request';
-import Reactmarkdown from 'react-markdown';
 import Link from 'next/link';
+import Navbar from '../../components/Navbar/Navbar';
+
+import styles from './Categories.module.scss';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -19,6 +21,10 @@ export const getServerSideProps = async (context) => {
         description
         slug
         categorySlug
+        mode
+        color {
+          hex
+        }
       }
     }
   `;
@@ -38,25 +44,37 @@ export const getServerSideProps = async (context) => {
 
 const Category = ({ problems }) => {
   if (problems.length === 0) {
-    return <h1>No problems</h1>;
+    return (
+      <>
+        <Navbar />
+        <main>
+          <h1>Looks like there is no 'Problems' yet</h1>
+        </main>
+      </>
+    );
   }
 
   return (
-    <div>
-      {problems.map((problem) => {
-        console.log(problem);
-        return (
-          <div className='problem-card' key={problem.slug}>
-            <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
-              <a>
-                <h2>{problem.title}</h2>
+    <>
+      <Navbar />
+      <main>
+        <h1>Problems</h1>
+        <div className={styles.problems}>
+          {problems.map((problem) => {
+            return (
+              <div className={styles.problem} key={problem.slug}>
+                <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
+                  <a>
+                    <h2>{problem.title}</h2>
+                  </a>
+                </Link>
                 <p>{problem.description}</p>
-              </a>
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+              </div>
+            );
+          })}
+        </div>
+      </main>
+    </>
   );
 };
 
