@@ -46,7 +46,6 @@ const Category = ({ problems }) => {
     <>
       <Navbar />
       <main>
-        <h1>Problem</h1>
         {problems.map((problem) => {
           return (
             <div className={styles.problem} key={problem.slug}>
