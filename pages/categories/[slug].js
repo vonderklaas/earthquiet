@@ -1,6 +1,7 @@
 import { gql, GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 import styles from './Categories.module.scss';
 
@@ -74,6 +75,7 @@ const Category = ({ problems }) => {
           })}
         </div>
       </main>
+      <Footer />
     </>
   );
 };

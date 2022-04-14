@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { gql, GraphQLClient } from 'graphql-request';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 import styles from './Categories.module.scss';
 
@@ -73,6 +74,7 @@ const Categories = ({ categories }) => {
             })}
         </div>
       </main>
+      <Footer />
     </>
   );
 };

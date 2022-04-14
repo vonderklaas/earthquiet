@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const Contact = () => {
   return (
@@ -14,6 +15,7 @@ const Contact = () => {
           <p>Support Developers: [github]</p>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

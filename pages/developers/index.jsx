@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const Developers = () => {
   return (
@@ -24,6 +25,7 @@ const Developers = () => {
           <p>We will try to reply to you as soon as possible</p>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

@@ -8,7 +8,7 @@ module.exports = {
   sassOptions: {
     includePaths: ['./src'],
     prependData: `
-      $primary-violet: rgba(138, 65, 208);
+      $primary-violet: rgb(100, 102, 241);
       $text-color-dark: rgb(17, 24, 39);
       $text-color-light: rgb(255, 255, 255);
 
