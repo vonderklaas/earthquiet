@@ -45,6 +45,13 @@ const Navbar = () => {
               <a className={styles.navbarMenuLink}>Categories</a>
             </Link>
           </li>
+          <li
+            className={router.pathname == '/contribution' ? 'active-link' : ''}
+          >
+            <Link href='/contribution'>
+              <a className={styles.navbarMenuLink}>Contribute</a>
+            </Link>
+          </li>
           <li className={router.pathname == '/about' ? 'active-link' : ''}>
             <Link href='/about'>
               <a className={styles.navbarMenuLink}>About</a>
@@ -62,8 +69,8 @@ const Navbar = () => {
           </li>
         </ul>
         <button className={styles.navbarButton}>
-          <Link href='/'>
-            <a>Fake Button</a>
+          <Link href='/docs'>
+            <a>How it works?</a>
           </Link>
         </button>
       </nav>

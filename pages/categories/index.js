@@ -50,20 +50,13 @@ const Categories = ({ categories }) => {
                     src={category.image.url}
                     alt={category.title}
                   />
-                  <div className={styles.categoryText}>
-                    <div>
-                      <Link href={`/categories/${category.slug}`}>
-                        <a className={styles.categoryTextIssues}>
-                          View Problems
-                        </a>
-                      </Link>
-                      <h3 className={styles.categoryTextTitle}>
-                        {category.title}
-                      </h3>
-                      <p className={styles.categoryTextDescription}>
-                        {category.description}
-                      </p>
-                    </div>
+                  <div>
+                    <Link href={`/categories/${category.slug}`}>
+                      <h3 className={styles.categoryTitle}>{category.title}</h3>
+                    </Link>
+                    <p className={styles.categoryDescription}>
+                      {category.description}
+                    </p>
                   </div>
                 </div>
               );

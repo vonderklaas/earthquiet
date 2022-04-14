@@ -24,7 +24,11 @@ const Footer = () => {
                 <li>Donate</li>
               </a>
             </Link>
-            <li>Documentation</li>
+            <Link href='/docs'>
+              <a>
+                <li>Documentation</li>
+              </a>
+            </Link>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>

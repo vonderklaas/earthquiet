@@ -21,10 +21,7 @@ export const getServerSideProps = async (context) => {
         description
         slug
         categorySlug
-        mode
-        color {
-          hex
-        }
+        rank
       }
     }
   `;
@@ -52,7 +49,7 @@ const Category = ({ problems }) => {
             Go back to
             <Link href={`/categories`}>
               <a>
-                <b>Categories</b>
+                <b> Categories</b>
               </a>
             </Link>
           </p>
@@ -73,10 +70,12 @@ const Category = ({ problems }) => {
               <div className={styles.problem} key={problem.slug}>
                 <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
                   <a>
-                    <h2>{problem.title}</h2>
+                    <h2 className={styles.problemTitle}>{problem.title}</h2>
                   </a>
                 </Link>
-                <p>{problem.description}</p>
+                <p className={styles.problemDescription}>
+                  {problem.description}
+                </p>
               </div>
             );
           })}

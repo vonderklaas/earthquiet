@@ -19,8 +19,9 @@ export const getServerSideProps = async (context) => {
         title
         description
         slug
-        body
-        aftermath
+        rank
+        generalText
+        consequences
         solutions
         categorySlug
       }
@@ -49,16 +50,20 @@ const Category = ({ problems }) => {
             <div className={styles.problem} key={problem.slug}>
               <h1>{problem.title}</h1>
               <div>
+                <h3>Rank</h3>
+                <Reactmarkdown children={problem.rank} />
+              </div>
+              <div>
                 <h3>Description</h3>
                 <Reactmarkdown children={problem.description} />
               </div>
               <div>
-                <h3>Body</h3>
-                <Reactmarkdown children={problem.body} />
+                <h3>Idea</h3>
+                <Reactmarkdown children={problem.generalText} />
               </div>
               <div>
-                <h3>Aftermath</h3>
-                <Reactmarkdown children={problem.aftermath} />
+                <h3>Consequences</h3>
+                <Reactmarkdown children={problem.consequences} />
               </div>
               <div>
                 <h3>Solutions</h3>
