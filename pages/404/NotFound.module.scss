@@ -1,0 +1,10 @@
+.NotFound {
+  &Button {
+    border: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: $primary-violet;
+    color: $text-color-light;
+  }
+}

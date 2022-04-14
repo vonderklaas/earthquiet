@@ -7,7 +7,6 @@ import styles from './Categories.module.scss';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
-
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -30,7 +29,6 @@ export const getServerSideProps = async (context) => {
     }
   `;
 
-  // @ts-ignore
   const vars = {
     pageSlug,
   };
@@ -49,8 +47,17 @@ const Category = ({ problems }) => {
       <>
         <Navbar />
         <main>
-          <h1>Looks like there is no 'Problems' yet</h1>
+          <h1>No problems here</h1>
+          <p>
+            Go back to
+            <Link href={`/categories`}>
+              <a>
+                <b>Categories</b>
+              </a>
+            </Link>
+          </p>
         </main>
+        <Footer />
       </>
     );
   }

@@ -1,6 +1,5 @@
-// Importing GraphQL
-import Link from 'next/link';
 import { gql, GraphQLClient } from 'graphql-request';
+import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -36,8 +35,6 @@ export const getStaticProps = async (context) => {
 };
 
 const Categories = ({ categories }) => {
-  console.log(categories);
-
   return (
     <>
       <Navbar />
@@ -53,7 +50,6 @@ const Categories = ({ categories }) => {
                     src={category.image.url}
                     alt={category.title}
                   />
-
                   <div className={styles.categoryText}>
                     <div>
                       <Link href={`/categories/${category.slug}`}>

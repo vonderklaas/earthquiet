@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
 import Head from 'next/head';
 
 import styles from './Navbar.module.scss';
@@ -30,7 +29,13 @@ const Navbar = () => {
         <div className={styles.navbarLogo}>
           <Link href='/'>
             <a>
-              <Image src='/logo.png' alt='Logo' width='50' height='50' />
+              <Image
+                className={styles.navbarLogoImage}
+                src='/logo.png'
+                alt='Logo'
+                width='50'
+                height='50'
+              />
             </a>
           </Link>
         </div>
@@ -57,8 +62,8 @@ const Navbar = () => {
           </li>
         </ul>
         <button className={styles.navbarButton}>
-          <Link href='/donate'>
-            <a>Donate</a>
+          <Link href='/'>
+            <a>Fake Button</a>
           </Link>
         </button>
       </nav>

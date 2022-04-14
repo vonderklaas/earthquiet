@@ -2,12 +2,10 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Reactmarkdown from 'react-markdown';
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
-
 import styles from './Problem.module.scss';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
-
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -29,7 +27,6 @@ export const getServerSideProps = async (context) => {
     }
   `;
 
-  // @ts-ignore
   const vars = {
     pageSlug,
   };

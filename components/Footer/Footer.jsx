@@ -1,9 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import Head from 'next/head';
 
-// socials
 import { FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 
 import styles from './Footer.module.scss';
@@ -23,6 +19,11 @@ const Footer = () => {
         <div className={styles.footerUpperItem}>
           <h4>Support</h4>
           <ul>
+            <Link href='/donate'>
+              <a>
+                <li>Donate</li>
+              </a>
+            </Link>
             <li>Documentation</li>
           </ul>
         </div>
@@ -78,8 +79,7 @@ const Footer = () => {
       </div>
       <div className={styles.footerLower}>
         <div className={styles.footerLowerCopyright}>
-          Copyright &copy; {new Date().getFullYear()} Earthquiet. All rights
-          reserved.
+          Copyright &copy;{new Date().getFullYear()} Earthquiet
         </div>
         <div className={styles.footerLowerSocials}>
           <span>
