@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className={styles.navbarLogo}>
           <Link href='/'>
             <a>
-              <Image src='/logo.webp' alt='Logo' width='45' height='45' />
+              <Image src='/logo.png' alt='Logo' width='50' height='50' />
             </a>
           </Link>
         </div>

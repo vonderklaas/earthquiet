@@ -2,11 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px 5px 30px;
-  border-bottom: 2px solid #f7f7f7;
+  padding: 7.5px 20px;
+  border-bottom: 2px solid #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #fff;
 
   &Logo {
-    display: block;
+    max-height: 50px;
   }
 
   &Menu {
