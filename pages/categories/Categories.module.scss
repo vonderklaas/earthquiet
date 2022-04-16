@@ -26,8 +26,13 @@
     }
 
     &Title {
+      display: inline-block;
       margin: 0;
       padding: 15px 15px 0 15px;
+      &:hover {
+        color: $primary-violet;
+        cursor: pointer;
+      }
     }
 
     &Description {

@@ -33,8 +33,8 @@ const Navbar = () => {
                 className={styles.navbarLogoImage}
                 src='/logo.png'
                 alt='Logo'
-                width='50'
-                height='50'
+                width='60'
+                height='60'
               />
             </a>
           </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
         <ul className={styles.navbarMenu}>
           <li className={router.pathname == '/categories' ? 'active-link' : ''}>
             <Link href='/categories'>
-              <a className={styles.navbarMenuLink}>Categories</a>
+              <a className={styles.navbarMenuLink}>Problems</a>
             </Link>
           </li>
           <li
@@ -68,11 +68,11 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <button className={styles.navbarButton}>
-          <Link href='/docs'>
-            <a>How it works?</a>
-          </Link>
-        </button>
+        <Link href='/docs'>
+          <a>
+            <button className={styles.navbarButton}>How it works?</button>
+          </a>
+        </Link>
       </nav>
     </header>
   );

@@ -64,6 +64,10 @@ const Category = ({ problems }) => {
       <Navbar />
       <main>
         <h1>Problems</h1>
+        <p>
+          These are all the problems we currently have for selected category,
+          you can go throgh them and explore more details
+        </p>
         <div className={styles.problems}>
           {problems.map((problem) => {
             return (

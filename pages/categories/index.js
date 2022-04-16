@@ -40,6 +40,10 @@ const Categories = ({ categories }) => {
       <Navbar />
       <main>
         <h1>Categories</h1>
+        <p>
+          Please choose a category down below and explore what problems and
+          isuses you can solve and contribute to
+        </p>
         <div className={styles.categories}>
           {categories &&
             categories.map((category) => {
@@ -52,7 +56,11 @@ const Categories = ({ categories }) => {
                   />
                   <div>
                     <Link href={`/categories/${category.slug}`}>
-                      <h3 className={styles.categoryTitle}>{category.title}</h3>
+                      <a>
+                        <h3 className={styles.categoryTitle}>
+                          {category.title}
+                        </h3>
+                      </a>
                     </Link>
                     <p className={styles.categoryDescription}>
                       {category.description}
