@@ -8,10 +8,7 @@ const Contact = () => {
       <main>
         <h1>Contact</h1>
         <div>
-          <h3>Please feel free to contact us:</h3>
-          <p>Email: earthquiet@[domain].com</p>
-          <p>Twitter: </p>
-          <p>Support Developers: [github]</p>
+          <p>earthquite.com@gmail.com</p>
         </div>
       </main>
       <Footer />

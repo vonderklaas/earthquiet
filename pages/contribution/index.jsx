@@ -8,12 +8,10 @@ const Contribution = () => {
       <main>
         <h1>Contribution</h1>
         <ul>
-          <li>Attend events</li>
-          <li>Share this website</li>
-          <li>Build buzz in social media</li>
-          <li>Give a speech</li>
+          <li>Create start-ups to fix isssues</li>
+          <li>Share website or articles with friends</li>
+          <li>Build buzz in social media for your audience</li>
           <li>Participate in donation campaigns</li>
-          <li>Start a start-up with friends</li>
         </ul>
       </main>
       <Footer />
