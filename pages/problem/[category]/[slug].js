@@ -2,6 +2,7 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Reactmarkdown from 'react-markdown';
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
+import Rank from '../../../components/Rank/Rank';
 import styles from './Problem.module.scss';
 
 export const getServerSideProps = async (context) => {
@@ -52,7 +53,7 @@ const Category = ({ problems }) => {
               <h1>{problem.title}</h1>
               <div>
                 <h3>Rank</h3>
-                <Reactmarkdown children={problem.rank} />
+                <Rank rank={problem.rank} />
               </div>
               <div>
                 <h3>Description</h3>

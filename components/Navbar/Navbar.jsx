@@ -36,7 +36,7 @@ const Navbar = () => {
         <ul className={styles.navbarMenu}>
           <li className={router.pathname == '/categories' ? 'active-link' : ''}>
             <Link href='/categories'>
-              <a className={styles.navbarMenuLink}>Problems</a>
+              <a className={styles.navbarMenuLink}>Categories</a>
             </Link>
           </li>
           <li
@@ -44,6 +44,11 @@ const Navbar = () => {
           >
             <Link href='/contribution'>
               <a className={styles.navbarMenuLink}>Contribute</a>
+            </Link>
+          </li>
+          <li className={router.pathname == '/docs' ? 'active-link' : ''}>
+            <Link href='/docs'>
+              <a className={styles.navbarMenuLink}>Documentation</a>
             </Link>
           </li>
           <li className={router.pathname == '/about' ? 'active-link' : ''}>
@@ -56,17 +61,7 @@ const Navbar = () => {
               <a className={styles.navbarMenuLink}>Contact</a>
             </Link>
           </li>
-          <li className={router.pathname == '/developers' ? 'active-link' : ''}>
-            <Link href='/developers'>
-              <a className={styles.navbarMenuLink}>Developers</a>
-            </Link>
-          </li>
         </ul>
-        <Link href='/docs'>
-          <a>
-            <button className={styles.navbarButton}>How it works?</button>
-          </a>
-        </Link>
       </nav>
     </header>
   );

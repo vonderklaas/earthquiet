@@ -16,7 +16,7 @@ module.exports = {
       $purple-text: rgb(55, 48, 163);
 
       $red-background: rgb(253, 231, 243);
-      $red-text: rgb(157, 23, 77);
+      $red-text: rgb(150, 0, 77);
 
       $green-background: rgb(209, 250, 229);
       $green-text: rgb(14, 97, 74);
@@ -26,6 +26,13 @@ module.exports = {
 
       $blue-background: rgb(239, 246, 255);
       $blue-text: rgb(41, 87, 219);
+
+
+      $rank-one-background: rgb(222, 132, 45);
+      $rank-two-background: rgb(43, 153, 122);
+      $rank-three-background: rgb(51, 166, 205);
+      $rank-four-background: rgb(93, 100, 204);
+      $rank-five-background: rgb(190, 87, 218);
     `,
   },
 };

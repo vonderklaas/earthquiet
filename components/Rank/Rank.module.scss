@@ -1,0 +1,31 @@
+.rankOne,
+.rankTwo,
+.rankThree,
+.rankFour,
+.rankFive {
+  display: inline-block;
+  padding: 2.5px 15px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: $text-color-light;
+}
+
+.rankOne {
+  background-color: $rank-one-background;
+}
+
+.rankTwo {
+  background-color: $rank-two-background;
+}
+
+.rankThree {
+  background-color: $rank-three-background;
+}
+
+.rankFour {
+  background-color: $rank-four-background;
+}
+
+.rankFive {
+  background-color: $rank-five-background;
+}

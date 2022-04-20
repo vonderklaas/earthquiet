@@ -8,7 +8,7 @@ const Donate = () => {
       <main>
         <h1>Donate</h1>
         <div>
-          <h3>Help us to help you</h3>
+          <h3>Help us help you</h3>
           <p>
             We want to mention that we are a non-profit platform that depends
             only on donations and enthusiast contribution. We need that to stay
