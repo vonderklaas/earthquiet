@@ -26,20 +26,32 @@ export const getServerSideProps = async (context) => {
       }
     }
   `;
+  const query2 = gql`
+    query ($pageSlug: String!) {
+      categories(where: { slug: $pageSlug }) {
+        color {
+          hex
+        }
+      }
+    }
+  `;
 
   const vars = {
     pageSlug,
   };
 
+  const categoryColordata = await graphQLClient.request(query2, vars);
   const data = await graphQLClient.request(query, vars);
   const problems = data.problems;
+  const catColor = categoryColordata.categories[0].color.hex;
 
   return {
-    props: { problems, pageSlug },
+    props: { problems, pageSlug, catColor },
   };
 };
 
-const Category = ({ problems, pageSlug }) => {
+const Category = ({ problems, pageSlug, catColor }) => {
+  console.log(catColor);
   if (problems.length === 0) {
     return (
       <>
@@ -72,16 +84,18 @@ const Category = ({ problems, pageSlug }) => {
         <div className={styles.problems}>
           {problems.map((problem) => {
             return (
-              <div className={styles.problem} key={problem.slug}>
-                <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
-                  <a>
-                    <h2 className={styles.problemTitle}>{problem.title}</h2>
-                  </a>
-                </Link>
-                <p className={styles.problemDescription}>
-                  {problem.description}
-                </p>
-              </div>
+              <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
+                <a
+                  style={{ backgroundColor: `${catColor}` }}
+                  className={styles.problem}
+                  key={problem.slug}
+                >
+                  <h2 className={styles.problemTitle}>{problem.title}</h2>
+                  <p className={styles.problemDescription}>
+                    {problem.description}
+                  </p>
+                </a>
+              </Link>
             );
           })}
         </div>

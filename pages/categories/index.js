@@ -19,8 +19,8 @@ export const getStaticProps = async (context) => {
         title
         slug
         description
-        image {
-          url
+        color {
+          hex
         }
       }
     }
@@ -46,29 +46,27 @@ const Categories = ({ categories }) => {
         </p>
         <div className={styles.categories}>
           {categories &&
-            categories.map((category) => {
-              return (
-                <div className={styles.category} key={category.slug}>
-                  <img
-                    className={styles.categoryImage}
-                    src={category.image.url}
-                    alt={category.title}
-                  />
-                  <div>
-                    <Link href={`/categories/${category.slug}`}>
-                      <a>
-                        <h3 className={styles.categoryTitle}>
-                          {category.title}
-                        </h3>
-                      </a>
-                    </Link>
-                    <p className={styles.categoryDescription}>
-                      {category.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            categories
+              .sort((a, b) => a.title.localeCompare(b.title))
+              .map((category) => {
+                return (
+                  <Link href={`/categories/${category.slug}`}>
+                    <a className={styles.category} key={category.slug}>
+                      <div
+                        style={{ backgroundColor: `${category.color.hex}` }}
+                        className={styles.categoryColor}
+                      >
+                        <h3>{category.title}</h3>
+                      </div>
+                      <div>
+                        <p className={styles.categoryDescription}>
+                          {category.description}
+                        </p>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
         </div>
       </main>
       <Footer />
