@@ -46,11 +46,11 @@ const Category = ({ problems }) => {
   return (
     <>
       <Navbar />
-      <main>
+      <section className={styles.problems}>
         {problems.map((problem) => {
           return (
             <div className={styles.problem} key={problem.slug}>
-              <h1>{problem.title}</h1>
+              <h1 className={styles.problemTitle}>{problem.title}</h1>
               <div>
                 <h3>Rank</h3>
                 <Rank rank={problem.rank} />
@@ -73,12 +73,13 @@ const Category = ({ problems }) => {
               </div>
               <div>
                 <h3>References</h3>
+                {/* <a href={problem.references}>{problem.references}</a> */}
                 <Reactmarkdown children={problem.references} />
               </div>
             </div>
           );
         })}
-      </main>
+      </section>
       <Footer />
     </>
   );

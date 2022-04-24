@@ -13,6 +13,7 @@
 
   &Logo {
     max-height: 60px;
+    line-height: 0;
 
     &Image {
       transition: 1.5s ease-in-out;
@@ -45,6 +46,7 @@
     border-radius: 5px;
     background-color: $primary-violet;
     color: $text-color-light;
+    line-height: 0;
 
     &:hover {
       cursor: pointer;

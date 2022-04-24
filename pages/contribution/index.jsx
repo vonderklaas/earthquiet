@@ -7,6 +7,7 @@ const Contribution = () => {
       <Navbar />
       <main>
         <h1>Contribution</h1>
+        <h3>Find ways how you can contribute</h3>
         <ul>
           <li>Create start-ups to fix isssues</li>
           <li>Share website or articles with friends</li>

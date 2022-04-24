@@ -4,9 +4,21 @@ import Head from 'next/head';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
+
+import { FaRegMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
 
   return (
     <header>
@@ -46,11 +58,6 @@ const Navbar = () => {
               <a className={styles.navbarMenuLink}>Contribute</a>
             </Link>
           </li>
-          <li className={router.pathname == '/docs' ? 'active-link' : ''}>
-            <Link href='/docs'>
-              <a className={styles.navbarMenuLink}>Documentation</a>
-            </Link>
-          </li>
           <li className={router.pathname == '/about' ? 'active-link' : ''}>
             <Link href='/about'>
               <a className={styles.navbarMenuLink}>About</a>
@@ -62,6 +69,11 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        <div>
+          <button onClick={toggleTheme} className={styles.navbarButton}>
+            {theme === 'dark' ? <FaSun /> : <FaRegMoon />}
+          </button>
+        </div>
       </nav>
     </header>
   );

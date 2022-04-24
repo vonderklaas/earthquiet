@@ -17,7 +17,7 @@ module.exports = {
 
       $red-background: rgb(253, 231, 243);
       $red-text: rgb(150, 0, 77);
-
+      
       $green-background: rgb(209, 250, 229);
       $green-text: rgb(14, 97, 74);
 

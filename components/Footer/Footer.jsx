@@ -11,55 +11,71 @@ const Footer = () => {
         <div className={styles.footerUpperItem}>
           <h4>Legal</h4>
           <ul>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-            <li>Cookies</li>
+            <li>
+              <Link href='/privacy'>
+                <a>Privacy Policy</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/terms'>
+                <a>Terms of Use</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/cookies'>
+                <a>Cookies</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
           <h4>Support</h4>
           <ul>
-            <Link href='/donate'>
-              <a>
-                <li>Donate</li>
-              </a>
-            </Link>
-            <Link href='/docs'>
-              <a>
-                <li>Documentation</li>
-              </a>
-            </Link>
+            <li>
+              <Link href='/donate'>
+                <a>Donate</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/documentation'>
+                <a>Documentation</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
           <h4>Our Team</h4>
           <ul>
-            <li>Meet Members</li>
+            <li>
+              <Link href='/team'>
+                <a>Our Team</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
           <h4>Platform</h4>
           <ul>
-            <Link href='/categories'>
-              <a>
-                <li>Categories</li>
-              </a>
-            </Link>
-            <Link href='/about'>
-              <a>
-                <li>About</li>
-              </a>
-            </Link>
-            <Link href='/contact'>
-              <a>
-                <li>Contact</li>
-              </a>
-            </Link>
-            <Link href='/developers'>
-              <a>
-                <li>Developers</li>
-              </a>
-            </Link>
+            <li>
+              <Link href='/categories'>
+                <a>Categories</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/contribution'>
+                <a>Contribution</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/about'>
+                <a>About</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/contact'>
+                <a>Contact</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
