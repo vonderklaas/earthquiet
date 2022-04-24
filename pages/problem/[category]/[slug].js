@@ -4,6 +4,7 @@ import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Rank from '../../../components/Rank/Rank';
 import styles from './Problem.module.scss';
+import Link from 'next/link';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -45,35 +46,41 @@ export const getServerSideProps = async (context) => {
 const Category = ({ problems }) => {
   return (
     <>
-      <Navbar />
+      <Navbar isProblemPage={true} />
       <section className={styles.problems}>
         {problems.map((problem) => {
           return (
             <div className={styles.problem} key={problem.slug}>
               <h1 className={styles.problemTitle}>{problem.title}</h1>
-              <div>
-                <h3>Rank</h3>
+              <div className={styles.problemRank}>
+                <div className={styles.problemRankTitle}>
+                  <h3>Rank</h3>
+                  <span className={styles.problemRankLink}>
+                    <Link href='/documentation'>
+                      <a>How we rank?</a>
+                    </Link>
+                  </span>
+                </div>
                 <Rank rank={problem.rank} />
               </div>
-              <div>
+              <div className={styles.problemDescription}>
                 <h3>Description</h3>
                 <Reactmarkdown children={problem.description} />
               </div>
-              <div>
+              <div className={styles.problemIdea}>
                 <h3>Idea</h3>
                 <Reactmarkdown children={problem.generalText} />
               </div>
-              <div>
+              <div className={styles.problemConsequences}>
                 <h3>Consequences</h3>
                 <Reactmarkdown children={problem.consequences} />
               </div>
-              <div>
+              <div className={styles.problemSolutions}>
                 <h3>Solutions</h3>
                 <Reactmarkdown children={problem.solutions} />
               </div>
-              <div>
+              <div className={styles.problemReferences}>
                 <h3>References</h3>
-                {/* <a href={problem.references}>{problem.references}</a> */}
                 <Reactmarkdown children={problem.references} />
               </div>
             </div>

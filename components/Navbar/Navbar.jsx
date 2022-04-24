@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes';
 
 import { FaRegMoon, FaSun } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar = ({ isProblemPage }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
 
@@ -39,8 +39,8 @@ const Navbar = () => {
                 className={styles.navbarLogoImage}
                 src='/logo.png'
                 alt='Logo'
-                width='60'
-                height='60'
+                width='55'
+                height='55'
               />
             </a>
           </Link>
@@ -69,11 +69,11 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div>
+        {isProblemPage && (
           <button onClick={toggleTheme} className={styles.navbarButton}>
             {theme === 'dark' ? <FaSun /> : <FaRegMoon />}
           </button>
-        </div>
+        )}
       </nav>
     </header>
   );

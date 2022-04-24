@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 2px solid #f1f1f1;
+  padding: 7.5px 20px;
+  border-bottom: 1px solid #f1f1f1;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
     line-height: 0;
 
     &Image {
-      transition: 1.5s ease-in-out;
+      transition: 2s ease-in-out;
       &:hover {
         transform: rotate(360deg);
       }

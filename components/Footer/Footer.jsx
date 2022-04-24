@@ -41,6 +41,11 @@ const Footer = () => {
                 <a>Documentation</a>
               </Link>
             </li>
+            <li>
+              <a href='https://www.kickstarter.com/profile/993189314/about'>
+                Kickstarter (in progress)
+              </a>
+            </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
