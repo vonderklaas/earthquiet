@@ -5,7 +5,6 @@ import Footer from '../../../components/Footer/Footer';
 import Rank from '../../../components/Rank/Rank';
 import styles from './Problem.module.scss';
 import Link from 'next/link';
-import Comments from '../../../components/Comments';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -87,10 +86,6 @@ const Category = ({ problems }) => {
             </div>
           );
         })}
-        <div>
-          <h3>Comments</h3>
-          <Comments />
-        </div>
       </section>
       <Footer />
     </>

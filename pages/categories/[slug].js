@@ -2,6 +2,7 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Comments from '../../components/Comments';
 
 import styles from './Categories.module.scss';
 
@@ -34,11 +35,11 @@ export const getServerSideProps = async (context) => {
   const problems = data.problems;
 
   return {
-    props: { problems },
+    props: { problems, pageSlug },
   };
 };
 
-const Category = ({ problems }) => {
+const Category = ({ problems, pageSlug }) => {
   if (problems.length === 0) {
     return (
       <>
@@ -83,6 +84,10 @@ const Category = ({ problems }) => {
               </div>
             );
           })}
+        </div>
+        <div>
+          <h3>Comments</h3>
+          <Comments categorySlug={pageSlug} />
         </div>
       </main>
       <Footer />
