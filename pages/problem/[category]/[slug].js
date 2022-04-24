@@ -26,6 +26,7 @@ export const getServerSideProps = async (context) => {
         consequences
         solutions
         references
+        donations
         categorySlug
       }
     }
@@ -82,6 +83,10 @@ const Category = ({ problems }) => {
               <div className={styles.problemReferences}>
                 <h3>References</h3>
                 <Reactmarkdown children={problem.references} />
+              </div>
+              <div className={styles.problemDonations}>
+                <h3>Donations</h3>
+                <Reactmarkdown children={problem.donations} />
               </div>
             </div>
           );
