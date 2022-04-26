@@ -37,61 +37,63 @@ export const getServerSideProps = async (context) => {
   };
 
   const data = await graphQLClient.request(query, vars);
-  const problems = data.problems;
+  const problem = data.problems;
 
   return {
-    props: { problems },
+    props: { problem },
   };
 };
 
-const Category = ({ problems }) => {
+const Category = ({ problem }) => {
   return (
     <>
       <Navbar isProblemPage={true} />
-      <section className={styles.problems}>
-        {problems.map((problem) => {
-          return (
-            <div className={styles.problem} key={problem.slug}>
-              <h1 className={styles.problemTitle}>{problem.title}</h1>
-              <div className={styles.problemRank}>
-                <div className={styles.problemRankTitle}>
-                  <h3>Rank</h3>
-                  <span className={styles.problemRankLink}>
+      <div className={styles.problemBackground}>
+        <main>
+          {problem.map((problem) => {
+            return (
+              <div key={problem.slug}>
+                <div className={styles.problemHeader}>
+                  <h1 className={styles.problemHeaderTitle}>{problem.title}</h1>
+                </div>
+                <div className={styles.problemRank}>
+                  <div className={styles.problemRankWrapper}>
+                    <h3>Rank</h3>
                     <Link href='/documentation'>
                       <a>How we rank?</a>
                     </Link>
-                  </span>
+                  </div>
+                  <Rank rank={problem.rank} />
                 </div>
-                <Rank rank={problem.rank} />
+                <div className={styles.problemDescription}>
+                  <h3>Description</h3>
+                  <Reactmarkdown children={problem.description} />
+                </div>
+                <div className={styles.problemIdea}>
+                  <h3>Idea</h3>
+                  <Reactmarkdown children={problem.generalText} />
+                </div>
+                <div className={styles.problemConsequences}>
+                  <h3>Consequences</h3>
+                  <Reactmarkdown children={problem.consequences} />
+                </div>
+                <div className={styles.problemSolutions}>
+                  <h3>Solutions</h3>
+                  <Reactmarkdown children={problem.solutions} />
+                </div>
+                <div className={styles.problemReferences}>
+                  <h3>References</h3>
+                  <Reactmarkdown children={problem.references} />
+                </div>
+                <div className={styles.problemDonations}>
+                  <h3>Donations</h3>
+                  <Reactmarkdown children={problem.donations} />
+                </div>
               </div>
-              <div className={styles.problemDescription}>
-                <h3>Description</h3>
-                <Reactmarkdown children={problem.description} />
-              </div>
-              <div className={styles.problemIdea}>
-                <h3>Idea</h3>
-                <Reactmarkdown children={problem.generalText} />
-              </div>
-              <div className={styles.problemConsequences}>
-                <h3>Consequences</h3>
-                <Reactmarkdown children={problem.consequences} />
-              </div>
-              <div className={styles.problemSolutions}>
-                <h3>Solutions</h3>
-                <Reactmarkdown children={problem.solutions} />
-              </div>
-              <div className={styles.problemReferences}>
-                <h3>References</h3>
-                <Reactmarkdown children={problem.references} />
-              </div>
-              <div className={styles.problemDonations}>
-                <h3>Donations</h3>
-                <Reactmarkdown children={problem.donations} />
-              </div>
-            </div>
-          );
-        })}
-      </section>
+            );
+          })}
+        </main>
+      </div>
       <Footer />
     </>
   );

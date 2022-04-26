@@ -5,19 +5,17 @@ import Head from 'next/head';
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
 
-import { FaRegMoon, FaSun } from 'react-icons/fa';
-
 const Navbar = () => {
   const router = useRouter();
 
   return (
-    <header>
+    <header className={styles.header}>
       <Head>
         <title>Earthquiet</title>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
-          href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap'
           rel='stylesheet'
         />
       </Head>
@@ -29,8 +27,8 @@ const Navbar = () => {
                 className={styles.navbarLogoImage}
                 src='/logo.png'
                 alt='Logo'
-                width='55'
-                height='55'
+                width='49'
+                height='49'
               />
             </a>
           </Link>

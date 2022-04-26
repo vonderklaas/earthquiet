@@ -1,28 +1,26 @@
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import Banner from '../components/Banner/Banner';
+
+import style from './Home.module.scss';
 
 const Home = () => {
-  const bannerMessage =
-    'This website is currently in active development, not all its features are yet introduced and there may be bugs presented.';
-
   return (
     <>
       <Navbar />
-      <main>
-        <Banner type={'warning'} message={bannerMessage} />
-        <h1>Explore World Problems and Help Resolve Them</h1>
-        <div>
-          <p>
-            Earhhquiet.com is a free, web-based resource and community created
-            platform, which is maintained by enthusiasts only. We distill the
-            facts about world problems use and its effects on our lives into
-            practical guidance for interested persons or for those who are
-            thinking about or want to contribute and make our world a better
-            place.
-          </p>
-        </div>
-      </main>
+      <div className={style.homeBackground}>
+        <main>
+          <div className={style.homeHeader}>
+            <h1 className={style.homeHeaderTitle}>The world is your oyster</h1>
+            <p className={style.homeHeaderParagraph}>
+              Welcome to <b>EARTHQUITE</b>. This world need people like you. We
+              need creativeness and solutions. We need people who can
+              collaboroate and solve problems. Go on, take your friends with you
+              in this journey. Explore what problem we have on earth and find
+              solutions to solve them. We all family here. Everywhere.
+            </p>
+          </div>
+        </main>
+      </div>
       <Footer />
     </>
   );

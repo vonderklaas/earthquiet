@@ -1,6 +1,32 @@
-.categories {
+.categoriesBackground {
+  background-image: url('../../public/categories.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+}
+
+.categoriesHeader {
+  margin-top: 100px;
+
+  &Title {
+    font-size: 3rem;
+    padding: 10px;
+    display: inline;
+    background-color: #fff;
+  }
+
+  &Paragraph {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #fff;
+  }
+}
+
+.categories {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   .category {
@@ -8,32 +34,55 @@
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    margin: 15px;
-    box-shadow: 0px 0px 15px rgb(230, 230, 230);
-    transition: all 0.5s;
+    margin: 15px 0;
+    background-color: #fff;
 
-    &:hover {
-      transform: translateY(-5px);
-    }
-
-    &Color {
+    &Title {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      padding: 15px;
+      background-color: pink;
+      padding: 10px;
     }
 
     &Description {
       margin: 0;
-      padding: 5px 15px 15px 15px;
+      padding: 10px 15px 15px 15px;
       height: 220px;
       overflow: hidden;
     }
   }
 }
 
+//
+.problemsBackground {
+  // background-image: url('../../public/categories.jpeg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  background-color: pink;
+  display: flex;
+  // align-items: center;
+}
+
+.problemsHeader {
+  margin-top: 100px;
+
+  &Title {
+    font-size: 3rem;
+    padding: 10px;
+    display: inline;
+    background-color: #fff;
+  }
+
+  &Paragraph {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #fff;
+  }
+}
+
 .problems {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   .problem {
@@ -41,10 +90,11 @@
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    margin: 15px;
+    // margin: 15px;
     padding: 15px;
-    box-shadow: 0px 0px 15px rgb(230, 230, 230);
+    // box-shadow: 0px 0px 15px rgb(230, 230, 230);
     transition: all 0.5s;
+    background-color: #fff;
 
     &Title {
       margin: 0;
@@ -58,4 +108,8 @@
       overflow: hidden;
     }
   }
+}
+
+.problemsComments {
+  margin-top: 50px;
 }

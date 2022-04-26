@@ -1,41 +1,45 @@
-.problems {
-  margin: 100px auto 0 auto;
-  max-width: 1100px;
+.problemBackground {
+  background-image: url('../../../public/categories.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
 
-  .problem {
-    &Title {
-      text-align: center;
-    }
-    &Rank {
-      margin-bottom: 2rem;
-      &Title {
-        display: flex;
-        align-items: flex-end;
-      }
-      &Link {
-        margin-left: 0.5rem;
-        font-weight: 300;
-        color: $primary-violet;
-        margin-bottom: 2px; // Allign to title
-      }
-    }
-    &Description {
-      margin-bottom: 2rem;
-    }
-    &Idea {
-      margin-bottom: 2rem;
-    }
-    &Consequences {
-      margin-bottom: 2rem;
-    }
-    &Solutions {
-      margin-bottom: 2rem;
-    }
-    &References {
-      margin-bottom: 2rem;
-    }
-    &Donations {
-      margin-bottom: 2rem;
-    }
+.problemHeader {
+  margin-top: 100px;
+
+  &Title {
+    font-size: 3rem;
+    padding: 10px;
+    display: inline;
+    background-color: #fff;
+  }
+
+  &Rank {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #fff;
   }
 }
+
+.problemRank,
+.problemDescription,
+.problemIdea,
+.problemConsequences,
+.problemSolutions,
+.problemReferences,
+.problemDonations {
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.problemRank {
+  &Wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+// }
+// }

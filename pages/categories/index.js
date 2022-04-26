@@ -19,9 +19,6 @@ export const getStaticProps = async (context) => {
         title
         slug
         description
-        color {
-          hex
-        }
       }
     }
   `;
@@ -38,37 +35,32 @@ const Categories = ({ categories }) => {
   return (
     <>
       <Navbar />
-      <main>
-        <h1>Categories</h1>
-        <p>
-          Please choose a category down below and explore what problems and
-          isuses you can solve and contribute to
-        </p>
-        <div className={styles.categories}>
-          {categories &&
-            categories
-              .sort((a, b) => a.title.localeCompare(b.title))
-              .map((category) => {
+      <div className={styles.categoriesBackground}>
+        <main>
+          <div className={styles.categoriesHeader}>
+            <h1 className={styles.categoriesHeaderTitle}>Categories</h1>
+            <p className={styles.categoriesHeaderParagraph}>
+              Please choose a category down below and explore what problems and
+              isuses you can solve and contribute to
+            </p>
+          </div>
+          <div className={styles.categories}>
+            {categories &&
+              categories.map((category) => {
                 return (
                   <Link href={`/categories/${category.slug}`}>
                     <a className={styles.category} key={category.slug}>
-                      <div
-                        style={{ backgroundColor: `${category.color.hex}` }}
-                        className={styles.categoryColor}
-                      >
-                        <h3>{category.title}</h3>
-                      </div>
-                      <div>
-                        <p className={styles.categoryDescription}>
-                          {category.description}
-                        </p>
-                      </div>
+                      <h3 className={styles.categoryTitle}>{category.title}</h3>
+                      <p className={styles.categoryDescription}>
+                        {category.description}
+                      </p>
                     </a>
                   </Link>
                 );
               })}
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
       <Footer />
     </>
   );
