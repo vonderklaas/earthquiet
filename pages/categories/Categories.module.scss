@@ -1,58 +1,55 @@
-.categoriesBackground,
-.problemsBackground {
+.categories {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+
+  .category {
+    max-width: 47%;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 5px #ddd;
+
+    &Title {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 10px 15px 10px 15px;
+      color: $primary-indigo;
+    }
+
+    &Description {
+      margin: 0;
+      padding: 15px;
+      height: 160px;
+      overflow: hidden;
+    }
+  }
 }
 
-.categories,
 .problems {
-  margin-top: 80px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-top: 100px;
 
-  .category,
   .problem {
     max-width: 400px;
-    display: flex;
-    flex-direction: column;
     border-radius: 10px;
-    margin: 15px;
-    background-color: #fff;
-  }
-}
+    margin: 5px;
+    box-shadow: 1px 1px 5px #ddd;
 
-.category {
-  &Title {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: black;
-    color: #fff;
-    padding: 5px 10px;
-  }
+    &Title {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 10px 15px 10px 15px;
+    }
 
-  &Description {
-    margin: 0;
-    padding: 10px;
-    height: 220px;
-    overflow: hidden;
-  }
-}
-
-.problem {
-  &Title {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: black;
-    color: #fff;
-    padding: 5px 10px;
-  }
-
-  &Description {
-    margin: 0;
-    padding: 10px;
-    height: 220px;
-    overflow: hidden;
+    &Description {
+      margin: 0;
+      padding: 10px;
+      height: 220px;
+      overflow: hidden;
+    }
   }
 }
 

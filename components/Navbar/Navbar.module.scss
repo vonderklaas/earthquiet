@@ -1,19 +1,36 @@
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 20px;
-  border-bottom: 1px solid #f1f1f1;
+.navbarContainer {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
+  padding-top: 5px;
   width: 100%;
-  background-color: #fff;
+  text-align: center;
+  color: $text-light;
+  background-color: rgb(15, 16, 18);
+
+  .navbarUkraineLink {
+    margin-left: 15px;
+    color: $primary-green;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(31, 41, 51);
 
   &Logo {
+    display: flex;
+    align-items: center;
     line-height: 0;
+    span {
+      margin-left: 10px;
+    }
     &Image {
+      display: block;
       transition: 2s ease-in-out;
       &:hover {
         transform: rotate(360deg);
@@ -23,12 +40,17 @@
 
   &Menu {
     display: inline-flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
     &Link {
       margin: 0 30px;
-      color: $text-color-dark;
+      transition: all 0.3s;
+      color: $text-light;
+      &:hover {
+        color: $primary-blue;
+      }
     }
   }
 }

@@ -1,22 +1,15 @@
-.problemBackground {
-  display: flex;
-  align-items: center;
-}
+.problem {
+  &Block {
+    padding: 10px;
 
-.problemRank,
-.problemIdea,
-.problemConsequences,
-.problemSolutions,
-.problemReferences,
-.problemDonations {
-  margin-bottom: 2rem;
-  background-color: #fff;
-  padding: 10px;
-}
+    &Rank {
+      display: flex;
+      align-items: center;
 
-.problemRank {
-  &Wrapper {
-    display: flex;
-    align-items: center;
+      a {
+        color: $primary-orange;
+        margin-left: 10px;
+      }
+    }
   }
 }

@@ -44,22 +44,23 @@ const Category = ({ problems, pageSlug }) => {
   return (
     <>
       <Navbar />
-      <div className={styles.problemsBackground}>
-        <main>
-          <Heading
-            title={`${pageSlug.toUpperCase()} Problems`}
-            paragraph={`Please choose a category down below and explore what problems and
+      <main>
+        <Heading
+          title={`${pageSlug.toUpperCase()} Problems`}
+          paragraph={`Please choose a category down below and explore what problems and
               isuses you can solve and contribute to`}
-          />
-          <div className={styles.problems}>
-            {problems.map((problem) => {
+        />
+        {problems.length === 0 && <div>No problems...</div>}
+        <div className={styles.problems}>
+          {problems &&
+            problems.map((problem) => {
               return (
                 <Link
                   key={problem.slug}
                   href={`/problem/${problem.categorySlug}/${problem.slug}`}
                 >
                   <a className={styles.problem} key={problem.slug}>
-                    <h2 className={styles.problemTitle}>{problem.title}</h2>
+                    <h3 className={styles.problemTitle}>{problem.title}</h3>
                     <p className={styles.problemDescription}>
                       {problem.description}
                     </p>
@@ -67,12 +68,12 @@ const Category = ({ problems, pageSlug }) => {
                 </Link>
               );
             })}
-          </div>
-          <div className={styles.comments}>
-            <Comments categorySlug={pageSlug} />
-          </div>
-        </main>
-      </div>
+        </div>
+        <Heading title={'Comments'} />
+        <div className={styles.comments}>
+          <Comments categorySlug={pageSlug} />
+        </div>
+      </main>
       <Footer />
     </>
   );

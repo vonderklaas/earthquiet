@@ -34,43 +34,59 @@ const Navbar = () => {
           rel='stylesheet'
         />
       </Head>
-      <nav className={styles.navbar}>
-        <div className={styles.navbarLogo}>
-          <Link href='/'>
-            <a>
-              <Image
-                className={styles.navbarLogoImage}
-                src='/logo.png'
-                alt='EARTHQUIET'
-                width='48'
-                height='48'
-              />
-            </a>
-          </Link>
+      <div className={styles.navbarContainer}>
+        <div>
+          <span>We Stand with Ukraine 🇺🇦</span>
+          <a
+            className={styles.navbarUkraineLink}
+            target='_blank'
+            href='https://supportukrainenow.org/'
+          >
+            <span>https://www.supportukraine.co/</span>
+          </a>
         </div>
-        <ul className={styles.navbarMenu}>
-          <li className={router.pathname == '/categories' ? 'active-link' : ''}>
-            <Link href='/categories'>
-              <a className={styles.navbarMenuLink}>Categories</a>
+        <nav className={styles.navbar}>
+          <div className={styles.navbarLogo}>
+            <Link href='/'>
+              <a>
+                <Image
+                  className={styles.navbarLogoImage}
+                  src='/logo.png'
+                  alt='EARTHQUIET'
+                  width='35'
+                  height='35'
+                />
+              </a>
             </Link>
-          </li>
-          <li className={router.pathname == '/contribute' ? 'active-link' : ''}>
-            <Link href='/contribute'>
-              <a className={styles.navbarMenuLink}>Contribute</a>
-            </Link>
-          </li>
-          <li className={router.pathname == '/about' ? 'active-link' : ''}>
-            <Link href='/about'>
-              <a className={styles.navbarMenuLink}>About</a>
-            </Link>
-          </li>
-          <li className={router.pathname == '/contact' ? 'active-link' : ''}>
-            <Link href='/contact'>
-              <a className={styles.navbarMenuLink}>Contact</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          </div>
+          <ul className={styles.navbarMenu}>
+            <li
+              className={router.pathname == '/categories' ? 'active-link' : ''}
+            >
+              <Link href='/categories'>
+                <a className={styles.navbarMenuLink}>Categories</a>
+              </Link>
+            </li>
+            <li
+              className={router.pathname == '/contribute' ? 'active-link' : ''}
+            >
+              <Link href='/contribute'>
+                <a className={styles.navbarMenuLink}>Contribute</a>
+              </Link>
+            </li>
+            <li className={router.pathname == '/about' ? 'active-link' : ''}>
+              <Link href='/about'>
+                <a className={styles.navbarMenuLink}>About</a>
+              </Link>
+            </li>
+            <li className={router.pathname == '/contact' ? 'active-link' : ''}>
+              <Link href='/contact'>
+                <a className={styles.navbarMenuLink}>Contact</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

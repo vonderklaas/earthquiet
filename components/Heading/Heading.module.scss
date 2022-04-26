@@ -1,20 +1,19 @@
 .heading {
-  margin-top: 160px;
+  margin-top: 150px;
 
   &Title,
   &Paragraph {
     padding: 10px;
-    background-color: #fff;
-    border: 2px solid royalblue;
+    border-left: 2px solid $primary-blue;
+    background-color: $text-light;
   }
 
   &Title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: inline;
   }
 
   &Paragraph {
     font-size: 1.2rem;
-    background-color: #fff;
   }
 }
