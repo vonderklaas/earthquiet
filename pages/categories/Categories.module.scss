@@ -1,92 +1,17 @@
-.categoriesBackground {
-  background-color: royalblue;
-  display: flex;
-  align-items: center;
-}
-
-.categoriesHeader {
-  margin-top: 160px;
-
-  &Title,
-  &Paragraph {
-    padding: 10px;
-    background-color: #fff;
-  }
-
-  &Title {
-    font-size: 3rem;
-    display: inline;
-  }
-
-  &Paragraph {
-    font-size: 1.2rem;
-    background-color: #fff;
-  }
-}
-
-.categories {
-  margin-top: 80px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-
-  .category {
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 15px;
-    background-color: #fff;
-
-    &Title {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      background-color: black;
-      color: #fff;
-      padding: 5px 10px;
-    }
-
-    &Description {
-      margin: 0;
-      padding: 10px;
-      height: 220px;
-      overflow: hidden;
-    }
-  }
-}
-
+.categoriesBackground,
 .problemsBackground {
-  background-color: royalblue;
   display: flex;
   align-items: center;
 }
 
-.problemsHeader {
-  margin-top: 160px;
-
-  &Title,
-  &Paragraph {
-    padding: 10px;
-    background-color: #fff;
-  }
-
-  &Title {
-    font-size: 3rem;
-    display: inline;
-  }
-
-  &Paragraph {
-    font-size: 1.2rem;
-    background-color: #fff;
-  }
-}
-
+.categories,
 .problems {
   margin-top: 80px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 
+  .category,
   .problem {
     max-width: 400px;
     display: flex;
@@ -94,24 +19,43 @@
     border-radius: 10px;
     margin: 15px;
     background-color: #fff;
-
-    &Title {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      background-color: black;
-      color: #fff;
-      padding: 5px 10px;
-    }
-
-    &Description {
-      margin: 0;
-      padding: 10px;
-      height: 220px;
-      overflow: hidden;
-    }
   }
 }
 
-.problemsComments {
+.category {
+  &Title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+  }
+
+  &Description {
+    margin: 0;
+    padding: 10px;
+    height: 220px;
+    overflow: hidden;
+  }
+}
+
+.problem {
+  &Title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+  }
+
+  &Description {
+    margin: 0;
+    padding: 10px;
+    height: 220px;
+    overflow: hidden;
+  }
+}
+
+.comments {
   margin-top: 50px;
 }

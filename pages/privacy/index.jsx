@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Privacy = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Privacy</h1>
+        <Heading
+          title={`Privacy`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Data Collection</h3>
           <p>We are not collecting any data of our users (right now)</p>

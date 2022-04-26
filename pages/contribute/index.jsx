@@ -1,13 +1,17 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Contribution = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Contribution</h1>
-        <h3>Find ways how you can contribute</h3>
+        <Heading
+          title={`Contribution`}
+          paragraph={`Find ways how you can contribute`}
+        />
+
         <ul>
           <li>Create start-ups to fix isssues</li>
           <li>Share website or articles with friends</li>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Comments from '../../components/Comments';
+import Heading from '../../components/Heading/Heading';
 
 import styles from './Categories.module.scss';
 
@@ -45,19 +46,18 @@ const Category = ({ problems, pageSlug }) => {
       <Navbar />
       <div className={styles.problemsBackground}>
         <main>
-          <div className={styles.problemsHeader}>
-            <h1 className={styles.problemsHeaderTitle}>
-              {pageSlug.toUpperCase()} Problems
-            </h1>
-            <p className={styles.problemsHeaderParagraph}>
-              Please choose a category down below and explore what problems and
-              isuses you can solve and contribute to
-            </p>
-          </div>
+          <Heading
+            title={`${pageSlug.toUpperCase()} Problems`}
+            paragraph={`Please choose a category down below and explore what problems and
+              isuses you can solve and contribute to`}
+          />
           <div className={styles.problems}>
             {problems.map((problem) => {
               return (
-                <Link href={`/problem/${problem.categorySlug}/${problem.slug}`}>
+                <Link
+                  key={problem.slug}
+                  href={`/problem/${problem.categorySlug}/${problem.slug}`}
+                >
                   <a className={styles.problem} key={problem.slug}>
                     <h2 className={styles.problemTitle}>{problem.title}</h2>
                     <p className={styles.problemDescription}>
@@ -68,7 +68,7 @@ const Category = ({ problems, pageSlug }) => {
               );
             })}
           </div>
-          <div className={styles.problemsComments}>
+          <div className={styles.comments}>
             <Comments categorySlug={pageSlug} />
           </div>
         </main>

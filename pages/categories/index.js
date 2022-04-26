@@ -2,6 +2,7 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 import styles from './Categories.module.scss';
 
@@ -37,18 +38,19 @@ const Categories = ({ categories }) => {
       <Navbar />
       <div className={styles.categoriesBackground}>
         <main>
-          <div className={styles.categoriesHeader}>
-            <h1 className={styles.categoriesHeaderTitle}>Categories</h1>
-            <p className={styles.categoriesHeaderParagraph}>
-              Please choose a category down below and explore what problems and
-              isuses you can solve and contribute to
-            </p>
-          </div>
+          <Heading
+            title={'Categories'}
+            paragraph={`Please choose a category down below and explore what problems and
+              isuses you can solve and contribute to`}
+          />
           <div className={styles.categories}>
             {categories &&
               categories.map((category) => {
                 return (
-                  <Link href={`/categories/${category.slug}`}>
+                  <Link
+                    key={category.slug}
+                    href={`/categories/${category.slug}`}
+                  >
                     <a className={styles.category} key={category.slug}>
                       <h3 className={styles.categoryTitle}>{category.title}</h3>
                       <p className={styles.categoryDescription}>

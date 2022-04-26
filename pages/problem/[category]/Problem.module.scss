@@ -1,22 +1,9 @@
 .problemBackground {
-  background-color: royalblue;
   display: flex;
   align-items: center;
 }
 
-.problemHeader {
-  margin-top: 160px;
-
-  &Title {
-    font-size: 3rem;
-    display: inline;
-    padding: 10px;
-    background-color: #fff;
-  }
-}
-
 .problemRank,
-.problemDescription,
 .problemIdea,
 .problemConsequences,
 .problemSolutions,
@@ -33,5 +20,3 @@
     align-items: center;
   }
 }
-// }
-// }

@@ -1,13 +1,17 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Rank from '../../components/Rank/Rank';
+import Heading from '../../components/Heading/Heading';
 
 const Docs = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Documentation</h1>
+        <Heading
+          title={`Documentation`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Articles and Information</h3>
           <p>

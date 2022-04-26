@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const About = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>About</h1>
+        <Heading
+          title={`About`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Earhhquiet.com</h3>
           <p>

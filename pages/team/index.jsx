@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Team = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Team</h1>
+        <Heading
+          title={`Team`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Meet Our Team</h3>
           <ul>

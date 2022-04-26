@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Terms = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Terms of Service</h1>
+        <Heading
+          title={`Terms of Service`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>
             Our aim is to keep this Agreement as readable as possible, but in

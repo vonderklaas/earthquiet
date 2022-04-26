@@ -12,7 +12,22 @@ const Navbar = () => {
     <header>
       <Head>
         <title>EARTHQUIET</title>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='shortcut icon' href='/favicons/favicon.ico' />
+        <meta name='viewport' content='width=device-width,initial-scale=1.0' />
+        <meta
+          name='keywords'
+          content='EARTH, Earth, Problems, World Problems'
+        />
+        <meta
+          name='description'
+          content='EARTHQUITE - is a free, web-based resource and community created
+          platform, which is maintained by enthusiasts only.'
+        />
+        <link
+          rel='preconnect'
+          href='https://fonts.googleapis.com'
+          crossorigin
+        />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
           href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap'
@@ -39,10 +54,8 @@ const Navbar = () => {
               <a className={styles.navbarMenuLink}>Categories</a>
             </Link>
           </li>
-          <li
-            className={router.pathname == '/contribution' ? 'active-link' : ''}
-          >
-            <Link href='/contribution'>
+          <li className={router.pathname == '/contribute' ? 'active-link' : ''}>
+            <Link href='/contribute'>
               <a className={styles.navbarMenuLink}>Contribute</a>
             </Link>
           </li>

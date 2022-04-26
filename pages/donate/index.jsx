@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Donate = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Donate</h1>
+        <Heading
+          title={`Donate`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Help us help you</h3>
           <p>

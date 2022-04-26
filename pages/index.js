@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import Heading from '../components/Heading/Heading';
 
 import style from './Home.module.scss';
 
@@ -9,16 +10,14 @@ const Home = () => {
       <Navbar />
       <div className={style.homeBackground}>
         <main>
-          <div className={style.homeHeader}>
-            <h1 className={style.homeHeaderTitle}>The world is your oyster</h1>
-            <p className={style.homeHeaderParagraph}>
-              Welcome to <b>EARTHQUITE</b>. This world need people like you. We
-              need creativeness and solutions. We need people who can
-              collaboroate and solve problems. Go on, take your friends with you
-              in this journey. Explore what problem we have on earth and find
-              solutions to solve them. We all family here. Everywhere.
-            </p>
-          </div>
+          <Heading
+            title={`The world is your oyster`}
+            paragraph={`Welcome to EARTHQUITE. This world need people like you. We need
+            creativeness and solutions. We need people who can collaboroate
+            and solve problems. Go on, take your friends with you in this
+            journey. Explore what problem we have on earth and find solutions
+            to solve them. We all family here. Everywhere`}
+          />
         </main>
       </div>
       <Footer />

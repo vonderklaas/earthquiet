@@ -41,11 +41,11 @@ const Footer = () => {
                 <a>Documentation</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a href='https://www.kickstarter.com/profile/993189314/about'>
                 Kickstarter (in progress)
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
@@ -67,7 +67,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href='/contribution'>
+              <Link href='/contribute'>
                 <a>Contribution</a>
               </Link>
             </li>

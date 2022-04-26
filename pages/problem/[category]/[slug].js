@@ -2,9 +2,9 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Reactmarkdown from 'react-markdown';
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
+import Heading from '../../../components/Heading/Heading';
 import Rank from '../../../components/Rank/Rank';
 import styles from './Problem.module.scss';
-import Link from 'next/link';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -53,18 +53,13 @@ const Category = ({ problem }) => {
           {problem.map((problem) => {
             return (
               <div key={problem.slug}>
-                <div className={styles.problemHeader}>
-                  <h1 className={styles.problemHeaderTitle}>{problem.title}</h1>
-                </div>
-
+                <Heading
+                  title={problem.title}
+                  paragraph={problem.description}
+                />
                 <div className={styles.problemRank}>
                   <h3>Rank</h3>
                   <Rank rank={problem.rank} />
-                </div>
-
-                <div className={styles.problemDescription}>
-                  <h3>Description</h3>
-                  <Reactmarkdown children={problem.description} />
                 </div>
                 <div className={styles.problemIdea}>
                   <h3>Idea</h3>

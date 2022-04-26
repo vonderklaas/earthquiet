@@ -1,26 +1,6 @@
 .homeBackground {
-  background: url('../public/home.jpg') no-repeat;
+  background: url('../public/backgrounds/home.jpg') no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-}
-
-.homeHeader {
-  margin-top: 160px;
-
-  &Title,
-  &Paragraph {
-    padding: 10px;
-    background-color: #fff;
-  }
-
-  &Title {
-    font-size: 3rem;
-    display: inline;
-  }
-
-  &Paragraph {
-    font-size: 1.2rem;
-    background-color: #fff;
-  }
 }

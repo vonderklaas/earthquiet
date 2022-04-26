@@ -1,12 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Heading from '../../components/Heading/Heading';
 
 const Cookies = () => {
   return (
     <>
       <Navbar />
       <main>
-        <h1>Cookies</h1>
+        <Heading
+          title={`Cookies`}
+          paragraph={`Find ways how you can contribute`}
+        />
         <div>
           <h3>Cookies</h3>
           <p>Currently we are not collecting any cookies</p>
