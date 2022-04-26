@@ -1,3 +1,4 @@
+// General
 html,
 body {
   padding: 0;
@@ -31,17 +32,17 @@ main {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
-  min-height: 95vh;
+  min-height: 100vh;
   padding-bottom: 40px;
 }
 
+// Additional
 .active-link {
   a {
     color: $primary-violet !important;
   }
 }
 
-// Comments
 .utterances {
   max-width: 100% !important;
 }

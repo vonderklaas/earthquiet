@@ -9,9 +9,9 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <header className={styles.header}>
+    <header>
       <Head>
-        <title>Earthquiet</title>
+        <title>EARTHQUIET</title>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
@@ -26,9 +26,9 @@ const Navbar = () => {
               <Image
                 className={styles.navbarLogoImage}
                 src='/logo.png'
-                alt='Logo'
-                width='49'
-                height='49'
+                alt='EARTHQUIET'
+                width='48'
+                height='48'
               />
             </a>
           </Link>

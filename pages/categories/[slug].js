@@ -69,12 +69,10 @@ const Category = ({ problems, pageSlug }) => {
             })}
           </div>
           <div className={styles.problemsComments}>
-            <h3>Comments</h3>
             <Comments categorySlug={pageSlug} />
           </div>
         </main>
       </div>
-
       <Footer />
     </>
   );

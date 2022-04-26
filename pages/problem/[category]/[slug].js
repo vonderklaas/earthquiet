@@ -56,15 +56,12 @@ const Category = ({ problem }) => {
                 <div className={styles.problemHeader}>
                   <h1 className={styles.problemHeaderTitle}>{problem.title}</h1>
                 </div>
+
                 <div className={styles.problemRank}>
-                  <div className={styles.problemRankWrapper}>
-                    <h3>Rank</h3>
-                    <Link href='/documentation'>
-                      <a>How we rank?</a>
-                    </Link>
-                  </div>
+                  <h3>Rank</h3>
                   <Rank rank={problem.rank} />
                 </div>
+
                 <div className={styles.problemDescription}>
                   <h3>Description</h3>
                   <Reactmarkdown children={problem.description} />

@@ -1,23 +1,15 @@
 .problemBackground {
-  background-image: url('../../../public/categories.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: royalblue;
   display: flex;
   align-items: center;
 }
 
 .problemHeader {
-  margin-top: 100px;
+  margin-top: 160px;
 
   &Title {
     font-size: 3rem;
-    padding: 10px;
     display: inline;
-    background-color: #fff;
-  }
-
-  &Rank {
-    font-size: 1.2rem;
     padding: 10px;
     background-color: #fff;
   }
