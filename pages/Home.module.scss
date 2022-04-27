@@ -1,32 +1,43 @@
-.homeBackground {
+.homeHeader {
+  background: url('../public/backgrounds/back_1.jpg') no-repeat;
+  background-position: 30% 30%;
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 600px;
+  &Heading {
+    max-width: 1000px;
+    margin-top: 120px;
+    &Title,
+    &Paragraph {
+      padding: 10px;
+      color: $text-dark;
+      background-color: rgba($text-light, 0.75);
+    }
+    &Title {
+      display: inline;
+      font-size: 2.5rem;
+    }
+    &Paragraph {
+      font-size: 1.2rem;
+    }
+  }
 }
 
-.homeCard {
-  display: block;
+.homeDescription {
+  margin-top: 70px;
+  a {
+    color: $primary-green;
+  }
 }
 
 .homeInfo {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 50px 0;
-
+  margin-top: 50px;
   &Column {
     max-width: 340px;
   }
-}
-
-.hr {
-  height: 1px;
-  margin-bottom: -1px;
-  border: none;
-  border-bottom: 1px solid #ececec;
-  padding: 0;
-}
-
-.homeLink {
-  color: $primary-purple;
 }

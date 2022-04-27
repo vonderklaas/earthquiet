@@ -59,7 +59,7 @@ const Category = ({ problem }) => {
               <div className={styles.problem}>
                 <div className={styles.problemBlock}>
                   <div className={styles.problemBlockRank}>
-                    <h3>Problem Rank</h3>
+                    <h3>Complexity</h3>
                     <Link href='/documentation'>
                       <a>(How we rank?)</a>
                     </Link>
@@ -67,7 +67,7 @@ const Category = ({ problem }) => {
                   <Rank rank={problem.rank} />
                 </div>
                 <div className={styles.problemBlock}>
-                  <h3>What is it all about?</h3>
+                  <h3>General</h3>
                   <Reactmarkdown children={problem.generalText} />
                 </div>
                 <div className={styles.problemBlock}>
@@ -75,7 +75,7 @@ const Category = ({ problem }) => {
                   <Reactmarkdown children={problem.consequences} />
                 </div>
                 <div className={styles.problemBlock}>
-                  <h3>Possible Solutions</h3>
+                  <h3>Solutions</h3>
                   <Reactmarkdown children={problem.solutions} />
                 </div>
                 <div className={styles.problemBlock}>

@@ -41,11 +41,6 @@ const Footer = () => {
                 <a>Documentation</a>
               </Link>
             </li>
-          </ul>
-        </div>
-        <div className={styles.footerUpperItem}>
-          <h4>Our Team</h4>
-          <ul>
             <li>
               <Link href='/team'>
                 <a>Our Team</a>
