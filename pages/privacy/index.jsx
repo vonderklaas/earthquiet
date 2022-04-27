@@ -7,10 +7,7 @@ const Privacy = () => {
     <>
       <Navbar />
       <main>
-        <Heading
-          title={`Privacy`}
-          paragraph={`Find ways how you can contribute`}
-        />
+        <Heading title={`Privacy`} paragraph={`How we manage your privacy?`} />
         <div>
           <h3>Data Collection</h3>
           <p>We are not collecting any data of our users (right now)</p>

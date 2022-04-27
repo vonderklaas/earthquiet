@@ -11,78 +11,105 @@ const Home = () => {
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
           <h1 className={styles.homeHeaderHeadingTitle}>
-            We appreciate you, visitor 🔮
+            Greetings, 🌍 Savers!
           </h1>
           <p className={styles.homeHeaderHeadingParagraph}>
-            Thank you for visiting our website! Here we collect world problems
-            and give people ability to explore issues and sollutions that are
-            connected to those problems. We support and give ability to
-            contribute over problems and ideally wrapping startups around issues
+            Welcome to EARTHQUITE. Here we collect global world problems and
+            issues. We pay very high attention on solutions, related to those
+            problems. Our platform supports and give space to contribute and
+            expand activities around issues
           </p>
         </div>
       </div>
       <main>
         <div className={styles.homeDescription}>
           <p>
-            Any aware person defenitly once googled or explored the problems our
-            world has. Someone probably heared of Global Warming or anything
-            else. There is a lot of resources out there, all containing same
-            problems with same descriptions.
+            We are pretty sure, that most of us, at least once explored or heard
+            about world problems. Someone probably heard of Global Warming or
+            lack of drinking water in some countries. If so, great, but there is
+            much more going on. First of all, there are a lot of resources out
+            there, all containing world problems, different ratings and tops.
           </p>
           <p>
-            Of course information is good, but EARTHQUITE decided to take to
-            another level.
+            Of course, such information is extremely useful, and allows any user
+            on the Internet to join these problems and delve into their origins.
           </p>
           <p>
-            The United Nations currently lists{' '}
-            <a href='https://www.un.org/en/global-issues'>22 Global Issues</a>.
-            This is not intended to be an exhaustive list. Rather, it serves as
-            an overview of some of the major issues all global citizens should
-            be aware of.
+            However, there are also many pitfalls. Internet resources like the
+            UN website or, for example, BBC, often publish some kind of news and
+            even tops. However, moving from source to source, sometimes the
+            integrity of the problems is lost. Each service makes its own
+            mini-review, uses its own criteria and its own coordinates. There
+            are simply hundreds of such sites and amateur works.
           </p>
           <p>
-            We decided to create this platform to contain all problems in one
-            place and have nice and minimalistic UX to explore those issues
+            At some point, it is very easy for everyone to get confused in this,
+            especially considering the variety of wordings and directions of
+            certain services. Someone covers only some categories, while others
+            ignore. Some problems are put above others, and those that need
+            attention are hidden at the bottom of their tops.
           </p>
+          <p>
+            We decided to create a platform that will cover the entire spectrum
+            of world problems and offer a convenient format for studying them,
+            and most importantly, solutions. We are not utopians, but we believe
+            that all world problems are not only possible, but must be solved.
+          </p>
+          <p>
+            Each person can take a step towards solving a problem. You don't
+            have to be a scientist or a millionaire to do this. This requires a
+            small group of like-minded people, a vision of the problem and its
+            solutions, perseverance and a little luck. It is available to
+            everyone.
+          </p>
+          <p>
+            Communicate, find people who understand you, unite and come up with
+            new solutions to already known or still not very well-known
+            problems. All in your hands. Learn, create, change.
+          </p>
+          <p>Thank you, EARTHQUITE Team</p>
         </div>
         <Heading
-          title={'Some Points'}
-          paragraph={`Take a look at some of important things we do`}
+          title={'Our Pillars'}
+          paragraph={`What things are important for us`}
         />
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoColumn}>
             <h3>Verified information</h3>
             <p>
-              We use only verified and world known websites and platforms
-              problems to collect information about issues we post.
+              We only use verified information from trusted sources. We
+              carefully work with the data and at the end we come to simple
+              explanations and solutions available to everyone.
             </p>
             <p>
-              Each problem goes through strict verification proccess and
-              moderation. We will to give you fresh, actual, real issues and
-              solutions to world problems.
+              We leave links to studies and sources so that anyone can check the
+              information if they wish or continue studying outside of our
+              platform.
             </p>
           </div>
           <div className={styles.homeInfoColumn}>
-            <h3>We want to contribute</h3>
+            <h3>Contribution</h3>
             <p>
-              We are not another post-oriented platform that only aims on
-              content. We give developers ways to find like-minded people and
-              collaborate on further solutions.
+              We don't just focus on content. We want to inspire and push to
+              create solutions and improve the world. Knowledge is power. And
+              this power must be used.
             </p>
             <p>
-              We think that every problem has its solution, and we support
-              people who wrapping startups around issues
+              We believe that only small groups of stubborn and creative people
+              will be able to move the world's mountain of problems off the
+              ground. It will crack, we're sure of it
             </p>
           </div>
           <div className={styles.homeInfoColumn}>
             <h3>Open-source and free</h3>
             <p>
-              We are open-source and free platform for everyone to use. We dont
-              run adds, banners and other comercial stuff.
+              We are a free platform without any privileged paid options and any
+              advertising. On our site you will not find ads, banners and
+              hundreds of modal windows.
             </p>
             <p>
-              We exist only because of contribution of enthusiasts who want to
-              change the world.
+              We exist by our own independent will, as well as support from the
+              same enthusiasts as we are
             </p>
           </div>
         </div>

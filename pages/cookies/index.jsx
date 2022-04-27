@@ -9,7 +9,7 @@ const Cookies = () => {
       <main>
         <Heading
           title={`Cookies`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`How we use and store our cookies`}
         />
         <div>
           <h3>Cookies</h3>

@@ -2,12 +2,7 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
-  @media screen and (max-width: 991px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  justify-content: flex-start;
 
   .category {
     max-width: 380px;
@@ -47,7 +42,7 @@
 .problems {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 
   .problem {
     max-width: 380px;

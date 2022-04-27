@@ -9,7 +9,7 @@ const Contact = () => {
       <main>
         <Heading
           title={`Contact`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`You need to talk with us? Sure!`}
         />
         <div>
           <p>earthquite.com@gmail.com</p>

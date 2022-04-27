@@ -65,7 +65,7 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
           icon={catDataProbs.url}
           alt={pageSlug}
           title={`${pageSlug.toUpperCase()}`}
-          paragraph={`These are ${pageSlug.toUpperCase()} problems you can explore`}
+          paragraph={`Here are the problems of category ${pageSlug.toUpperCase()}. We constantly work on our site and if a problem that you are not interested in is not yet presented, be sure that it will appear soon.`}
         />
         {problems.length === 0 && <div>No problems...</div>}
         <div className={styles.problems}>

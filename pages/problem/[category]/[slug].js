@@ -60,7 +60,7 @@ const Category = ({ problem }) => {
                 <div className={styles.problemBlock}>
                   <div className={styles.problemBlockRank}>
                     <h3>Complexity</h3>
-                    <Link href='/documentation'>
+                    <Link href='/docs'>
                       <a>(How we rank?)</a>
                     </Link>
                   </div>

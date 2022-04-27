@@ -9,10 +9,10 @@ const Donate = () => {
       <main>
         <Heading
           title={`Donate`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`Your donation will go on funding for platform only`}
         />
         <div>
-          <h3>Help us help you</h3>
+          <h3>Why we need your support</h3>
           <p>
             We want to mention that we are a non-profit platform that depends
             only on donations and enthusiast contribution. We need that to stay
@@ -27,10 +27,7 @@ const Donate = () => {
             place for advertising. But if we were useful to you, and you want to
             support our project, please consider making a donation.
           </p>
-          <p>Thanks</p>
-          <p>
-            <b>Earthquiet.com</b>
-          </p>
+          <p>Thanks, EARTHQUITE Team</p>
         </div>
       </main>
       <Footer />

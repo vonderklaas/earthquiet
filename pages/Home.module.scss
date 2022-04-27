@@ -1,11 +1,11 @@
 .homeHeader {
-  background: url('../public/backgrounds/back_1.jpg') no-repeat;
-  background-position: 30% 30%;
+  background: url('../public/backgrounds/back_2.webp') no-repeat;
+  background-position: 30% 10%;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 500px;
   &Heading {
     max-width: 1000px;
     margin-top: 120px;
@@ -13,7 +13,7 @@
     &Paragraph {
       padding: 10px;
       color: $text-dark;
-      background-color: rgba($text-light, 0.75);
+      background-color: rgba($text-light, 0.8);
     }
     &Title {
       display: inline;
@@ -26,7 +26,7 @@
 }
 
 .homeDescription {
-  margin-top: 70px;
+  margin-top: 50px;
   a {
     color: $primary-green;
   }

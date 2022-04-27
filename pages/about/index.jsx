@@ -9,12 +9,12 @@ const About = () => {
       <main>
         <Heading
           title={`About`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`Discover more information about us and things we think are important`}
         />
         <div>
-          <h3>Earhhquiet.com</h3>
+          <h3>EARTHQUITE</h3>
           <p>
-            Earhhquiet.com is a free, web-based resource and community created
+            EARTHQUITE is a free, web-based resource and community created
             platform, which is maintained by enthusiasts only. We distill the
             facts about world problems use and its effects on our lives into
             practical guidance for interested persons or for those who are
@@ -23,11 +23,11 @@ const About = () => {
           </p>
           <h3>Contributors</h3>
           <p>
-            The Earthquiet.com team of authors, editors, and contributors
-            collect and present important information about world problems in a
-            convenient (as it seems to us) format. We do research and analyse of
-            everything we want to share, and strive to provide best experience
-            of exploring world problems.
+            Our team is very small now, but of course we plan expanding. Our
+            authors, developers, editors, and contributors collect and present
+            important information about world problems in a convenient (as it
+            seems to us) format. We do research and analyse of everything we
+            want to share, and strive to provide best experience for our users.
           </p>
           <h3>Mindset</h3>
           <p>
@@ -42,7 +42,7 @@ const About = () => {
             We feel like we need a community which can contribute in all kinds
             of ways and see reports of their contributions. We advice you to
             take each problem as a chance, as a opportunity to work towards a
-            common goal, and to answer the question: Why Earth is not quiet
+            common goal, and to answer the question: Why EARTH is not quiet
             anymore?
           </p>
         </div>

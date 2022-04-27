@@ -9,7 +9,7 @@ const Terms = () => {
       <main>
         <Heading
           title={`Terms of Service`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`If you are interested of course`}
         />
         <div>
           <h3>
