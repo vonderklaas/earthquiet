@@ -9,3 +9,7 @@
 ## Production:
 
 https://www.earthquiet.com/
+
+## Branches:
+- main
+- production
