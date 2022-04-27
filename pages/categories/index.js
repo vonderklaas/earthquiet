@@ -20,6 +20,9 @@ export const getStaticProps = async (context) => {
         title
         slug
         description
+        icon {
+          url
+        }
       }
     }
   `;
@@ -38,7 +41,7 @@ const Categories = ({ categories }) => {
       <Navbar />
       <main>
         <Heading
-          title={'Categories'}
+          title={'Explore by category'}
           paragraph={`Please choose a category down below and explore what problems and
                 isuses you can solve and contribute to`}
         />
@@ -48,6 +51,11 @@ const Categories = ({ categories }) => {
               return (
                 <Link key={category.slug} href={`/categories/${category.slug}`}>
                   <a className={styles.category} key={category.slug}>
+                    <img
+                      className={styles.categoryIcon}
+                      src={category.icon.url}
+                      alt={category.slug}
+                    />
                     <h3 className={styles.categoryTitle}>{category.title}</h3>
                     <p className={styles.categoryDescription}>
                       {category.description}

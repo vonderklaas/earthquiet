@@ -4,8 +4,10 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Comments from '../../components/Comments';
 import Heading from '../../components/Heading/Heading';
+import Rank from '../../components/Rank/Rank';
 
 import styles from './Categories.module.scss';
+import { useState } from 'react';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -24,6 +26,18 @@ export const getServerSideProps = async (context) => {
         slug
         categorySlug
         rank
+        date
+        keywords
+      }
+    }
+  `;
+
+  const query2 = gql`
+    query ($pageSlug: String!) {
+      category(where: { slug: $pageSlug }) {
+        icon {
+          url
+        }
       }
     }
   `;
@@ -33,19 +47,24 @@ export const getServerSideProps = async (context) => {
   };
 
   const data = await graphQLClient.request(query, vars);
+  const catData = await graphQLClient.request(query2, vars);
   const problems = data.problems;
+  const catDataProbs = catData.category.icon;
 
   return {
-    props: { problems, pageSlug },
+    props: { problems, pageSlug, catDataProbs },
   };
 };
 
-const Category = ({ problems, pageSlug }) => {
+const Category = ({ problems, pageSlug, catDataProbs }) => {
+  console.log(catDataProbs.url);
   return (
     <>
       <Navbar />
       <main>
         <Heading
+          icon={catDataProbs.url}
+          alt={pageSlug}
           title={`${pageSlug.toUpperCase()} Problems`}
           paragraph={`Please choose a category down below and explore what problems and
               isuses you can solve and contribute to`}
@@ -64,6 +83,16 @@ const Category = ({ problems, pageSlug }) => {
                     <p className={styles.problemDescription}>
                       {problem.description}
                     </p>
+                    <p className={styles.problemTags}>
+                      {problem.keywords.split(', ').map((tag) => {
+                        return (
+                          <span className={styles.problemTagsTag}>#{tag}</span>
+                        );
+                      })}
+                    </p>
+                    <p>Updated: {problem.date}</p>
+                    <h3>Complexity</h3>
+                    <Rank rank={problem.rank} />
                   </a>
                 </Link>
               );

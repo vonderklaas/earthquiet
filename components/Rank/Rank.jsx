@@ -14,20 +14,24 @@ const Rank = ({ rank }) => {
   const getRankTitle = (rank) => {
     switch (rank) {
       case 'rankOne':
-        return <span>1</span>;
+        return <span></span>;
       case 'rankTwo':
-        return <span>2</span>;
+        return <span></span>;
       case 'rankThree':
-        return <span>3</span>;
+        return <span></span>;
       case 'rankFour':
-        return <span>4</span>;
+        return <span></span>;
       case 'rankFive':
-        return <span>5</span>;
+        return <span></span>;
     }
   };
 
   const neededRank = rankClasses.filter((rankClass) => rankClass == rank);
-  return <p className={`${styles[neededRank]}`}>{getRankTitle(rank)}</p>;
+  return (
+    <div className={styles.rankWrapper}>
+      <p className={`${styles[neededRank]}`}>{getRankTitle(rank)}</p>
+    </div>
+  );
 };
 
 export default Rank;

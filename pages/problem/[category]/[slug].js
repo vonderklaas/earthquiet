@@ -28,6 +28,8 @@ export const getServerSideProps = async (context) => {
         solutions
         references
         donations
+        date
+        keywords
         categorySlug
       }
     }

@@ -1,10 +1,14 @@
 .heading {
   margin-top: 150px;
 
+  &Icon {
+    width: 35px;
+    height: 35px;
+  }
+
   &Title,
   &Paragraph {
     padding: 10px;
-    border-left: 2px solid $primary-blue;
     background-color: $text-light;
   }
 

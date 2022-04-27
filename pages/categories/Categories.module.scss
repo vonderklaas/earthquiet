@@ -1,54 +1,85 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 100px;
 
   .category {
-    max-width: 47%;
+    max-width: 30%;
     border-radius: 10px;
-    margin: 5px;
-    box-shadow: 1px 1px 5px #ddd;
+    padding: 15px;
+    margin: 15px;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 10px #f3f3f3;
+
+    &:hover {
+      box-shadow: 5px 5px 30px #f3f3f3;
+      transform: translateY(-5px);
+    }
+
+    &Icon {
+      width: 35px;
+      height: 35px;
+    }
 
     &Title {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      padding: 10px 15px 10px 15px;
-      color: $primary-indigo;
+      color: $text-dark;
+      font-size: 1.5rem;
     }
 
     &Description {
       margin: 0;
-      padding: 15px;
       height: 160px;
       overflow: hidden;
     }
   }
 }
 
+// Category Problems
+
 .problems {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
   margin-top: 100px;
 
   .problem {
-    max-width: 400px;
+    max-width: 30%;
     border-radius: 10px;
-    margin: 5px;
-    box-shadow: 1px 1px 5px #ddd;
+    padding: 15px;
+    margin: 15px;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 10px #f3f3f3;
+
+    &:hover {
+      box-shadow: 5px 5px 30px #f3f3f3;
+      transform: translateY(-5px);
+    }
 
     &Title {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      padding: 10px 15px 10px 15px;
+      color: $text-dark;
+      font-size: 1.5rem;
     }
 
     &Description {
       margin: 0;
-      padding: 10px;
-      height: 220px;
+      height: 200px;
       overflow: hidden;
+    }
+
+    &Tags {
+      display: flex;
+      flex-wrap: wrap;
+      &Tag {
+        margin: 5px;
+        background-color: lightblue;
+        padding: 2.5px 7.5px;
+        border-radius: 15px;
+      }
     }
   }
 }

@@ -1,31 +1,43 @@
+.rankWrapper {
+  background-color: #ddd;
+  width: 100%;
+  line-height: 0;
+  border-radius: 20px;
+}
+
 .rankOne,
 .rankTwo,
 .rankThree,
 .rankFour,
 .rankFive {
   display: inline-block;
-  padding: 2.5px 15px;
-  border: 1px solid transparent;
+  padding: 5px;
   border-radius: 20px;
   color: $text-light;
+  margin: 0;
 }
 
 .rankOne {
   background-color: $primary-orange;
+  width: 20%;
 }
 
 .rankTwo {
   background-color: $primary-green;
+  width: 40%;
 }
 
 .rankThree {
   background-color: $primary-blue;
+  width: 60%;
 }
 
 .rankFour {
   background-color: $primary-indigo;
+  width: 80%;
 }
 
 .rankFive {
   background-color: $primary-purple;
+  width: 100%;
 }
