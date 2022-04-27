@@ -1,31 +1,25 @@
 import Link from 'next/link';
 import Footer from '../../components/Footer/Footer';
-
-import styles from './NotFound.module.scss';
+import Navbar from '../../components/Navbar/Navbar';
+import Heading from '../../components/Heading/Heading';
 
 const NotFound = () => {
   return (
     <>
+      <Navbar />
       <main>
-        <h1>404</h1>
+        <Heading title={'404'} paragraph={'Nothing here...'} />
         <div>
-          <h2>Return Home?</h2>
-          <button className={styles.NotFoundButton}>
-            <Link href='/'>
-              <a>Go Home</a>
-            </Link>
-          </button>
+          <Link href='/'>
+            <a>Go Home</a>
+          </Link>
         </div>
         <div>
-          <h2>Looking for something?</h2>
-          <button className={styles.NotFoundButton}>
-            <Link href='/contact'>
-              <a>Get Support</a>
-            </Link>
-          </button>
+          <Link href='/contact'>
+            <a>Get Support</a>
+          </Link>
         </div>
       </main>
-
       <Footer />
     </>
   );

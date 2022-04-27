@@ -7,7 +7,6 @@ import Heading from '../../components/Heading/Heading';
 import Rank from '../../components/Rank/Rank';
 
 import styles from './Categories.module.scss';
-import { useState } from 'react';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -65,9 +64,8 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
         <Heading
           icon={catDataProbs.url}
           alt={pageSlug}
-          title={`${pageSlug.toUpperCase()} Problems`}
-          paragraph={`Please choose a category down below and explore what problems and
-              isuses you can solve and contribute to`}
+          title={`${pageSlug.toUpperCase()}`}
+          paragraph={`These are ${pageSlug.toUpperCase()} problems you can explore`}
         />
         {problems.length === 0 && <div>No problems...</div>}
         <div className={styles.problems}>

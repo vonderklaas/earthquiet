@@ -3,24 +3,37 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  padding-top: 5px;
   width: 100%;
-  text-align: center;
-  color: $text-light;
-  background-color: rgb(15, 16, 18);
-
-  .navbarUkraineLink {
-    margin-left: 15px;
-    color: $primary-green;
-  }
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
   background-color: rgb(31, 41, 51);
+
+  &Banner {
+    text-align: center;
+    color: $text-light;
+    background-color: rgb(15, 16, 18);
+    padding: 5px 0;
+
+    span {
+      font-size: 18px;
+    }
+
+    .navbarUkraineLink {
+      margin-left: 15px;
+      color: $primary-purple;
+      font-size: 18px;
+    }
+  }
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12.5px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 
   &Logo {
     display: flex;
@@ -45,6 +58,7 @@
     margin: 0;
     padding: 0;
     &Link {
+      font-size: 18px;
       margin: 0 30px;
       transition: all 0.3s;
       color: $text-light;

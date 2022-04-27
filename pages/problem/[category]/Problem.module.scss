@@ -1,13 +1,17 @@
 .problem {
   &Block {
-    padding: 10px;
+    padding: 10px 0;
+    margin: 20px 0;
+
+    a {
+      color: $primary-purple;
+    }
 
     &Rank {
       display: flex;
       align-items: center;
 
       a {
-        color: $primary-orange;
         margin-left: 10px;
       }
     }

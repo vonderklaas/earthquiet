@@ -1,7 +1,10 @@
 .rankWrapper {
-  background-color: #ddd;
+  background-color: #f1f1f1;
   width: 100%;
+  max-width: 450px;
   line-height: 0;
+  margin: 0;
+  padding: 0;
   border-radius: 20px;
 }
 
@@ -13,7 +16,6 @@
   display: inline-block;
   padding: 5px;
   border-radius: 20px;
-  color: $text-light;
   margin: 0;
 }
 

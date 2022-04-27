@@ -1,6 +1,32 @@
 .homeBackground {
-  background: url('../public/backgrounds/home.jpg') no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
+}
+
+.homeCard {
+  display: block;
+}
+
+.homeInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 0;
+
+  &Column {
+    max-width: 340px;
+  }
+}
+
+.hr {
+  height: 1px;
+  margin-bottom: -1px;
+  border: none;
+  border-bottom: 1px solid #ececec;
+  padding: 0;
+}
+
+.homeLink {
+  color: $primary-purple;
 }

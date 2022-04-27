@@ -11,7 +11,6 @@ const Contribution = () => {
           title={`Contribution`}
           paragraph={`Find ways how you can contribute`}
         />
-
         <ul>
           <li>Create start-ups to fix isssues</li>
           <li>Share website or articles with friends</li>
