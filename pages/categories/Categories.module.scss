@@ -1,8 +1,9 @@
 // Categories
 .categories {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 
   .category {
     max-width: 380px;
@@ -40,9 +41,10 @@
 
 // Problems
 .problems {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 
   .problem {
     max-width: 380px;
