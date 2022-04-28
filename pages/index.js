@@ -19,7 +19,11 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <main>
+      <section className={styles.homeSection}>
+        <Heading
+          title={'EARTHQUITE'}
+          paragraph={`What motivates us to exist`}
+        />
         <div className={styles.homeDescription}>
           <p>
             We are pretty sure, that most of us, at least once explored or heard
@@ -68,7 +72,7 @@ const Home = () => {
           <p>Thank you, EARTHQUIET Team</p>
         </div>
         <Heading
-          title={'Our Pillars'}
+          title={'Pillars'}
           paragraph={`What things are important for us`}
         />
         <div className={styles.homeInfo}>
@@ -111,7 +115,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </main>
+      </section>
       <Footer />
     </>
   );

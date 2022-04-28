@@ -1,14 +1,14 @@
 .homeHeader {
   background: url('../public/backgrounds/back_2.webp') no-repeat;
-  background-position: 30% 10%;
+  background-position: 30% 20%;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 600px;
   &Heading {
     max-width: 1000px;
-    margin-top: 120px;
+    margin-top: 130px;
     &Title,
     &Paragraph {
       padding: 10px;
@@ -25,19 +25,28 @@
   }
 }
 
-.homeDescription {
-  margin-top: 50px;
-  a {
-    color: $primary-green;
-  }
-}
+.homeSection {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  padding-top: 50px;
+  min-height: 100vh;
 
-.homeInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 50px;
-  &Column {
-    max-width: 340px;
+  .homeDescription {
+    margin-top: 50px;
+    a {
+      color: $primary-green;
+    }
+  }
+
+  .homeInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    &Column {
+      max-width: 340px;
+    }
   }
 }

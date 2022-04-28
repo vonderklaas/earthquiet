@@ -4,6 +4,7 @@ import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
 import Rank from '../../../components/Rank/Rank';
+import Tag from '../../../components/Tag/Tag';
 import styles from './Problem.module.scss';
 import Link from 'next/link';
 
@@ -69,13 +70,9 @@ const Category = ({ problem }) => {
                 <div className={styles.problemBlock}>
                   <h3>Keywords</h3>
                   <div className={styles.problemTags}>
-                    {problem.keywords.split(', ').map((keyword) => {
-                      return (
-                        <span className={styles.problemTagsTag}>
-                          #{keyword}
-                        </span>
-                      );
-                    })}
+                    {problem.keywords.split(', ').map((tag) => (
+                      <Tag key={tag} tag={tag} />
+                    ))}
                   </div>
                 </div>
                 <div className={styles.problemBlock}>

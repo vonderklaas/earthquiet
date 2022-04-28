@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 450px;
   line-height: 0;
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
   border-radius: 20px;
 }
@@ -14,9 +14,11 @@
 .rankFour,
 .rankFive {
   display: inline-block;
-  padding: 5px;
   border-radius: 20px;
   margin: 0;
+  color: #fff;
+  padding: 12.5px 7.5px;
+  text-align: center;
 }
 
 .rankOne {

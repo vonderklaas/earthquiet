@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import Comments from '../../components/Comments';
 import Heading from '../../components/Heading/Heading';
 import Rank from '../../components/Rank/Rank';
+import Tag from '../../components/Tag/Tag';
 
 import styles from './Categories.module.scss';
 
@@ -78,19 +79,19 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
                 >
                   <a className={styles.problem} key={problem.slug}>
                     <h3 className={styles.problemTitle}>{problem.title}</h3>
+                    <p>
+                      <h3>Complexity</h3>
+                      <Rank rank={problem.rank} />
+                    </p>
                     <p className={styles.problemDescription}>
                       {problem.description}
                     </p>
                     <p className={styles.problemTags}>
-                      {problem.keywords.split(', ').map((tag) => {
-                        return (
-                          <span className={styles.problemTagsTag}>#{tag}</span>
-                        );
-                      })}
+                      {problem.keywords.split(', ').map((tag) => (
+                        <Tag key={tag} tag={tag} />
+                      ))}
                     </p>
-                    <p>Updated: {problem.date}</p>
-                    <h3>Complexity</h3>
-                    <Rank rank={problem.rank} />
+                    <p>Last Updated: {problem.date}</p>
                   </a>
                 </Link>
               );

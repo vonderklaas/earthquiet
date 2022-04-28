@@ -14,15 +14,15 @@ const Rank = ({ rank }) => {
   const getRankTitle = (rank) => {
     switch (rank) {
       case 'rankOne':
-        return <span></span>;
+        return <span>20%</span>;
       case 'rankTwo':
-        return <span></span>;
+        return <span>40%</span>;
       case 'rankThree':
-        return <span></span>;
+        return <span>60%</span>;
       case 'rankFour':
-        return <span></span>;
+        return <span>80%</span>;
       case 'rankFive':
-        return <span></span>;
+        return <span>100%</span>;
     }
   };
 

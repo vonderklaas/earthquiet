@@ -1,0 +1,16 @@
+.banner {
+  text-align: center;
+  color: $text-light;
+  background-color: rgb(19, 31, 42);
+  padding: 5px 0;
+
+  span {
+    font-size: 18px;
+  }
+
+  &Link {
+    margin-left: 15px;
+    color: $primary-green;
+    font-size: 18px;
+  }
+}

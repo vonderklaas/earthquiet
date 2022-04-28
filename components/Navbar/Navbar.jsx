@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 
+import Banner from '../Banner/Banner';
+
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
 
@@ -9,7 +11,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <header>
+    <header className={styles.header}>
       <Head>
         <title>EARTHQUIET</title>
         <link rel='shortcut icon' href='/favicons/favicon.ico' />
@@ -30,19 +32,10 @@ const Navbar = () => {
           rel='stylesheet'
         />
       </Head>
-      <div className={styles.navbarContainer}>
-        <div className={styles.navbarBanner}>
-          <span>We Stand with Ukraine 🇺🇦</span>
-          <a
-            className={styles.navbarUkraineLink}
-            target='_blank'
-            href='https://supportukrainenow.org/'
-          >
-            <span>https://www.supportukraine.co/</span>
-          </a>
-        </div>
+      <div className={styles.headerContainer}>
+        <Banner />
         <nav className={styles.navbar}>
-          <div className={styles.navbarWrapper}>
+          <div className={styles.navbarContainer}>
             <div className={styles.navbarLogo}>
               <Link href='/'>
                 <a>
