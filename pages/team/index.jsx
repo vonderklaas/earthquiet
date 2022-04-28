@@ -63,7 +63,7 @@ const Team = () => {
           title={`Join The Team`}
           paragraph={`Are you a developer, designer, copywriter, environmentalist or just
             an enthusiast? Please, join us and share your ambitions. You can
-            reach out us here: earthquite.com@gmail.com`}
+            reach out us here: earthquiet.com@gmail.com`}
         />
       </main>
       <Footer />

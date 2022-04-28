@@ -10,11 +10,9 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>
-            Greetings, 🌍 Savers!
-          </h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Greetings!</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
-            Welcome to EARTHQUITE. Here we collect global world problems and
+            Welcome to EARTHQUIET. Here we collect global world problems and
             issues. We pay very high attention on solutions, related to those
             problems. Our platform supports and give space to contribute and
             expand activities around issues
@@ -67,7 +65,7 @@ const Home = () => {
             new solutions to already known or still not very well-known
             problems. All in your hands. Learn, create, change.
           </p>
-          <p>Thank you, EARTHQUITE Team</p>
+          <p>Thank you, EARTHQUIET Team</p>
         </div>
         <Heading
           title={'Our Pillars'}

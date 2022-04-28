@@ -12,9 +12,9 @@ const About = () => {
           paragraph={`Discover more information about us and things we think are important`}
         />
         <div>
-          <h3>EARTHQUITE</h3>
+          <h3>EARTHQUIET</h3>
           <p>
-            EARTHQUITE is a free, web-based resource and community created
+            EARTHQUIET is a free, web-based resource and community created
             platform, which is maintained by enthusiasts only. We distill the
             facts about world problems use and its effects on our lives into
             practical guidance for interested persons or for those who are

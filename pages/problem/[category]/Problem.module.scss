@@ -16,4 +16,15 @@
       }
     }
   }
+
+  &Tags {
+    display: flex;
+    flex-wrap: wrap;
+    &Tag {
+      margin: 5px;
+      background-color: lightblue;
+      padding: 2.5px 10px;
+      border-radius: 15px;
+    }
+  }
 }

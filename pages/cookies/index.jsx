@@ -17,7 +17,7 @@ const Cookies = () => {
           <h3>Contact</h3>
           <p>
             For any additional information, please contact us at:
-            earthquite.com@gmail.com
+            earthquiet.com@gmail.com
           </p>
         </div>
       </main>

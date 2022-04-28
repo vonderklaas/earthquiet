@@ -29,7 +29,7 @@ const Docs = () => {
             to point to the problem. Show what is happening right now, what are
             bad and good things, how can we fix issues, where we can search for
             them and how can we contribute. This is our main goal and main aim
-            of EARTHQUITE platform. We just want to keep our Earth quite.
+            of EARTHQUIET platform.
           </p>
           <h3>Ranking</h3>
           <p>

@@ -12,7 +12,7 @@ const Contact = () => {
           paragraph={`You need to talk with us? Sure!`}
         />
         <div>
-          <p>earthquite.com@gmail.com</p>
+          <p>earthquiet.com@gmail.com</p>
         </div>
       </main>
       <Footer />

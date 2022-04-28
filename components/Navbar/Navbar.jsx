@@ -20,7 +20,7 @@ const Navbar = () => {
         />
         <meta
           name='description'
-          content='EARTHQUITE - is a free, web-based resource and community created
+          content='EARTHQUIET - is a free, web-based resource and community created
           platform, which is maintained by enthusiasts only.'
         />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -50,8 +50,8 @@ const Navbar = () => {
                     className={styles.navbarLogoImage}
                     src='/logo.png'
                     alt='EARTHQUIET'
-                    width='35'
-                    height='35'
+                    width='50'
+                    height='50'
                   />
                 </a>
               </Link>

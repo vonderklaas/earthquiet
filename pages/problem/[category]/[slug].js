@@ -67,6 +67,18 @@ const Category = ({ problem }) => {
                   <Rank rank={problem.rank} />
                 </div>
                 <div className={styles.problemBlock}>
+                  <h3>Keywords</h3>
+                  <div className={styles.problemTags}>
+                    {problem.keywords.split(', ').map((keyword) => {
+                      return (
+                        <span className={styles.problemTagsTag}>
+                          #{keyword}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className={styles.problemBlock}>
                   <h3>General</h3>
                   <Reactmarkdown children={problem.generalText} />
                 </div>

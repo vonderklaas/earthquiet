@@ -23,11 +23,11 @@ const Donate = () => {
             our platform leading. We don't say the price, it is up to you only.
           </p>
           <p>
-            Earthquite.com is a place to learn, explore and contribute, not a
-            place for advertising. But if we were useful to you, and you want to
+            EARTHQUIET is a place to learn, explore and contribute, not a place
+            for advertising. But if we were useful to you, and you want to
             support our project, please consider making a donation.
           </p>
-          <p>Thanks, EARTHQUITE Team</p>
+          <p>Thanks, EARTHQUIET Team</p>
         </div>
       </main>
       <Footer />

@@ -24,13 +24,13 @@ const Terms = () => {
             including, without limitation, our Privacy Policy (as defined
             below), constitute a legal agreement (collectively, this
             "Agreement") and are entered into by and between you ("you", "your",
-            "User") and EARTHQUITE ("Company", "we", "us", & "our").
+            "User") and EARTHQUIET ("Company", "we", "us", & "our").
           </p>
           <p>
             This Agreement contains very important information regarding your
             rights and obligations, as well as conditions, limitations, and
             exclusions that apply to your access and use of
-            https://www.earthquite.com/ (the "Website"). Please read the
+            https://www.earthquiet.com/ (the "Website"). Please read the
             Agreement carefully.
           </p>
           <p>BY ACCESSING AND USING THIS WEBSITE, YOU:</p>
@@ -248,7 +248,7 @@ const Terms = () => {
           <h3>Privacy Policy</h3>
           <p>
             Your provision of personal information through the Website is
-            governed by our privacy policy located at earthquite.com@gmail.com
+            governed by our privacy policy located at earthquiet.com@gmail.com
           </p>
           <h3>Governing Law</h3>
           <p>
@@ -304,7 +304,7 @@ const Terms = () => {
             <li>
               To give us notice under these Agreement, you must contact us as
               follows: (i) by personal delivery, overnight courier or registered
-              or certified mail to EARTHQUITE. We may update the address for
+              or certified mail to EARTHQUIET. We may update the address for
               notices to us by posting a notice on this Website. Notices
               provided by personal delivery will be effective immediately once
               personally received by an authorized representative of Company.
@@ -318,12 +318,12 @@ const Terms = () => {
             or defamatory conduct, you must report it to the Company. All
             reports of misuse and other feedback, comments, requests for
             technical support, and other communications relating to the Website
-            should be directed to earthquite.com@gmail.com.
+            should be directed to earthquiet.com@gmail.com.
           </p>
           <h3>Contact</h3>
           <p>
             For any additional information, please contact us at:
-            earthquite.com@gmail.com
+            earthquiet.com@gmail.com
           </p>
         </div>
       </main>
