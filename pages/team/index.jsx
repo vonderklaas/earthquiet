@@ -11,7 +11,7 @@ const Team = () => {
     <>
       <Navbar />
       <main>
-        <Heading title={`Team`} paragraph={`Meet our team`} />
+        <Heading title={`Team`} />
         <ul className={styles.team}>
           <li className={styles.teamMember}>
             <img
@@ -19,7 +19,7 @@ const Team = () => {
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
             />
-            <h3>Nick - Software Developer</h3>
+            <h3>Founder, Developer</h3>
             <div className={styles.teamMemberLinks}>
               <a href='https://twitter.com/garbalau_twitt'>
                 <FaTwitter />
@@ -42,7 +42,7 @@ const Team = () => {
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'
             />
-            <h3>Anastasia - Marketing Specialist, CMS Manager</h3>
+            <h3>Co-founder, Marketing Specialist</h3>
             <div className={styles.teamMemberLinks}>
               <a href='https://twitter.com/bakedwithlovemd'>
                 <FaTwitter />
@@ -60,8 +60,8 @@ const Team = () => {
           </li>
         </ul>
         <Heading
-          title={`Join The Team`}
-          paragraph={`Are you a developer, designer, copywriter, environmentalist or just
+          title={`Join Us`}
+          paragraph={`Do you want to be a part of a team? Are you a developer, designer, copywriter, environmentalist or just
             an enthusiast? Please, join us and share your ambitions. You can
             reach out us here: earthquiet.com@gmail.com`}
         />

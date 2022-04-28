@@ -41,8 +41,8 @@ const Categories = ({ categories }) => {
       <Navbar />
       <main>
         <Heading
-          title={'Explore by category'}
-          paragraph={`You can choose the category you are interested in and study what world problems belong to it`}
+          title={'Categories'}
+          paragraph={`Choose a category that is close and interesting to you and study what world problems belong to this category.`}
         />
         <div className={styles.categories}>
           {categories &&

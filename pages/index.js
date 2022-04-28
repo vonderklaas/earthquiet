@@ -10,108 +10,90 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Greetings!</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Nice to see you!</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
-            Welcome to EARTHQUIET. Here we collect global world problems and
-            issues. We pay very high attention on solutions, related to those
-            problems. Our platform supports and give space to contribute and
-            expand activities around issues
+            EARTHQUIET - is a platform that collects and organizes the world's
+            problems, providing a convenient and structured approach to the
+            study, and most importantly, to the solution of these problems. Our
+            platform encourages interest in solving these problems, and offers a
+            convenient place to express your ideas and find like-minded people.
           </p>
         </div>
       </div>
       <section className={styles.homeSection}>
-        <Heading
-          title={'EARTHQUITE'}
-          paragraph={`What motivates us to exist`}
-        />
+        <Heading title={'Motivation'} />
         <div className={styles.homeDescription}>
           <p>
-            We are pretty sure, that most of us, at least once explored or heard
-            about world problems. Someone probably heard of Global Warming or
-            lack of drinking water in some countries. If so, great, but there is
-            much more going on. First of all, there are a lot of resources out
-            there, all containing world problems, different ratings and tops.
+            Most likely every person on this planet has faced different
+            problems, sometimes these are the same problems that we all face,
+            and sometimes they are completely opposite. On one planet, we water
+            our gardens and flush dozens of liters of water in our souls, and
+            right there we suffer from water scarcity and die of hunger.
           </p>
           <p>
-            Of course, such information is extremely useful, and allows any user
-            on the Internet to join these problems and delve into their origins.
+            In a world with limited resources, globalization without new
+            technologies is doomed. Technological innovations never came to
+            mankind on their own, over time, something needs to be done for
+            this. Smartphones that distract us from reality prevent us from
+            noticing the fact that this very reality remains surprisingly
+            old-fashioned and imperfect. Yes, progress cannot be slowed down or
+            even stopped, it exists outside of time, but it can be hurried. In
+            our world there are a lot of problems that need a solution, active
+            development and popularization.
           </p>
           <p>
-            However, there are also many pitfalls. Internet resources like the
-            UN website or, for example, BBC, often publish some kind of news and
-            even tops. However, moving from source to source, sometimes the
-            integrity of the problems is lost. Each service makes its own
-            mini-review, uses its own criteria and its own coordinates. There
-            are simply hundreds of such sites and amateur works.
+            Most businesses are now busy making money. Money that may not be
+            useful just because the world in which it can be used will simply
+            disappear. We must pay attention to problems, we must earn money by
+            solving them, not by making them worse. Most often, new technologies
+            and solutions are born in the depths of start-ups, fanatic
+            scientists, a minority.
           </p>
           <p>
-            At some point, it is very easy for everyone to get confused in this,
-            especially considering the variety of wordings and directions of
-            certain services. Someone covers only some categories, while others
-            ignore. Some problems are put above others, and those that need
-            attention are hidden at the bottom of their tops.
+            A startup is the largest group of people you can infect with your
+            idea of creating a new, better future. Main strength new company -
+            in the ability to think in a new way: small size firm allows
+            employees to think freely, and this is an advantage is even more
+            important than flexibility and adaptability.
           </p>
           <p>
-            We decided to create a platform that will cover the entire spectrum
-            of world problems and offer a convenient format for studying them,
-            and most importantly, solutions. We are not utopians, but we believe
-            that all world problems are not only possible, but must be solved.
+            We would like you to study the information that we have collected
+            and think about what you could do to make this world a little
+            better. Each person can take a step towards solving a problem. You
+            don't have to be a scientist or a millionaire to do this. You need
+            vision, perseverance and a little luck. It is available to everyone.
           </p>
           <p>
-            Each person can take a step towards solving a problem. You don't
-            have to be a scientist or a millionaire to do this. This requires a
-            small group of like-minded people, a vision of the problem and its
-            solutions, perseverance and a little luck. It is available to
-            everyone.
-          </p>
-          <p>
-            Communicate, find people who understand you, unite and come up with
-            new solutions to already known or still not very well-known
-            problems. All in your hands. Learn, create, change.
+            We created this platform to inspire and support you. Find things
+            that interest you, communicate and find like-minded people. The
+            future is in your hands. Learn, create, change.
           </p>
           <p>Thank you, EARTHQUIET Team</p>
         </div>
-        <Heading
-          title={'Pillars'}
-          paragraph={`What things are important for us`}
-        />
+        <Heading title={'What we are'} />
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoColumn}>
-            <h3>Verified information</h3>
+            <h3>Information</h3>
             <p>
               We only use verified information from trusted sources. We
               carefully work with the data and at the end we come to simple
               explanations and solutions available to everyone.
             </p>
-            <p>
-              We leave links to studies and sources so that anyone can check the
-              information if they wish or continue studying outside of our
-              platform.
-            </p>
           </div>
           <div className={styles.homeInfoColumn}>
             <h3>Contribution</h3>
             <p>
-              We don't just focus on content. We want to inspire and push to
-              create solutions and improve the world. Knowledge is power. And
-              this power must be used.
-            </p>
-            <p>
-              We believe that only small groups of stubborn and creative people
-              will be able to move the world's mountain of problems off the
-              ground. It will crack, we're sure of it
+              Notice, that EARTHQUIET don't just focus on content. We want to
+              inspire and push people to create. Knowledge is power and this
+              power must be used.
             </p>
           </div>
           <div className={styles.homeInfoColumn}>
-            <h3>Open-source and free</h3>
+            <h3>Open and free</h3>
             <p>
-              We are a free platform without any privileged paid options and any
-              advertising. On our site you will not find ads, banners and
-              hundreds of modal windows.
-            </p>
-            <p>
-              We exist by our own independent will, as well as support from the
-              same enthusiasts as we are
+              EARTHQUIET is a free platform without any privileged paid options
+              and any advertising. We exist by our own independent will and
+              support from other enthusiasts
             </p>
           </div>
         </div>

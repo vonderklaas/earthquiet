@@ -58,7 +58,7 @@ const Category = ({ problem }) => {
             <div key={problem.slug}>
               <Heading title={problem.title} paragraph={problem.description} />
               <div className={styles.problem}>
-                <div className={styles.problemBlock}>
+                {/* <div className={styles.problemBlock}>
                   <div className={styles.problemBlockRank}>
                     <h3>Complexity</h3>
                     <Link href='/docs'>
@@ -66,7 +66,7 @@ const Category = ({ problem }) => {
                     </Link>
                   </div>
                   <Rank rank={problem.rank} />
-                </div>
+                </div> */}
                 <div className={styles.problemBlock}>
                   <h3>Keywords</h3>
                   <div className={styles.problemTags}>

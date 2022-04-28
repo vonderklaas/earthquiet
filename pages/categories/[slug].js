@@ -25,7 +25,6 @@ export const getServerSideProps = async (context) => {
         description
         slug
         categorySlug
-        rank
         date
         keywords
       }
@@ -57,7 +56,6 @@ export const getServerSideProps = async (context) => {
 };
 
 const Category = ({ problems, pageSlug, catDataProbs }) => {
-  console.log(catDataProbs.url);
   return (
     <>
       <Navbar />
@@ -66,7 +64,7 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
           icon={catDataProbs.url}
           alt={pageSlug}
           title={`${pageSlug.toUpperCase()}`}
-          paragraph={`Here are the problems of category ${pageSlug.toUpperCase()}. We constantly work on our site and if a problem that you are not interested in is not yet presented, be sure that it will appear soon.`}
+          paragraph={`Keep in mind that we are constantly working on updating content. If the problem you are interested in is not yet on this list, be aware that it will appear as soon as possible. However, you can speed up this process if you contact us personally.`}
         />
         {problems.length === 0 && <div>No problems...</div>}
         <div className={styles.problems}>
@@ -79,10 +77,6 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
                 >
                   <a className={styles.problem} key={problem.slug}>
                     <h3 className={styles.problemTitle}>{problem.title}</h3>
-                    <p>
-                      <h3>Complexity</h3>
-                      <Rank rank={problem.rank} />
-                    </p>
                     <p className={styles.problemDescription}>
                       {problem.description}
                     </p>
@@ -97,7 +91,10 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
               );
             })}
         </div>
-        <Heading title={'Comments'} />
+        <Heading
+          title={'Communicate'}
+          paragraph={`Maybe someone has already created a repository for this?`}
+        />
         <div className={styles.comments}>
           <Comments categorySlug={pageSlug} />
         </div>

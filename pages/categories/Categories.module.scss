@@ -1,27 +1,26 @@
-// Categories
 .categories {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   .category {
-    max-width: 380px;
+    max-width: 45%;
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
     transition: all 0.3s;
-    border: 1px solid #f7f7f7;
-    box-shadow: 5px 5px 15px #f7f7f7;
+    border: 2px solid #f7f7f7;
+    box-shadow: 5px 5px 10px #f7f7f7;
 
     &:hover {
-      box-shadow: 5px 5px 15px #f1f1f1;
+      box-shadow: 10px 5px 20px #f1f1f1;
       transform: translateY(-5px);
     }
 
     &Icon {
-      width: 60px;
-      height: 60px;
+      width: 65px;
+      height: 65px;
     }
 
     &Title {
@@ -33,30 +32,27 @@
     &Description {
       margin: 0;
       height: 100%;
-      max-height: 200px;
       overflow: hidden;
     }
   }
 }
 
-// Problems
 .problems {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   .problem {
-    max-width: 380px;
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
     transition: all 0.3s;
-    border: 1px solid #f7f7f7;
-    box-shadow: 5px 5px 15px #f7f7f7;
+    border: 2px solid #f7f7f7;
+    box-shadow: 5px 5px 10px #f7f7f7;
+    height: 100%;
 
     &:hover {
-      box-shadow: 5px 5px 30px #f3f3f3;
+      box-shadow: 10px 5px 20px #f1f1f1;
       transform: translateY(-5px);
     }
 

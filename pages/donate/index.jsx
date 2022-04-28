@@ -9,18 +9,20 @@ const Donate = () => {
       <main>
         <Heading
           title={`Donate`}
-          paragraph={`Your donation will go on funding for platform only`}
+          paragraph={`Your donation will help our platform grow and remain adds-free`}
         />
         <div>
-          <h3>Why we need your support</h3>
+          <h3>Why we need you</h3>
           <p>
-            We want to mention that we are a non-profit platform that depends
-            only on donations and enthusiast contribution. We need that to stay
-            online and constantly evolve. Of course we understand that 99%
-            people who come to our platform just want to get information. This
-            is the internet, it simply works like that. But if everyone who
-            reads us and want to contribute gave just a little, we could keep
-            our platform leading. We don't say the price, it is up to you only.
+            As you have already noticed, we dont run any adds. We are an
+            organization that exists only through the work of enthusiasts and
+            donations from outside. Of course, like many others we want to stay
+            online and constantly evolve. We understand that 99% people who come
+            to our platform just want to get information. This is the how the
+            internet works, and we understand it. If you feel like you want to
+            help and support us, please fell free to contribute as much as you
+            want. Thanks to dontations we could keep our platform alive. We dont
+            say the price, it is up to you only.
           </p>
           <p>
             EARTHQUIET is a place to learn, explore and contribute, not a place
