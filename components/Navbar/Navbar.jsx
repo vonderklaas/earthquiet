@@ -14,7 +14,9 @@ const Navbar = () => {
     <header className={styles.header}>
       <Head>
         <title>EARTHQUIET</title>
-        <link rel='shortcut icon' href='/favicons/favicon.ico' />
+        <meta name='theme-color' content='#ffffff' />
+        <meta name='application-name' content='EARTHQUIET' />
+        <meta name='apple-mobile-web-app-title' content='EARTHQUIET' />
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
           name='keywords'
@@ -25,7 +27,12 @@ const Navbar = () => {
           content='EARTHQUIET - is a free, web-based resource and community created
           platform, which is maintained by enthusiasts only.'
         />
-        <link rel='apple-touch-icon' href='../../public/favicons/apple.png' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='../../public/favicons/apple-touch-icon.png'
+        />
+        <link rel='shortcut icon' href='/favicons/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
