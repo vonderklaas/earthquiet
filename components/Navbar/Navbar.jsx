@@ -25,6 +25,7 @@ const Navbar = () => {
           content='EARTHQUIET - is a free, web-based resource and community created
           platform, which is maintained by enthusiasts only.'
         />
+        <link rel='apple-touch-icon' href='../../public/favicons/apple.png' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link

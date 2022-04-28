@@ -13,7 +13,7 @@
     &Paragraph {
       padding: 10px;
       color: $text-dark;
-      background-color: rgba($text-light, 0.8);
+      background-color: rgba($text-light, 0.9);
     }
     &Title {
       display: inline;
@@ -47,6 +47,29 @@
     margin-top: 50px;
     &Column {
       max-width: 340px;
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .homeHeader {
+    height: 100vh;
+    background-position: 50% 50%;
+    &Heading {
+      &Title {
+        font-size: 2rem;
+      }
+      &Paragraph {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .homeSection {
+    .homeInfo {
+      flex-direction: column;
+      &Column {
+        max-width: 340px;
+      }
     }
   }
 }

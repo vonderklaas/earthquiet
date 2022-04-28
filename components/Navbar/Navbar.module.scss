@@ -41,12 +41,24 @@
     margin: 0;
     padding: 0;
     &Link {
-      font-size: 18px;
+      font-size: 1.1rem;
       margin: 0 30px;
       transition: all 0.3s;
       color: $text-light;
       &:hover {
         color: $primary-blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .navbar {
+    flex-direction: column;
+    &Menu {
+      &Link {
+        font-size: 1rem;
+        margin: 0 10px;
       }
     }
   }

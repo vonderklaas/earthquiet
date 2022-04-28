@@ -80,3 +80,15 @@
 .comments {
   margin-top: 50px;
 }
+
+@media screen and (max-width: 525px) {
+  .categories,
+  .problems {
+    flex-direction: column;
+  }
+
+  .category,
+  .problem {
+    max-width: 100% !important;
+  }
+}
