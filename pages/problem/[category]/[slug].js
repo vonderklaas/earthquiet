@@ -3,10 +3,8 @@ import Reactmarkdown from 'react-markdown';
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
-import Rank from '../../../components/Rank/Rank';
 import Tag from '../../../components/Tag/Tag';
 import styles from './Problem.module.scss';
-import Link from 'next/link';
 
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -23,12 +21,10 @@ export const getServerSideProps = async (context) => {
         title
         description
         slug
-        rank
         generalText
         consequences
         solutions
         references
-        donations
         date
         keywords
         categorySlug
@@ -58,15 +54,6 @@ const Category = ({ problem }) => {
             <div key={problem.slug}>
               <Heading title={problem.title} paragraph={problem.description} />
               <div className={styles.problem}>
-                {/* <div className={styles.problemBlock}>
-                  <div className={styles.problemBlockRank}>
-                    <h3>Complexity</h3>
-                    <Link href='/docs'>
-                      <a>(How we rank?)</a>
-                    </Link>
-                  </div>
-                  <Rank rank={problem.rank} />
-                </div> */}
                 <div className={styles.problemBlock}>
                   <h3>Keywords</h3>
                   <div className={styles.problemTags}>
@@ -90,10 +77,6 @@ const Category = ({ problem }) => {
                 <div className={styles.problemBlock}>
                   <h3>References</h3>
                   <Reactmarkdown children={problem.references} />
-                </div>
-                <div className={styles.problemBlock}>
-                  <h3>Donation Campaigns</h3>
-                  <Reactmarkdown children={problem.donations} />
                 </div>
               </div>
             </div>

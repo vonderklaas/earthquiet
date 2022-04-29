@@ -4,7 +4,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Comments from '../../components/Comments';
 import Heading from '../../components/Heading/Heading';
-import Rank from '../../components/Rank/Rank';
 import Tag from '../../components/Tag/Tag';
 
 import styles from './Categories.module.scss';

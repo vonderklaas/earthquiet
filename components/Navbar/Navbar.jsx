@@ -20,24 +20,56 @@ const Navbar = () => {
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
           name='keywords'
-          content='EARTH, Earth, Problems, World Problems'
+          content='EARTH, Global Problems, World, Issues, Global Warming, Climate Change'
         />
         <meta
           name='description'
           content='EARTHQUIET - is a free, web-based resource and community created
           platform, which is maintained by enthusiasts only.'
         />
+        <meta name='msapplication-TileColor' content='#ffffff' />
+        <link rel='shortcut icon' href='../../public/favicons/favicon.ico' />
+
         <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='../../public/favicons/apple-touch-icon.png'
+          rel='mask-icon'
+          href='../../public/favicons/apple-touch-icon-152x152.png'
+          color='#ffffff'
         />
-        <link rel='shortcut icon' href='/favicons/favicon.ico' />
+
+        <link
+          rel='apple-touch-icon-precomposed'
+          sizes='152x152'
+          href='../../public/favicons/apple-touch-icon-152x152.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          href='../../public/favicons/favicon-32x32.png'
+          sizes='32x32'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          href='../../public/favicons/favicon-16x16.png'
+          sizes='16x16'
+        />
+        <meta name='application-name' content='EARTHQUIET' />
+        <meta name='msapplication-TileColor' content='#FFFFFF' />
+        <meta
+          name='msapplication-square150x150logo'
+          content='../../public/favicons/mstile-150x150.png'
+        />
+
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='true'
+        />
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap'
           rel='stylesheet'
+          crossOrigin='true'
         />
       </Head>
       <div className={styles.headerContainer}>
