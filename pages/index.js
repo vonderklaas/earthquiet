@@ -10,13 +10,12 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Greetings!</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Hello Earthers!</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects and organizes the world's
-            problems, providing a convenient and structured approach to the
-            study, and most importantly, to the solution of these problems. Our
-            platform encourages interest in solving these problems, and offers a
-            convenient place to express your ideas and find like-minded people.
+            problems. Our platform encourages interest in solving these problems
+            and offers a convenient place to express your ideas and be creative
+            in the most amazing way.
           </p>
         </div>
       </div>
@@ -24,44 +23,38 @@ const Home = () => {
         <Heading title={'Motivation'} />
         <div className={styles.homeDescription}>
           <p>
-            Most likely every person on this planet has faced different
-            problems, sometimes these are the same problems that we all face,
-            and sometimes they are completely opposite. On one planet, we water
-            our gardens and flush dozens of liters of water in our souls, and
-            right there we suffer from water scarcity and die of hunger.
-          </p>
-          <p>
             In a world with limited resources, globalization without new
-            technologies is doomed. Technological innovations never came to
-            mankind on their own, over time, something needs to be done for
-            this. Smartphones that distract us from reality prevent us from
-            noticing the fact that this very reality remains surprisingly
-            old-fashioned and imperfect. Yes, progress cannot be slowed down or
-            even stopped, it exists outside of time, but it can be hurried. In
-            our world there are a lot of problems that need a solution, active
-            development and popularization.
+            technologies are doomed. Technological innovations never came to
+            mankind on their own, over time. We need all can become a part of
+            this innovation processes. Take a look on us, smartphone distracts
+            us from reality, we live in. It prevents us from noticing the fact
+            that this reality remains surprisingly old-fashioned and imperfect.
+            In our world there are a lot of problems that need solutions, active
+            development and popularization. Yes, progress cannot be slowed down
+            or even stopped, it exists outside of time, but it can be hurried.
           </p>
           <p>
-            Most businesses are now busy making money. Money that may not be
-            useful just because the world in which it can be used will simply
-            disappear. We must pay attention to problems, we must earn money by
-            solving them, not by making them worse. Most often, new technologies
-            and solutions are born in the depths of start-ups, fanatic
+            Most businesses are now busy making money. Money that can be
+            completely useless, because the world we know may disappear. We face
+            a climate crisis, overpopulation, hunger, diseases, and they are
+            slowly destroying us. We must pay attention to problem which
+            surround us, and try to resolve them. Most often, new technologies
+            and solutions are born in the depths of start-ups, by fanatic
             scientists, a minority.
           </p>
           <p>
             A startup is the largest group of people you can infect with your
             idea of creating a new, better future. Main strength new company -
             in the ability to think in a new way: small size firm allows
-            employees to think freely, and this is an advantage is even more
-            important than flexibility and adaptability.
+            employees to think freely, and this is an advantage which is even
+            more important than flexibility and adaptability.
           </p>
           <p>
-            We would like you to study the information that we have collected
-            and think about what you could do to make this world a little
-            better. Each person can take a step towards solving a problem. You
-            don't have to be a scientist or a millionaire to do this. You need
-            vision, perseverance and a little luck. It is available to everyone.
+            A startup is the largest group of people you can infect with your
+            idea of creating a new, better future. Main strength new company -
+            in the ability to think in a new way: small size firm allows
+            employees to think freely, and this is an advantage which is even
+            more important than flexibility and adaptability.
           </p>
           <p>
             We created this platform to inspire and support you. Find things
