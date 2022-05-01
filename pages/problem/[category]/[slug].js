@@ -6,6 +6,10 @@ import Heading from '../../../components/Heading/Heading';
 import Tag from '../../../components/Tag/Tag';
 import styles from './Problem.module.scss';
 
+import Comments from '../../../components/Comments';
+
+import { useRouter } from 'next/router';
+
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
@@ -44,6 +48,8 @@ export const getServerSideProps = async (context) => {
 };
 
 const Category = ({ problem }) => {
+  const router = useRouter();
+  const commentsUrl = `${router.query.category}__${router.query.slug}`;
   return (
     <>
       <Navbar />
@@ -77,6 +83,13 @@ const Category = ({ problem }) => {
             </div>
           );
         })}
+        <Heading
+          title={'Do the talking'}
+          paragraph={`Maybe someone has already created a repo for this?`}
+        />
+        <div className={styles.comments}>
+          <Comments commentsUrl={commentsUrl} />
+        </div>
       </main>
       <Footer />
     </>

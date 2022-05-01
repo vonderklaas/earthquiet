@@ -10,7 +10,7 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Hello Earthers!</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Hello Earthlings!</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects and organizes the world's
             problems. Our platform encourages interest in solving these problems

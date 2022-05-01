@@ -2,7 +2,6 @@ import { gql, GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import Comments from '../../components/Comments';
 import Heading from '../../components/Heading/Heading';
 import Tag from '../../components/Tag/Tag';
 
@@ -89,13 +88,6 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
                 </Link>
               );
             })}
-        </div>
-        <Heading
-          title={'Communicate'}
-          paragraph={`Maybe someone has already created a repository for this?`}
-        />
-        <div className={styles.comments}>
-          <Comments categorySlug={pageSlug} />
         </div>
       </main>
       <Footer />
