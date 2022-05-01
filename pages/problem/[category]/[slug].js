@@ -24,7 +24,6 @@ export const getServerSideProps = async (context) => {
         generalText
         consequences
         solutions
-        references
         date
         keywords
         categorySlug
@@ -73,10 +72,6 @@ const Category = ({ problem }) => {
                 <div className={styles.problemBlock}>
                   <h3>Solutions</h3>
                   <Reactmarkdown children={problem.solutions} />
-                </div>
-                <div className={styles.problemBlock}>
-                  <h3>References</h3>
-                  <Reactmarkdown children={problem.references} />
                 </div>
               </div>
             </div>
