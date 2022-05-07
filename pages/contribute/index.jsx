@@ -9,14 +9,20 @@ const Contribution = () => {
       <main>
         <Heading
           title={`Contribution`}
-          paragraph={`Find ways how you can contribute`}
+          paragraph={`We provide consequences and possible solutions to problems we write about, find ways how you can contribute`}
         />
-        <ul>
-          <li>Create start-ups to fix isssues</li>
-          <li>Share website or articles with friends</li>
-          <li>Build buzz in social media for your audience</li>
-          <li>Participate in donation campaigns</li>
-        </ul>
+        <div>
+          <h3>We encourage you to:</h3>
+          <ul>
+            <li>Create projects which will grow into start-ups</li>
+            <li>Share our articles and website with friends and family</li>
+            <li>
+              Build buzz on social media, share your thoughts with audience
+            </li>
+            <li>Find and participate in donation campaigns</li>
+            <li>Join our team and be a part of community</li>
+          </ul>
+        </div>
       </main>
       <Footer />
     </>
