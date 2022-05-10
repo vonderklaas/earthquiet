@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaInstagram } from 'react-icons/fa';
 
 import styles from './Footer.module.scss';
 

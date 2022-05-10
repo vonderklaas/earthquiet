@@ -10,6 +10,10 @@ import Comments from '../../../components/Comments';
 
 import { useRouter } from 'next/router';
 
+import { useEffect, useRef, useState } from 'react';
+
+import { FaClock } from 'react-icons/fa';
+
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
@@ -48,8 +52,24 @@ export const getServerSideProps = async (context) => {
 };
 
 const Category = ({ problem }) => {
+  const [timeToRead, setTimeToRead] = useState(0);
   const router = useRouter();
   const commentsUrl = `${router.query.category}__${router.query.slug}`;
+
+  const problemRef = useRef();
+
+  const readingTime = () => {
+    const wordsPerMinute = 265;
+    const issueText = problemRef.current.innerText;
+    const words = issueText.trim().split(/\s+/).length;
+    const time = Math.ceil(words / wordsPerMinute);
+    return time;
+  };
+
+  useEffect(() => {
+    setTimeToRead(readingTime());
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -57,8 +77,12 @@ const Category = ({ problem }) => {
         {problem.map((problem) => {
           return (
             <div key={problem.slug}>
+              <div className={styles.timeToRead}>
+                <FaClock />
+                <span>{timeToRead} min read</span>
+              </div>
               <Heading title={problem.title} paragraph={problem.description} />
-              <div className={styles.problem}>
+              <div ref={problemRef} className={styles.problem}>
                 <div className={styles.problemBlock}>
                   <h3>Keywords</h3>
                   <div className={styles.problemTags}>

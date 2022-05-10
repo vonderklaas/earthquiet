@@ -74,6 +74,7 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
                   href={`/problem/${problem.categorySlug}/${problem.slug}`}
                 >
                   <a className={styles.problem} key={problem.slug}>
+                    <p className={styles.problemDescription}>{problem.date}</p>
                     <h3 className={styles.problemTitle}>{problem.title}</h3>
                     <p className={styles.problemDescription}>
                       {problem.description}
@@ -83,7 +84,6 @@ const Category = ({ problems, pageSlug, catDataProbs }) => {
                         <Tag key={tag} tag={tag} />
                       ))}
                     </p>
-                    <p>Last Updated: {problem.date}</p>
                   </a>
                 </Link>
               );
