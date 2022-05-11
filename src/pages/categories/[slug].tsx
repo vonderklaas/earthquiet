@@ -7,7 +7,9 @@ import Tag from '../../components/Tag/Tag';
 
 import styles from './Categories.module.scss';
 
-export const getServerSideProps = async (context) => {
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {

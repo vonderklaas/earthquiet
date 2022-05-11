@@ -6,7 +6,9 @@ import Heading from '../../components/Heading/Heading';
 
 import styles from './Categories.module.scss';
 
-export const getStaticProps = async (context) => {
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async (context) => {
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {
     headers: {

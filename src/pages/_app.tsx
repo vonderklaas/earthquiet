@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import '../styles/Globals.scss';
 
+import { AppProps } from 'next/app';
+
 import NextNProgress from 'nextjs-progressbar';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>

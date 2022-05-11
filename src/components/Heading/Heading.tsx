@@ -2,7 +2,14 @@ import React from 'react';
 
 import styles from './Heading.module.scss';
 
-const Heading = ({ icon, alt, title, paragraph }) => {
+export type HeadingProps = {
+  icon?: string;
+  alt?: string;
+  title?: string;
+  paragraph?: string;
+};
+
+const Heading = ({ icon, alt, title, paragraph }: HeadingProps) => {
   return (
     <div className={styles.heading}>
       <div className={styles.headingWrapper}>
