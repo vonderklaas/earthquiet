@@ -8,6 +8,8 @@ import styles from './Categories.module.scss';
 
 import { GetStaticProps } from 'next';
 
+import { Categories, Category } from '../../types/Categories';
+
 export const getStaticProps: GetStaticProps = async (context) => {
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {
@@ -34,28 +36,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: { categories },
-  };
-};
-
-export type Categories = {
-  categories: [
-    {
-      title: string;
-      slug: string;
-      description: string;
-      icon: {
-        url: string;
-      };
-    }
-  ];
-};
-
-export type Category = {
-  title: string;
-  slug: string;
-  description: string;
-  icon: {
-    url: string;
   };
 };
 

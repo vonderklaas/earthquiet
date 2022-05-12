@@ -9,6 +9,8 @@ import styles from './Categories.module.scss';
 
 import { GetServerSideProps } from 'next';
 
+import { IssueShort } from '../../types/Issues';
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
@@ -66,15 +68,6 @@ export type Issues = {
       keywords: string;
     }
   ];
-};
-
-export type IssueShort = {
-  title: string;
-  description: string;
-  slug: string;
-  categorySlug: string;
-  date: string;
-  keywords: string;
 };
 
 const Category = ({ issues, pageSlug, categoryIcon }) => {

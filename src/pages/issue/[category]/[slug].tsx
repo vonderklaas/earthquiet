@@ -14,6 +14,8 @@ import { useEffect, useRef, useState } from 'react';
 
 import { FaClock } from 'react-icons/fa';
 
+import { IssueFull } from '../../../types/Issues';
+
 export const getServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
@@ -49,18 +51,6 @@ export const getServerSideProps = async (context) => {
   return {
     props: { issue },
   };
-};
-
-export type IssueFull = {
-  title: string;
-  description: string;
-  slug: string;
-  generalText: string;
-  consequences: string;
-  solutions: string;
-  date: string;
-  keywords: string;
-  categorySlug: string;
 };
 
 const Issue = ({ issue }) => {
