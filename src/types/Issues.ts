@@ -18,3 +18,9 @@ export type IssueFull = {
   keywords: string;
   categorySlug: string;
 };
+
+export type IssueId = {
+  categoryParent: {
+    id: string;
+  };
+};

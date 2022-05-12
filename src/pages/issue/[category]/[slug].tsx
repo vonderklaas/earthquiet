@@ -81,28 +81,28 @@ const Issue = ({ issue }) => {
             <div key={issue.slug}>
               <div className={styles.timeToRead}>
                 <FaClock />
-                <span>{timeToRead} min read</span>
+                <span>
+                  Time to read: {timeToRead}{' '}
+                  {timeToRead > 2 ? 'minutes' : 'minute'}
+                </span>
               </div>
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
-                <div className={styles.issueBlock}>
-                  <h3>Keywords</h3>
-                  <div className={styles.issueTags}>
-                    {issue.keywords.split(', ').map((tag) => (
-                      <Tag key={tag} tag={tag} />
-                    ))}
-                  </div>
+                <div className={styles.issueTags}>
+                  {issue.keywords.split(', ').map((tag) => (
+                    <Tag key={tag} tag={tag} />
+                  ))}
                 </div>
+                <div className={styles.separator}> </div>
                 <div className={styles.issueBlock}>
-                  <h3>General</h3>
                   <Reactmarkdown children={issue.generalText} />
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>Consequences</h3>
+                  <h3>What are the consequences</h3>
                   <Reactmarkdown children={issue.consequences} />
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>Solutions</h3>
+                  <h3>How can you contribute?</h3>
                   <Reactmarkdown children={issue.solutions} />
                 </div>
               </div>
@@ -110,7 +110,7 @@ const Issue = ({ issue }) => {
           );
         })}
         <Heading
-          title={'Do the talking'}
+          title={'Communicate'}
           paragraph={`Maybe someone has already created a repo for this?`}
         />
         <div className={styles.comments}>

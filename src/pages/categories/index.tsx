@@ -9,8 +9,9 @@ import styles from './Categories.module.scss';
 import { GetStaticProps } from 'next';
 
 import { Categories, Category } from '../../types/Categories';
+import { IssueId } from '../../types/Issues';
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const url = process.env.API_CONTENT_URL;
   const graphQLClient = new GraphQLClient(url, {
     headers: {
@@ -18,11 +19,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   });
 
-  const query = gql`
-    query Categories {
+  const categoriesQuery = gql`
+    query {
       categories {
         title
         slug
+        id
         description
         icon {
           url
@@ -31,8 +33,30 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
   `;
 
-  const data = await graphQLClient.request(query);
-  const categories = data.categories;
+  const issuesQuery = gql`
+    query {
+      issues {
+        categoryParent {
+          id
+        }
+      }
+    }
+  `;
+
+  const categoriesData = await graphQLClient.request(categoriesQuery);
+  const issuesData = await graphQLClient.request(issuesQuery);
+  const categories = categoriesData.categories;
+  const issuesIds = issuesData.issues;
+
+  // Adding property with amount of issues under one category
+  categories.map((category: Category) => {
+    category.issues = 0;
+    issuesIds.map((issuesIdsElement: IssueId) => {
+      if (issuesIdsElement.categoryParent.id === category.id) {
+        category.issues++;
+      }
+    });
+  });
 
   return {
     props: { categories },
@@ -62,6 +86,7 @@ const Categories = ({ categories }: Categories) => {
                   <p className={styles.categoryDescription}>
                     {category.description}
                   </p>
+                  <p>Issues: {category.issues}</p>
                 </a>
               </Link>
             );

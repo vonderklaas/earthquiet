@@ -56,8 +56,8 @@ const EarthquietApp = ({ Component, pageProps }: AppProps) => {
       <NextNProgress
         color='rgb(43, 153, 122)'
         startPosition={0.3}
-        stopDelayMs={0}
-        height={4}
+        stopDelayMs={200}
+        height={5}
         showOnShallow={true}
       />
       <Component {...pageProps} />

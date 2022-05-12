@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   });
 
-  const query = gql`
+  const issuesQuery = gql`
     query ($pageSlug: String!) {
       issues(where: { categorySlug: $pageSlug }) {
         title
@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
   `;
 
-  const query2 = gql`
+  const categoriesQuery = gql`
     query ($pageSlug: String!) {
       category(where: { slug: $pageSlug }) {
         icon {
@@ -47,10 +47,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     pageSlug,
   };
 
-  const issuesData = await graphQLClient.request(query, vars);
-  const categoryData = await graphQLClient.request(query2, vars);
+  const issuesData = await graphQLClient.request(issuesQuery, vars);
+  const categoriesData = await graphQLClient.request(categoriesQuery, vars);
   const issues = issuesData.issues;
-  const categoryIcon = categoryData.category.icon;
+  const categoryIcon = categoriesData.category.icon;
 
   return {
     props: { issues, pageSlug, categoryIcon },
@@ -81,28 +81,36 @@ const Category = ({ issues, pageSlug, categoryIcon }) => {
           title={`${pageSlug.toUpperCase()}`}
           paragraph={`Keep in mind that we are constantly working on updating content. If the issue you are interested in is not yet on this list, be aware that it will appear as soon as possible. However, you can speed up this process if you contact us personally.`}
         />
-        {issues.length === 0 && <div>No issues</div>}
-        <div className={styles.issues}>
-          {issues.map((issue: IssueShort) => {
-            return (
-              <Link
-                key={issue.slug}
-                href={`/issue/${issue.categorySlug}/${issue.slug}`}
-              >
-                <a className={styles.issue} key={issue.slug}>
-                  <p className={styles.issueDescription}>{issue.date}</p>
-                  <h3 className={styles.issueTitle}>{issue.title}</h3>
-                  <p className={styles.issueDescription}>{issue.description}</p>
-                  <p className={styles.issueTags}>
-                    {issue.keywords.split(', ').map((tag) => (
-                      <Tag key={tag} tag={tag} />
-                    ))}
-                  </p>
-                </a>
-              </Link>
-            );
-          })}
-        </div>
+        {issues.length === 0 ? (
+          <div>No issues</div>
+        ) : (
+          <>
+            <p>Issues: {issues.length}</p>
+            <div className={styles.issues}>
+              {issues.map((issue: IssueShort) => {
+                return (
+                  <Link
+                    key={issue.slug}
+                    href={`/issue/${issue.categorySlug}/${issue.slug}`}
+                  >
+                    <a className={styles.issue} key={issue.slug}>
+                      <p className={styles.issueDescription}>{issue.date}</p>
+                      <h3 className={styles.issueTitle}>{issue.title}</h3>
+                      <p className={styles.issueDescription}>
+                        {issue.description}
+                      </p>
+                      <p className={styles.issueTags}>
+                        {issue.keywords.split(', ').map((tag) => (
+                          <Tag key={tag} tag={tag} />
+                        ))}
+                      </p>
+                    </a>
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
       </main>
       <Footer />
     </>

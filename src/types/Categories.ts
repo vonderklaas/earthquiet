@@ -3,6 +3,8 @@ export type Categories = {
     {
       title: string;
       slug: string;
+      id: string;
+      issues?: number;
       description: string;
       icon: {
         url: string;
@@ -14,6 +16,8 @@ export type Categories = {
 export type Category = {
   title: string;
   slug: string;
+  id: string;
+  issues?: number;
   description: string;
   icon: {
     url: string;

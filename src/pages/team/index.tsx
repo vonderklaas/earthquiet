@@ -19,12 +19,8 @@ const Team = () => {
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
             />
-            <h3>Founder, Developer</h3>
+            <h3>Founder, Software Developer</h3>
             <div className={styles.teamMemberLinks}>
-              <a href='https://twitter.com/garbalau_twitt'>
-                <FaTwitter />
-                <span>https://twitter.com/garbalau_twitt</span>
-              </a>
               <a href='https://github.com/garbalau-github'>
                 <FaGithub />
                 <span>https://github.com/garbalau-github</span>
@@ -42,12 +38,8 @@ const Team = () => {
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'
             />
-            <h3>Co-founder, Marketing Specialist</h3>
+            <h3>Co-founder, Digital Marketing</h3>
             <div className={styles.teamMemberLinks}>
-              <a href='https://twitter.com/bakedwithlovemd'>
-                <FaTwitter />
-                <span>https://twitter.com/bakedwithlovemd</span>
-              </a>
               <a href='https://github.com/martiniucanastasia'>
                 <FaGithub />
                 <span>https://github.com/martiniucanastasia</span>

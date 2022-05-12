@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Footer.module.scss';
 
@@ -105,6 +105,11 @@ const Footer = () => {
           <span>
             <a target='blank' href='https://instagram.com'>
               <FaInstagram />
+            </a>
+          </span>
+          <span>
+            <a target='blank' href='https://linkedin.com/'>
+              <FaLinkedinIn />
             </a>
           </span>
         </div>
