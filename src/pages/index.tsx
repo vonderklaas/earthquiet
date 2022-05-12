@@ -13,7 +13,7 @@ const Home = () => {
           <h1 className={styles.homeHeaderHeadingTitle}>Hello Earthlings!</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects and organizes the world's
-            problems. Our platform encourages interest in solving these problems
+            issues. Our platform encourages interest in solving these problems
             and offers a convenient place to express your ideas and be creative
             in the most amazing way.
           </p>
@@ -29,7 +29,7 @@ const Home = () => {
             this innovation processes. Take a look on us, smartphone distracts
             us from reality, we live in. It prevents us from noticing the fact
             that this reality remains surprisingly old-fashioned and imperfect.
-            In our world there are a lot of problems that need solutions, active
+            In our world there are a lot of issues that need solutions, active
             development and popularization. Yes, progress cannot be slowed down
             or even stopped, it exists outside of time, but it can be hurried.
           </p>
@@ -37,9 +37,9 @@ const Home = () => {
             Most businesses are now busy making money. Money that can be
             completely useless, because the world we know may disappear. We face
             a climate crisis, overpopulation, hunger, diseases, and they are
-            slowly destroying us. We must pay attention to problem which
-            surround us, and try to resolve them. Most often, new technologies
-            and solutions are born in the depths of start-ups, by fanatic
+            slowly destroying us. We must pay attention to issues which surround
+            us, and try to resolve them. Most often, new technologies and
+            solutions are born in the depths of start-ups, by fanatic
             scientists, a minority.
           </p>
           <p>

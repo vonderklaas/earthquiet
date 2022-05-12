@@ -9,7 +9,7 @@ const Contribution = () => {
       <main>
         <Heading
           title={`Contribution`}
-          paragraph={`We provide consequences and possible solutions to problems we write about, find ways how you can contribute`}
+          paragraph={`We provide consequences and possible solutions to issues we write about, find ways how you can contribute`}
         />
         <div>
           <h3>We encourage you to:</h3>

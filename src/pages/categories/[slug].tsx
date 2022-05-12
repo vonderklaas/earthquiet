@@ -7,7 +7,7 @@ import Tag from '../../components/Tag/Tag';
 
 import styles from './Categories.module.scss';
 
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const query = gql`
     query ($pageSlug: String!) {
-      problems(where: { categorySlug: $pageSlug }) {
+      issues(where: { categorySlug: $pageSlug }) {
         title
         description
         slug
@@ -45,51 +45,70 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     pageSlug,
   };
 
-  const data = await graphQLClient.request(query, vars);
-  const catData = await graphQLClient.request(query2, vars);
-  const problems = data.problems;
-  const catDataProbs = catData.category.icon;
+  const issuesData = await graphQLClient.request(query, vars);
+  const categoryData = await graphQLClient.request(query2, vars);
+  const issues = issuesData.issues;
+  const categoryIcon = categoryData.category.icon;
 
   return {
-    props: { problems, pageSlug, catDataProbs },
+    props: { issues, pageSlug, categoryIcon },
   };
 };
 
-const Category = ({ problems, pageSlug, catDataProbs }) => {
+export type Issues = {
+  issues: [
+    {
+      title: string;
+      description: string;
+      slug: string;
+      categorySlug: string;
+      date: string;
+      keywords: string;
+    }
+  ];
+};
+
+export type IssueShort = {
+  title: string;
+  description: string;
+  slug: string;
+  categorySlug: string;
+  date: string;
+  keywords: string;
+};
+
+const Category = ({ issues, pageSlug, categoryIcon }) => {
   return (
     <>
       <Navbar />
       <main>
         <Heading
-          icon={catDataProbs.url}
+          icon={categoryIcon.url}
           alt={pageSlug}
           title={`${pageSlug.toUpperCase()}`}
-          paragraph={`Keep in mind that we are constantly working on updating content. If the problem you are interested in is not yet on this list, be aware that it will appear as soon as possible. However, you can speed up this process if you contact us personally.`}
+          paragraph={`Keep in mind that we are constantly working on updating content. If the issue you are interested in is not yet on this list, be aware that it will appear as soon as possible. However, you can speed up this process if you contact us personally.`}
         />
-        {problems.length === 0 && <div>No problems...</div>}
-        <div className={styles.problems}>
-          {problems &&
-            problems.map((problem) => {
-              return (
-                <Link
-                  key={problem.slug}
-                  href={`/problem/${problem.categorySlug}/${problem.slug}`}
-                >
-                  <a className={styles.problem} key={problem.slug}>
-                    <p className={styles.problemDescription}>{problem.date}</p>
-                    <h3 className={styles.problemTitle}>{problem.title}</h3>
-                    <p className={styles.problemDescription}>
-                      {problem.description}
-                    </p>
-                    <p className={styles.problemTags}>
-                      {problem.keywords.split(', ').map((tag) => (
-                        <Tag key={tag} tag={tag} />
-                      ))}
-                    </p>
-                  </a>
-                </Link>
-              );
-            })}
+        {issues.length === 0 && <div>No issues</div>}
+        <div className={styles.issues}>
+          {issues.map((issue: IssueShort) => {
+            return (
+              <Link
+                key={issue.slug}
+                href={`/issue/${issue.categorySlug}/${issue.slug}`}
+              >
+                <a className={styles.issue} key={issue.slug}>
+                  <p className={styles.issueDescription}>{issue.date}</p>
+                  <h3 className={styles.issueTitle}>{issue.title}</h3>
+                  <p className={styles.issueDescription}>{issue.description}</p>
+                  <p className={styles.issueTags}>
+                    {issue.keywords.split(', ').map((tag) => (
+                      <Tag key={tag} tag={tag} />
+                    ))}
+                  </p>
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </main>
       <Footer />

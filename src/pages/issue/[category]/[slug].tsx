@@ -4,7 +4,7 @@ import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
 import Tag from '../../../components/Tag/Tag';
-import styles from './Problem.module.scss';
+import styles from './Issue.module.scss';
 
 import Comments from '../../../components/Comments';
 
@@ -25,7 +25,7 @@ export const getServerSideProps = async (context) => {
 
   const query = gql`
     query ($pageSlug: String!) {
-      problems(where: { slug: $pageSlug }) {
+      issues(where: { slug: $pageSlug }) {
         title
         description
         slug
@@ -43,24 +43,36 @@ export const getServerSideProps = async (context) => {
     pageSlug,
   };
 
-  const data = await graphQLClient.request(query, vars);
-  const problem = data.problems;
+  const issuesData = await graphQLClient.request(query, vars);
+  const issue = issuesData.issues;
 
   return {
-    props: { problem },
+    props: { issue },
   };
 };
 
-const Category = ({ problem }) => {
+export type IssueFull = {
+  title: string;
+  description: string;
+  slug: string;
+  generalText: string;
+  consequences: string;
+  solutions: string;
+  date: string;
+  keywords: string;
+  categorySlug: string;
+};
+
+const Issue = ({ issue }) => {
   const [timeToRead, setTimeToRead] = useState(0);
   const router = useRouter();
   const commentsUrl = `${router.query.category}__${router.query.slug}`;
 
-  const problemRef = useRef();
+  const issueRef = useRef<HTMLDivElement>(null);
 
   const readingTime = () => {
     const wordsPerMinute = 265;
-    const issueText = problemRef.current.innerText;
+    const issueText = issueRef.current.innerText;
     const words = issueText.trim().split(/\s+/).length;
     const time = Math.ceil(words / wordsPerMinute);
     return time;
@@ -74,34 +86,34 @@ const Category = ({ problem }) => {
     <>
       <Navbar />
       <main>
-        {problem.map((problem) => {
+        {issue.map((issue: IssueFull) => {
           return (
-            <div key={problem.slug}>
+            <div key={issue.slug}>
               <div className={styles.timeToRead}>
                 <FaClock />
                 <span>{timeToRead} min read</span>
               </div>
-              <Heading title={problem.title} paragraph={problem.description} />
-              <div ref={problemRef} className={styles.problem}>
-                <div className={styles.problemBlock}>
+              <Heading title={issue.title} paragraph={issue.description} />
+              <div ref={issueRef} className={styles.issue}>
+                <div className={styles.issueBlock}>
                   <h3>Keywords</h3>
-                  <div className={styles.problemTags}>
-                    {problem.keywords.split(', ').map((tag) => (
+                  <div className={styles.issueTags}>
+                    {issue.keywords.split(', ').map((tag) => (
                       <Tag key={tag} tag={tag} />
                     ))}
                   </div>
                 </div>
-                <div className={styles.problemBlock}>
+                <div className={styles.issueBlock}>
                   <h3>General</h3>
-                  <Reactmarkdown children={problem.generalText} />
+                  <Reactmarkdown children={issue.generalText} />
                 </div>
-                <div className={styles.problemBlock}>
+                <div className={styles.issueBlock}>
                   <h3>Consequences</h3>
-                  <Reactmarkdown children={problem.consequences} />
+                  <Reactmarkdown children={issue.consequences} />
                 </div>
-                <div className={styles.problemBlock}>
+                <div className={styles.issueBlock}>
                   <h3>Solutions</h3>
-                  <Reactmarkdown children={problem.solutions} />
+                  <Reactmarkdown children={issue.solutions} />
                 </div>
               </div>
             </div>
@@ -120,4 +132,4 @@ const Category = ({ problem }) => {
   );
 };
 
-export default Category;
+export default Issue;

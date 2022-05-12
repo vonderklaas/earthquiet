@@ -6,7 +6,7 @@ import Heading from '../../components/Heading/Heading';
 
 import styles from './Categories.module.scss';
 
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const url = process.env.API_CONTENT_URL;
@@ -37,34 +37,55 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const Categories = ({ categories }) => {
+export type Categories = {
+  categories: [
+    {
+      title: string;
+      slug: string;
+      description: string;
+      icon: {
+        url: string;
+      };
+    }
+  ];
+};
+
+export type Category = {
+  title: string;
+  slug: string;
+  description: string;
+  icon: {
+    url: string;
+  };
+};
+
+const Categories = ({ categories }: Categories) => {
   return (
     <>
       <Navbar />
       <main>
         <Heading
           title={'Categories'}
-          paragraph={`Choose a category that is close and interesting to you and study what world problems belong to this category.`}
+          paragraph={`Choose a category that is close and interesting to you and study what world issues belong to this category.`}
         />
         <div className={styles.categories}>
-          {categories &&
-            categories.map((category) => {
-              return (
-                <Link key={category.slug} href={`/categories/${category.slug}`}>
-                  <a className={styles.category} key={category.slug}>
-                    <img
-                      className={styles.categoryIcon}
-                      src={category.icon.url}
-                      alt={category.slug}
-                    />
-                    <h3 className={styles.categoryTitle}>{category.title}</h3>
-                    <p className={styles.categoryDescription}>
-                      {category.description}
-                    </p>
-                  </a>
-                </Link>
-              );
-            })}
+          {categories.map((category: Category) => {
+            return (
+              <Link key={category.slug} href={`/categories/${category.slug}`}>
+                <a className={styles.category} key={category.slug}>
+                  <img
+                    className={styles.categoryIcon}
+                    src={category.icon.url}
+                    alt={category.slug}
+                  />
+                  <h3 className={styles.categoryTitle}>{category.title}</h3>
+                  <p className={styles.categoryDescription}>
+                    {category.description}
+                  </p>
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </main>
       <Footer />

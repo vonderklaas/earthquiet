@@ -16,11 +16,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
           name='keywords'
-          content='EARTH, EARTHQUIET, Global Problems, World, Issues, Global Warming, Climate Change, Problems, Solutions, Start-ups, Contribution'
+          content='EARTH, EARTHQUIET, Global Issues, World, Issues, Global Warming, Climate Change, Problems, Solutions, Start-ups, Contribution'
         />
         <meta
           name='description'
-          content='EARTHQUIET - is a free, web-based resource of world problems and community created
+          content='EARTHQUIET - is a free, web-based resource of world issues and community created
       platform, which is maintained by enthusiasts only.'
         />
         <link
