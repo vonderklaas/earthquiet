@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Heading from '../../components/Heading/Heading';
 
+import Image from 'next/image';
+
 import styles from './Categories.module.scss';
 
 import { GetStaticProps } from 'next';
@@ -77,7 +79,7 @@ const Categories = ({ categories }: Categories) => {
             return (
               <Link key={category.slug} href={`/categories/${category.slug}`}>
                 <a className={styles.category} key={category.slug}>
-                  <img
+                  <Image
                     className={styles.categoryIcon}
                     src={category.icon.url}
                     alt={category.slug}

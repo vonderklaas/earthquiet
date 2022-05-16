@@ -1,3 +1,16 @@
+export type IssuesArray = {
+  issues: [
+    {
+      title: string;
+      description: string;
+      slug: string;
+      categorySlug: string;
+      date: string;
+      keywords: string;
+    }
+  ];
+};
+
 export type IssueShort = {
   title: string;
   description: string;

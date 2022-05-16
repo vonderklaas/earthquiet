@@ -9,7 +9,7 @@ const Comments = (props: CommentsProps) => {
 
   useEffect(() => {
     console.log(`comments-${props.commentsUrl}`);
-    let scriptEl = document.createElement('script');
+    const scriptEl = document.createElement('script');
     scriptEl.setAttribute('src', 'https://utteranc.es/client.js');
     scriptEl.setAttribute('crossorigin', 'anonymous');
     scriptEl.setAttribute('async', 'true');

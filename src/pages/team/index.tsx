@@ -2,6 +2,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Heading from '../../components/Heading/Heading';
 
+import Image from 'next/image';
+
 import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Team.module.scss';
@@ -14,13 +16,17 @@ const Team = () => {
         <Heading title={`Team`} />
         <ul className={styles.team}>
           <li className={styles.teamMember}>
-            <img
+            <Image
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
             />
             <h3>Founder, Software Developer</h3>
             <div className={styles.teamMemberLinks}>
+              <a href='https://twitter.com/garbalau_twitt'>
+                <FaTwitter />
+                <span>https://twitter.com/garbalau_twitt</span>
+              </a>
               <a href='https://github.com/garbalau-github'>
                 <FaGithub />
                 <span>https://github.com/garbalau-github</span>
@@ -33,7 +39,7 @@ const Team = () => {
           </li>
 
           <li className={styles.teamMember}>
-            <img
+            <Image
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'

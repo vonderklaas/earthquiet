@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 import styles from './Heading.module.scss';
 
 export type HeadingProps = {
@@ -14,7 +16,7 @@ const Heading = ({ icon, alt, title, paragraph }: HeadingProps) => {
     <div className={styles.heading}>
       <div className={styles.headingWrapper}>
         {title && <h1 className={styles.headingTitle}>{title}</h1>}
-        {icon && <img className={styles.headingIcon} src={icon} alt={alt} />}
+        {icon && <Image className={styles.headingIcon} src={icon} alt={alt} />}
       </div>
       {paragraph && <p className={styles.headingParagraph}>{paragraph}</p>}
     </div>

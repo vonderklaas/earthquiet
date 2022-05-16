@@ -9,7 +9,7 @@ import styles from './Categories.module.scss';
 
 import { GetServerSideProps } from 'next';
 
-import { IssueShort } from '../../types/Issues';
+import { IssueShort, IssuesArray } from '../../types/Issues';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const issuesData = await graphQLClient.request(issuesQuery, vars);
   const categoriesData = await graphQLClient.request(categoriesQuery, vars);
-  const issues = issuesData.issues;
+  const issues: IssuesArray = issuesData.issues;
   const categoryIcon = categoriesData.category.icon;
 
   return {
@@ -57,20 +57,17 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-export type Issues = {
-  issues: [
-    {
-      title: string;
-      description: string;
-      slug: string;
-      categorySlug: string;
-      date: string;
-      keywords: string;
-    }
-  ];
-};
-
-const Category = ({ issues, pageSlug, categoryIcon }) => {
+const Category = ({
+  issues,
+  pageSlug,
+  categoryIcon,
+}: {
+  issues: IssueShort[];
+  pageSlug: string;
+  categoryIcon: {
+    url: string;
+  };
+}) => {
   return (
     <>
       <Navbar />
@@ -87,7 +84,7 @@ const Category = ({ issues, pageSlug, categoryIcon }) => {
           <>
             <p>Issues: {issues.length}</p>
             <div className={styles.issues}>
-              {issues.map((issue: IssueShort) => {
+              {issues.map((issue) => {
                 return (
                   <Link
                     key={issue.slug}
