@@ -10,6 +10,7 @@ const Banner = () => {
         className={styles.bannerLink}
         target='_blank'
         href='https://supportukrainenow.org/'
+        rel='noreferrer'
       >
         <span>https://www.supportukraine.co/</span>
       </a>
