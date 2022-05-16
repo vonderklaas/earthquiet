@@ -83,27 +83,28 @@ const Issue = ({ issue }) => {
                 <FaClock />
                 <span>
                   Time to read: {timeToRead}{' '}
-                  {timeToRead > 2 ? 'minutes' : 'minute'}
+                  {timeToRead > 1 ? 'minutes' : 'minute'}
                 </span>
+              </div>
+              <div className={styles.issueTags}>
+                {issue.keywords.split(', ').map((tag) => (
+                  <Tag key={tag} tag={tag} />
+                ))}
               </div>
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
-                <div className={styles.issueTags}>
-                  {issue.keywords.split(', ').map((tag) => (
-                    <Tag key={tag} tag={tag} />
-                  ))}
-                </div>
                 <div className={styles.separator}> </div>
                 <div className={styles.issueBlock}>
-                  <Reactmarkdown children={issue.generalText} />
+                  <h3>General</h3>
+                  <Reactmarkdown>{issue.generalText}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>What are the consequences</h3>
-                  <Reactmarkdown children={issue.consequences} />
+                  <h3>Consequences</h3>
+                  <Reactmarkdown>{issue.consequences}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>How can you contribute?</h3>
-                  <Reactmarkdown children={issue.solutions} />
+                  <h3>Solutions</h3>
+                  <Reactmarkdown>{issue.solutions}</Reactmarkdown>
                 </div>
               </div>
             </div>
