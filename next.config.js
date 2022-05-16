@@ -5,6 +5,9 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
+  images: {
+    domains: ['media.graphassets.com', 'avatars.githubusercontent.com'],
+  },
   sassOptions: {
     includePaths: ['./src'],
     prependData: `

@@ -20,6 +20,8 @@ const Team = () => {
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
+              width='80'
+              height='80'
             />
             <h3>Founder, Software Developer</h3>
             <div className={styles.teamMemberLinks}>
@@ -43,9 +45,15 @@ const Team = () => {
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'
+              width='80'
+              height='80'
             />
             <h3>Co-founder, Digital Marketing</h3>
             <div className={styles.teamMemberLinks}>
+              <a href='https://twitter.com/bakedwithlovemd'>
+                <FaTwitter />
+                <span>https://twitter.com/bakedwithlovemd</span>
+              </a>
               <a href='https://github.com/martiniucanastasia'>
                 <FaGithub />
                 <span>https://github.com/martiniucanastasia</span>

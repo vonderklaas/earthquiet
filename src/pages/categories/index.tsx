@@ -83,6 +83,8 @@ const Categories = ({ categories }: Categories) => {
                     className={styles.categoryIcon}
                     src={category.icon.url}
                     alt={category.slug}
+                    width='60'
+                    height='60'
                   />
                   <h3 className={styles.categoryTitle}>{category.title}</h3>
                   <p className={styles.categoryDescription}>

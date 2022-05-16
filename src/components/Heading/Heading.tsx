@@ -16,7 +16,15 @@ const Heading = ({ icon, alt, title, paragraph }: HeadingProps) => {
     <div className={styles.heading}>
       <div className={styles.headingWrapper}>
         {title && <h1 className={styles.headingTitle}>{title}</h1>}
-        {icon && <Image className={styles.headingIcon} src={icon} alt={alt} />}
+        {icon && (
+          <Image
+            width='60'
+            height='60'
+            className={styles.headingIcon}
+            src={icon}
+            alt={alt}
+          />
+        )}
       </div>
       {paragraph && <p className={styles.headingParagraph}>{paragraph}</p>}
     </div>
