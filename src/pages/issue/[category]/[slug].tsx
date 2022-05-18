@@ -6,6 +6,8 @@ import Heading from '../../../components/Heading/Heading';
 import Tag from '../../../components/Tag/Tag';
 import styles from './Issue.module.scss';
 
+import { GetServerSideProps } from 'next';
+
 import Comments from '../../../components/Comments';
 
 import { useRouter } from 'next/router';
@@ -16,9 +18,10 @@ import { FaClock } from 'react-icons/fa';
 
 import { IssueFull } from '../../../types/Issues';
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
+  // @ts-expect-error
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization: process.env.GRAPH_TOKEN,
@@ -53,7 +56,7 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-const Issue = ({ issue }) => {
+const Issue = ({ issue }: { issue: IssueFull[] }) => {
   const [timeToRead, setTimeToRead] = useState(0);
   const router = useRouter();
   const commentsUrl = `${router.query.category}__${router.query.slug}`;
@@ -62,7 +65,7 @@ const Issue = ({ issue }) => {
 
   const readingTime = () => {
     const wordsPerMinute = 265;
-    const issueText = issueRef.current.innerText;
+    const issueText = issueRef.current?.innerText!;
     const words = issueText.trim().split(/\s+/).length;
     const time = Math.ceil(words / wordsPerMinute);
     return time;

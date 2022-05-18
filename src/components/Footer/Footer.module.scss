@@ -5,14 +5,15 @@
 
   &Upper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 0;
     border-bottom: 1px solid rgb(55, 65, 81);
 
     &Item {
       padding: 25px 0;
+      margin-right: 150px;
       h4 {
         text-transform: uppercase;
       }
@@ -24,34 +25,11 @@
     }
   }
 
-  &Form {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-
-    &Email {
-      border: none;
-      padding: 10px 10px;
-      border-radius: 5px;
-      width: 250px;
-    }
-
-    &Submit {
-      border: none;
-      display: block;
-      padding: 10px 20px;
-      border-radius: 5px;
-      background-color: $primary-green;
-      color: $text-light;
-      margin-left: 10px;
-    }
-  }
-
   &Lower {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 20px 0;
     max-width: 1300px;
     margin: 0 auto;
     &Copyright {
@@ -60,10 +38,14 @@
 
     &Socials {
       display: flex;
-      span {
-        font-size: 2rem;
+      a {
+        font-size: 1.5rem;
+        transition: all 0.3s;
         &:not(:last-child) {
           margin-right: 20px;
+        }
+        &:hover {
+          color: $primary-purple;
         }
       }
     }

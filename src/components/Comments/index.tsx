@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export type CommentsProps = {
   commentsUrl: string;
@@ -19,8 +19,8 @@ const Comments = (props: CommentsProps) => {
     );
     scriptEl.setAttribute('issue-term', 'title');
     scriptEl.setAttribute('theme', 'github-light');
-    commentBox.current.appendChild(scriptEl);
-  }, []);
+    commentBox?.current?.appendChild(scriptEl);
+  }, [props.commentsUrl]);
 
   return (
     <div id='comments' style={{ width: '100%' }}>

@@ -10,7 +10,7 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Hello Earthlings!</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Hello ✋</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects and organizes the world's
             issues. Our platform encourages interest in solving these problems
@@ -63,7 +63,7 @@ const Home = () => {
           </p>
           <p>Thank you, EARTHQUIET Team</p>
         </div>
-        <Heading title={'What we are'} />
+        <Heading title={'Pillars'} />
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoColumn}>
             <h3>Information</h3>

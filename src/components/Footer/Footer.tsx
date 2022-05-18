@@ -73,45 +73,21 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.footerUpperItem}>
-          <h4>Subscribe</h4>
-          <span>The latest news, weekly on your inbox</span>
-          <form className={styles.footerForm}>
-            <input
-              className={styles.footerFormEmail}
-              required
-              min={3}
-              type='email'
-              placeholder='Enter your email'
-            />
-            <input
-              className={styles.footerFormSubmit}
-              type='submit'
-              value='Email me'
-            />
-          </form>
-        </div>
       </div>
       <div className={styles.footerLower}>
         <div className={styles.footerLowerCopyright}>
           Copyright &copy;{new Date().getFullYear()} Earthquiet
         </div>
         <div className={styles.footerLowerSocials}>
-          <span>
-            <a target='blank' href='https://twitter.com'>
-              <FaTwitter />
-            </a>
-          </span>
-          <span>
-            <a target='blank' href='https://instagram.com'>
-              <FaInstagram />
-            </a>
-          </span>
-          <span>
-            <a target='blank' href='https://linkedin.com/'>
-              <FaLinkedinIn />
-            </a>
-          </span>
+          <a target='blank' href='https://twitter.com'>
+            <FaTwitter />
+          </a>
+          <a target='blank' href='https://instagram.com'>
+            <FaInstagram />
+          </a>
+          <a target='blank' href='https://linkedin.com/'>
+            <FaLinkedinIn />
+          </a>
         </div>
       </div>
     </footer>
