@@ -15,7 +15,7 @@ import { IssueId } from '../../types/Issues';
 
 export const getStaticProps: GetStaticProps = async () => {
   const url = process.env.API_CONTENT_URL;
-  // @ts-expect-error
+  // @ts-ignore
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization: process.env.GRAPH_TOKEN,
