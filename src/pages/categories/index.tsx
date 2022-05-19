@@ -80,14 +80,16 @@ const Categories = ({ categories }: Categories) => {
             return (
               <Link key={category.slug} href={`/categories/${category.slug}`}>
                 <a className={styles.category} key={category.slug}>
-                  <Image
-                    className={styles.categoryIcon}
-                    src={category.icon.url}
-                    alt={category.slug}
-                    width='60'
-                    height='60'
-                  />
-                  <h3 className={styles.categoryTitle}>{category.title}</h3>
+                  <div>
+                    <Image
+                      className={styles.categoryIcon}
+                      src={category.icon.url}
+                      alt={category.slug}
+                      width='60'
+                      height='60'
+                    />
+                    <h3 className={styles.categoryTitle}>{category.title}</h3>
+                  </div>
                   <p className={styles.categoryDescription}>
                     {category.description}
                   </p>

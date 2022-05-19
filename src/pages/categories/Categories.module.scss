@@ -5,10 +5,14 @@
   justify-content: center;
 
   .category {
-    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
     border-radius: 10px;
     padding: 15px;
-    margin: 15px;
+    margin: 15px 0;
     transition: all 0.3s;
     border: 1px solid #f7f7f7;
     box-shadow: 5px 5px 10px #f7f7f7;
@@ -31,6 +35,7 @@
 
     &Description {
       margin: 0;
+      max-height: 300px;
       overflow: hidden;
     }
   }
@@ -44,7 +49,7 @@
   .issue {
     border-radius: 10px;
     padding: 15px;
-    margin: 15px;
+    margin: 15px 0;
     transition: all 0.3s;
     border: 2px solid #f7f7f7;
     box-shadow: 5px 5px 10px #f7f7f7;
@@ -64,8 +69,6 @@
 
     &Description {
       margin: 0;
-      height: 100%;
-      max-height: 250px;
       overflow: hidden;
     }
 
