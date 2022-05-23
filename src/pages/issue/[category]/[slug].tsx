@@ -21,7 +21,6 @@ import { IssueFull } from '../../../types/Issues';
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
-  // @ts-ignore
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization: process.env.GRAPH_TOKEN,

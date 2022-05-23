@@ -15,7 +15,6 @@ import { IssueId } from '../../types/Issues';
 
 export const getStaticProps: GetStaticProps = async () => {
   const url = process.env.API_CONTENT_URL;
-  // @ts-ignore
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization: process.env.GRAPH_TOKEN,
@@ -56,7 +55,7 @@ export const getStaticProps: GetStaticProps = async () => {
     category.issues = 0;
     issuesIds.map((issuesIdsElement: IssueId) => {
       if (issuesIdsElement.categoryParent.id === category.id) {
-        category.issues!++;
+        category.issues++;
       }
     });
   });
@@ -81,19 +80,22 @@ const Categories = ({ categories }: Categories) => {
               <Link key={category.slug} href={`/categories/${category.slug}`}>
                 <a className={styles.category} key={category.slug}>
                   <div>
-                    <Image
-                      className={styles.categoryIcon}
-                      src={category.icon.url}
-                      alt={category.slug}
-                      width='60'
-                      height='60'
-                    />
-                    <h3 className={styles.categoryTitle}>{category.title}</h3>
+                    <div className={styles.categoryTitleWrapper}>
+                      <h3 className={styles.categoryTitle}>{category.title}</h3>
+                      <Image
+                        src={category.icon.url}
+                        alt={category.slug}
+                        width='35'
+                        height='35'
+                      />
+                    </div>
+                    <p className={styles.categoryDescription}>
+                      {category.description}
+                    </p>
                   </div>
-                  <p className={styles.categoryDescription}>
-                    {category.description}
+                  <p className={styles.categoryIssues}>
+                    Issues: {category.issues}
                   </p>
-                  <p>Issues: {category.issues}</p>
                 </a>
               </Link>
             );

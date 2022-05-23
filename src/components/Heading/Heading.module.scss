@@ -1,21 +1,17 @@
 .heading {
   margin-top: 50px;
   &Wrapper {
+    width: 100%;
     display: flex;
-    justify-items: center;
+    justify-items: flex-start;
     align-items: center;
-  }
-  &Icon {
-    width: 60px;
-    height: 60px;
-    margin-left: 15px;
   }
   &Title,
   &Paragraph {
     background-color: $text-light;
   }
   &Title {
-    display: inline;
+    display: inline-block;
     font-size: 2.5rem;
   }
   &Paragraph {

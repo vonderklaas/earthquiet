@@ -14,7 +14,6 @@ import { IssueShort, IssuesArray } from '../../types/Issues';
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const url = process.env.API_CONTENT_URL;
-  // @ts-ignore
   const graphQLClient = new GraphQLClient(url, {
     headers: {
       Authorization: process.env.GRAPH_TOKEN,
@@ -37,9 +36,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const categoriesQuery = gql`
     query ($pageSlug: String!) {
       category(where: { slug: $pageSlug }) {
-        icon {
-          url
-        }
+        title
       }
     }
   `;
@@ -51,34 +48,25 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const issuesData = await graphQLClient.request(issuesQuery, vars);
   const categoriesData = await graphQLClient.request(categoriesQuery, vars);
   const issues: IssuesArray = issuesData.issues;
-  const categoryIcon = categoriesData.category.icon;
+  const categoryTitle = categoriesData.category.title;
 
   return {
-    props: { issues, pageSlug, categoryIcon },
+    props: { issues, categoryTitle },
   };
 };
 
 const Category = ({
   issues,
-  pageSlug,
-  categoryIcon,
+  categoryTitle,
 }: {
   issues: IssueShort[];
-  pageSlug: string;
-  categoryIcon: {
-    url: string;
-  };
+  categoryTitle: string;
 }) => {
   return (
     <>
       <Navbar />
       <main>
-        <Heading
-          icon={categoryIcon.url}
-          alt={pageSlug}
-          title={`${pageSlug.toUpperCase()}`}
-          paragraph={`Keep in mind that we are constantly working on updating content. If the issue you are interested in is not yet on this list, be aware that it will appear as soon as possible. However, you can speed up this process if you contact us personally.`}
-        />
+        <Heading title={`${categoryTitle.toUpperCase()}`} />
         {issues.length === 0 ? (
           <div>No issues</div>
         ) : (
@@ -92,7 +80,6 @@ const Category = ({
                     href={`/issue/${issue.categorySlug}/${issue.slug}`}
                   >
                     <a className={styles.issue} key={issue.slug}>
-                      <p className={styles.issueDescription}>{issue.date}</p>
                       <h3 className={styles.issueTitle}>{issue.title}</h3>
                       <p className={styles.issueDescription}>
                         {issue.description}
@@ -102,6 +89,7 @@ const Category = ({
                           <Tag key={tag} tag={tag} />
                         ))}
                       </p>
+                      <p className={styles.issueDescription}>{issue.date}</p>
                     </a>
                   </Link>
                 );
