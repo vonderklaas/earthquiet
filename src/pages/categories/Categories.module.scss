@@ -21,6 +21,11 @@
       width: 100%;
     }
 
+    @media only screen and (max-width: 525px) {
+      padding: 10px;
+      margin: 10px 0;
+    }
+
     &:hover {
       box-shadow: 10px 5px 20px #f1f1f1;
       transform: translateY(-5px);

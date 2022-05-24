@@ -33,6 +33,9 @@ main {
   margin: 0 auto;
   padding-top: 130px;
   min-height: 100vh;
+  @media only screen and (max-width: 525px) {
+    padding-top: 80px;
+  }
 }
 
 // Other

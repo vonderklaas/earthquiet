@@ -22,8 +22,8 @@ const Navbar = () => {
                     className={styles.navbarLogoImage}
                     src='/logo.png'
                     alt='EARTHQUIET'
-                    width='50'
-                    height='50'
+                    width='45'
+                    height='45'
                   />
                 </a>
               </Link>

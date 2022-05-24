@@ -8,8 +8,12 @@
     justify-content: flex-start;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
     border-bottom: 1px solid rgb(55, 65, 81);
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
 
     &Item {
       padding: 25px 0;
@@ -29,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px;
     max-width: 1300px;
     margin: 0 auto;
     &Copyright {

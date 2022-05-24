@@ -18,10 +18,10 @@
     padding: 10px 20px;
     max-width: 1300px;
     margin: 0 auto;
+    @media only screen and (max-width: 525px) {
+      padding: 7.5px 20px;
+    }
   }
-}
-
-.navbar {
   &Logo {
     display: flex;
     align-items: center;
@@ -51,13 +51,12 @@
     }
   }
 }
-
-@media screen and (max-width: 525px) {
+@media only screen and (max-width: 525px) {
   .navbar {
     flex-direction: column;
     &Menu {
       &Link {
-        margin: 0 10px;
+        margin: 0 7.5px;
       }
     }
   }
