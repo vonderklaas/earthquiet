@@ -2,6 +2,8 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 
+import Link from 'next/link';
+
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -10,12 +12,13 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Hello ✋</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>Greetings! ✋</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
-            EARTHQUIET - is a platform that collects and organizes the world's
-            issues. Our platform encourages interest in solving these problems
-            and offers a convenient place to express your ideas and be creative
-            in the most amazing way.
+            EARTHQUIET - is a platform that collects global and not only global
+            problems from around the world and all spheres. We inspire people to
+            explore these issues, create solutions, invest and spread. Every
+            step taken towards a solution is a step towards making our world a
+            better place.
           </p>
         </div>
       </div>
@@ -23,70 +26,84 @@ const Home = () => {
         <Heading title={'Motivation'} />
         <div className={styles.homeDescription}>
           <p>
-            In a world with limited resources, globalization without new
-            technologies are doomed. Technological innovations never came to
-            mankind on their own, over time. We need all can become a part of
-            this innovation processes. Take a look on us, smartphone distracts
-            us from reality, we live in. It prevents us from noticing the fact
-            that this reality remains surprisingly old-fashioned and imperfect.
-            In our world there are a lot of issues that need solutions, active
-            development and popularization. Yes, progress cannot be slowed down
-            or even stopped, it exists outside of time, but it can be hurried.
+            In the world we live in, a world with limited resources, further
+            globalization without new technologies is doomed. We know from
+            history that technological innovations and progress never came to
+            humanity on their own, over time, someone has to work on it. People
+            are waking up more and more and coming to a conscious existence,
+            they notice the imperfections of our society and our environment,
+            they want to help. We need everyone to be a part of this innovation
+            process. Look at us, the smartphone distracts us from the reality we
+            live in. It prevents us from noticing that this reality remains
+            surprisingly old-fashioned and imperfect. In our world, there are a
+            lot of questions and problems that need to be addressed, actively
+            developed and popularized. It is in our hands, the hands of an
+            active and informed population.
           </p>
           <p>
-            Most businesses are now busy making money. Money that can be
-            completely useless, because the world we know may disappear. We face
-            a climate crisis, overpopulation, hunger, diseases, and they are
-            slowly destroying us. We must pay attention to issues which surround
-            us, and try to resolve them. Most often, new technologies and
-            solutions are born in the depths of start-ups, by fanatic
-            scientists, a minority.
+            Many people who have power, established systems and subordinate
+            people are now busy making money. Money that can be completely
+            useless, in that world, we know, can disappear. Humanity is facing
+            climate crisis, armed conflicts, corruption, overpopulation, hunger,
+            disease, urbanization, the need to switch to alternative energy and
+            other problems that slowly but surely destroying us. We must pay
+            attention to the problems that surround us and try to solve them.
+            These decisions will serve the formation of a new world, a world
+            that has overcome hunger, war and division.
           </p>
           <p>
-            A startup is the largest group of people you can infect with your
-            idea of creating a new, better future. Main strength new company -
-            in the ability to think in a new way: small size firm allows
-            employees to think freely, and this is an advantage which is even
-            more important than flexibility and adaptability.
+            The most modern attempt to gather like-minded people in one place
+            results in such a thing as a startup. Most often, new technologies
+            and progressive activities solutions are born in the depths of such
+            startups, sometimes by fanatics, self-taught, enthusiasts,
+            scientists, a minority. A startup is the largest group of people you
+            can infect with your the idea of creating a new, better future. The
+            main strength of the new company is in the ability to think in a new
+            way: the small size of the firm allows employees to think freely,
+            and this is an advantage that even more important than flexibility
+            and adaptability.
           </p>
           <p>
-            A startup is the largest group of people you can infect with your
-            idea of creating a new, better future. Main strength new company -
-            in the ability to think in a new way: small size firm allows
-            employees to think freely, and this is an advantage which is even
-            more important than flexibility and adaptability.
+            We created this platform to bring together innovators and
+            visionaries, amateurs and professionals, scientists and fanatics,
+            enthusiasts and just people who want to help, want to take a step
+            towards a better future. Explore problems and ideas, communicate and
+            find like-minded people, the future is in our hands, and we need to
+            start today. Now.
           </p>
           <p>
-            We created this platform to inspire and support you. Find things
-            that interest you, communicate and find like-minded people. The
-            future is in your hands. Learn, create, change.
+            Thank you, EARTHQUIET{' '}
+            <Link href='/team'>
+              <a>Team</a>
+            </Link>
           </p>
-          <p>Thank you, EARTHQUIET Team</p>
         </div>
-        <Heading title={'Pillars'} />
+        <Heading title={'Vision'} />
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoColumn}>
             <h3>Information</h3>
             <p>
-              We only use verified information from trusted sources. We
-              carefully work with the data and at the end we come to simple
-              explanations and solutions available to everyone.
+              Our articles are based only on verified sources. we study each
+              problem, trying to fit the main idea, consequences and possible
+              solutions into simple and understandable ideas.
             </p>
           </div>
           <div className={styles.homeInfoColumn}>
             <h3>Contribution</h3>
             <p>
-              Notice, that EARTHQUIET don't just focus on content. We want to
-              inspire and push people to create. Knowledge is power and this
-              power must be used.
+              Note that we are not just focusing on gathering facts and
+              organizing the world's problems. We want to inspire people and
+              push them to action. Knowledge is power, and this power must be
+              used for good.
             </p>
           </div>
           <div className={styles.homeInfoColumn}>
-            <h3>Open and free</h3>
+            <h3>Not for money</h3>
             <p>
-              EARTHQUIET is a free platform without any privileged paid options
-              and any advertising. We exist by our own independent will and
-              support from other enthusiasts
+              EARTHQUIET is non-profit and s free platform without any
+              privileges and paid options. We exist by our own conscious will
+              and independently, accepting support from enthusiasts and
+              supporters.
             </p>
           </div>
         </div>
