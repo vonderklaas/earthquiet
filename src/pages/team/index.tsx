@@ -13,17 +13,20 @@ const Team = () => {
     <>
       <Navbar />
       <main>
-        <Heading title={`Team`} />
+        <Heading
+          title={`Team`}
+          paragraph={`Meet those who work on EARTHQUIET`}
+        />
         <ul className={styles.team}>
           <li className={styles.teamMember}>
             <Image
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
-              width='80'
-              height='80'
+              width='75'
+              height='75'
             />
-            <h3>Founder, Software Developer</h3>
+            <h3>Founder</h3>
             <div className={styles.teamMemberLinks}>
               <a href='https://twitter.com/garbalau_twitt'>
                 <FaTwitter />
@@ -33,22 +36,21 @@ const Team = () => {
                 <FaGithub />
                 <span>https://github.com/garbalau-github</span>
               </a>
-              <a href=' https://www.linkedin.com/in/garbalau-in/'>
+              <a href='https://www.linkedin.com/in/garbalau-in/'>
                 <FaLinkedinIn />
                 <span> https://www.linkedin.com/in/garbalau-in/</span>
               </a>
             </div>
           </li>
-
           <li className={styles.teamMember}>
             <Image
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'
-              width='80'
-              height='80'
+              width='75'
+              height='75'
             />
-            <h3>Co-founder, Digital Marketing</h3>
+            <h3>Co-Founder</h3>
             <div className={styles.teamMemberLinks}>
               <a href='https://twitter.com/bakedwithlovemd'>
                 <FaTwitter />
