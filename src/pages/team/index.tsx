@@ -66,11 +66,18 @@ const Team = () => {
           </li>
         </ul>
         <Heading
-          title={`Join Us`}
+          subTitle={`Join Us`}
           paragraph={`Do you want to be a part of a team? Are you a developer, designer, copywriter, environmentalist or just
-            an enthusiast? Please, join us and share your ambitions. You can
-            reach out us here: earthquiet.com@gmail.com`}
+            an enthusiast? Please, join us and share your ambitions.`}
         />
+        <div>
+          <p>
+            You can reach out us here:{' '}
+            <a href='mailto:earthquiet.com@gmail.com'>
+              earthquiet.com@gmail.com
+            </a>
+          </p>
+        </div>
       </main>
       <Footer />
     </>

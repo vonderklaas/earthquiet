@@ -71,7 +71,6 @@ const Category = ({
           <div>No issues</div>
         ) : (
           <>
-            <p>Issues: {issues.length}</p>
             <div className={styles.issues}>
               {issues.map((issue) => {
                 return (
@@ -89,7 +88,9 @@ const Category = ({
                           <Tag key={tag} tag={tag} />
                         ))}
                       </p>
-                      <p className={styles.issueDescription}>{issue.date}</p>
+                      <p className={styles.issueDescription}>
+                        Updated: {issue.date}
+                      </p>
                     </a>
                   </Link>
                 );

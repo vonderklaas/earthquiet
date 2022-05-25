@@ -320,10 +320,15 @@ const Terms = () => {
             technical support, and other communications relating to the Website
             should be directed to earthquiet.com@gmail.com.
           </p>
-          <h3>Contact</h3>
+          <Heading
+            subTitle={`Contact`}
+            paragraph={`Additional questions? No problem!`}
+          />
           <p>
-            For any additional information, please contact us at:
-            earthquiet.com@gmail.com
+            You can reach out us here:{' '}
+            <a href='mailto:earthquiet.com@gmail.com'>
+              earthquiet.com@gmail.com
+            </a>
           </p>
         </div>
       </main>

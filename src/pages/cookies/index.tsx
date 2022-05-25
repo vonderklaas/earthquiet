@@ -7,17 +7,22 @@ const Cookies = () => {
     <>
       <Navbar />
       <main>
-        <Heading
-          title={`Cookies`}
-          paragraph={`How we use and store our cookies`}
-        />
+        <Heading title={`Cookies`} paragraph={`A cookie? 🍪`} />
         <div>
-          <h3>Cookies</h3>
-          <p>Currently we are not collecting any cookies</p>
-          <h3>Contact</h3>
+          <Heading
+            subTitle={`Storage`}
+            paragraph={`Currently we are not collecting any cookies, maybe something
+            will change in the future, dont worry, we will let you know!`}
+          />
+          <Heading
+            subTitle={`Contact`}
+            paragraph={`Additional questions? No problem!`}
+          />
           <p>
-            For any additional information, please contact us at:
-            earthquiet.com@gmail.com
+            You can reach out us here:{' '}
+            <a href='mailto:earthquiet.com@gmail.com'>
+              earthquiet.com@gmail.com
+            </a>
           </p>
         </div>
       </main>

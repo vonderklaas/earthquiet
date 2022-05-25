@@ -18,6 +18,12 @@
     &Item {
       padding: 25px 0;
       margin-right: 250px;
+      a {
+        transition: all 0.3s;
+        &:hover {
+          color: $primary-purple;
+        }
+      }
       h4 {
         text-transform: uppercase;
       }

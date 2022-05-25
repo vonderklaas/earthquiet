@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Greetings! ✋</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>The world needs you</h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects global and not only global
             problems from around the world and all spheres. We inspire people to
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
       </div>
       <section className={styles.homeSection}>
-        <Heading title={'Motivation'} />
+        <Heading subTitle={'Motivation'} />
         <div className={styles.homeDescription}>
           <p>
             In the world we live in, a world with limited resources, further
@@ -78,7 +78,7 @@ const Home = () => {
             </Link>
           </p>
         </div>
-        <Heading title={'Vision'} />
+        <Heading subTitle={'Vision'} />
         <div className={styles.homeInfo}>
           <div className={styles.homeInfoColumn}>
             <h3>Information</h3>

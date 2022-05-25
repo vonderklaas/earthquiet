@@ -95,7 +95,6 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
               </div>
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
-                <div className={styles.separator}> </div>
                 <div className={styles.issueBlock}>
                   <h3>General</h3>
                   <Reactmarkdown>{issue.generalText}</Reactmarkdown>
@@ -113,7 +112,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
           );
         })}
         <Heading
-          title={'Communicate'}
+          subTitle={'Communicate'}
           paragraph={`Maybe someone has already created a repo for this?`}
         />
         <div className={styles.comments}>

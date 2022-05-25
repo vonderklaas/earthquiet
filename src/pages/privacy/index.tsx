@@ -9,12 +9,19 @@ const Privacy = () => {
       <main>
         <Heading title={`Privacy`} paragraph={`How we manage your privacy?`} />
         <div>
-          <h3>Data Collection</h3>
-          <p>We are not collecting any data of our users (right now)</p>
-          <h3>Contact</h3>
+          <Heading
+            subTitle={`Data Collection`}
+            paragraph={`We are not collecting any data of our users`}
+          />
+          <Heading
+            subTitle={`Contact`}
+            paragraph={`Additional questions? No problem!`}
+          />
           <p>
-            For any additional information, please contact us at:
-            earthquiet.com@gmail.com
+            You can reach out us here:{' '}
+            <a href='mailto:earthquiet.com@gmail.com'>
+              earthquiet.com@gmail.com
+            </a>
           </p>
         </div>
       </main>
