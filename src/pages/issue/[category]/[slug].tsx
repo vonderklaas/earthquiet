@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const query = gql`
     query ($pageSlug: String!) {
-      issues(where: { slug: $pageSlug }) {
+      solutions(where: { slug: $pageSlug }) {
         title
         description
         slug
@@ -48,7 +48,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 
   const issuesData = await graphQLClient.request(query, vars);
-  const issue = issuesData.issues;
+  const issue = issuesData.solutions;
 
   return {
     props: { issue },

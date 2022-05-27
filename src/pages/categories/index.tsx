@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const issuesQuery = gql`
     query {
-      issues {
+      solutions {
         categoryParent {
           id
         }
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const categoriesData = await graphQLClient.request(categoriesQuery);
   const issuesData = await graphQLClient.request(issuesQuery);
   const categories = categoriesData.categories;
-  const issuesIds = issuesData.issues;
+  const issuesIds = issuesData.solutions;
 
   // Adding property with amount of issues under one category
   categories.map((category: Category) => {

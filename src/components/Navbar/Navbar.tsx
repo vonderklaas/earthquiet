@@ -35,7 +35,7 @@ const Navbar = () => {
                 }
               >
                 <Link href='/categories'>
-                  <a className={styles.navbarMenuLink}>Browse</a>
+                  <a className={styles.navbarMenuLink}>Categories</a>
                 </Link>
               </li>
               <li
