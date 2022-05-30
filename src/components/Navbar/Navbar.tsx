@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Banner from '../Banner/Banner';
+import NextNProgress from 'nextjs-progressbar';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
@@ -12,7 +12,6 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <Banner />
         <nav className={styles.navbar}>
           <div className={styles.navbarContainer}>
             <div className={styles.navbarLogo}>
@@ -63,6 +62,13 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
+      <NextNProgress
+        color='rgb(43, 153, 122)'
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={5}
+        showOnShallow={true}
+      />
     </header>
   );
 };

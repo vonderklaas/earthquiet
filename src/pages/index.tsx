@@ -12,7 +12,9 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>The world needs you</h1>
+          <h1 className={styles.homeHeaderHeadingTitle}>
+            “The greatest danger to our future is apathy.” - Jane Goodall
+          </h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects global and not only global
             problems from around the world and all spheres. We inspire people to

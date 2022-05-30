@@ -3,8 +3,6 @@ import '../styles/Globals.scss';
 
 import { AppProps } from 'next/app';
 
-import NextNProgress from 'nextjs-progressbar';
-
 const EarthquietApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
@@ -16,12 +14,11 @@ const EarthquietApp = ({ Component, pageProps }: AppProps) => {
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
           name='keywords'
-          content='EARTH, EARTHQUIET, Global Issues, World, Issues, Global Warming, Climate Change, Problems, Solutions, Start-ups, Contribution'
+          content='EARTH, EARTHQUIET, Global Issues, World, Issues, Solutions, Global Warming, Climate Change, Problems, Solutions, Start-ups, Contribution'
         />
         <meta
           name='description'
-          content='EARTHQUIET - is a free, web-based resource of world issues and community created
-      platform, which is maintained by enthusiasts only.'
+          content='We are free and non-comercial web-based platform of global world problems and solutions, which is maintained by enthusiasts and supporters.'
         />
         <link
           rel='apple-touch-icon'
@@ -48,13 +45,6 @@ const EarthquietApp = ({ Component, pageProps }: AppProps) => {
           crossOrigin='true'
         />
       </Head>
-      <NextNProgress
-        color='rgb(43, 153, 122)'
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={5}
-        showOnShallow={true}
-      />
       <Component {...pageProps} />
     </>
   );

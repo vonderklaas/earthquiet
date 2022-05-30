@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Banner from '../Banner/Banner';
+
 import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Footer.module.scss';
@@ -7,6 +9,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <Banner />
       <div className={styles.footerUpper}>
         <div className={styles.footerUpperItem}>
           <h4>Legal</h4>
@@ -85,7 +88,7 @@ const Footer = () => {
           <a target='blank' href='https://instagram.com'>
             <FaInstagram />
           </a>
-          <a target='blank' href='https://linkedin.com/'>
+          <a target='blank' href='https://www.linkedin.com/company/earthquiet'>
             <FaLinkedinIn />
           </a>
         </div>

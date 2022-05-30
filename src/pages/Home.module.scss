@@ -1,11 +1,11 @@
 .homeHeader {
   background: url('../../public/background.webp') no-repeat;
-  background-position: 30% 20%;
+  background-position: 50% 50%;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 100vh;
   &Heading {
     max-width: 1000px;
     margin-top: 130px;
@@ -17,7 +17,7 @@
     }
     &Title {
       display: inline;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     &Paragraph {
       font-size: 1.1rem;
@@ -53,7 +53,6 @@
 
 @media screen and (max-width: 525px) {
   .homeHeader {
-    height: 100vh;
     background-position: 50% 50%;
     &Heading {
       &Title {

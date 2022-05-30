@@ -50,7 +50,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const categories = categoriesData.categories;
   const issuesIds = issuesData.solutions;
 
-  // Adding property with amount of issues under one category
   categories.map((category: Category) => {
     category.issues = 0;
     issuesIds.map((issuesIdsElement: IssueId) => {
@@ -72,7 +71,8 @@ const Categories = ({ categories }: Categories) => {
       <main>
         <Heading
           title={'Categories'}
-          paragraph={`Choose a category that is close and interesting to you and study what world issues belong to this category.`}
+          paragraph={`Explore the categories and areas of human life, as well as what can be done 
+          to improve their condition and further development`}
         />
         <div className={styles.categories}>
           {categories.map((category: Category) => {
@@ -94,7 +94,11 @@ const Categories = ({ categories }: Categories) => {
                     </p>
                   </div>
                   <p className={styles.categoryIssues}>
-                    Issues: {category.issues}
+                    {category.issues === 1 ? (
+                      <span>{category.issues} issue</span>
+                    ) : (
+                      <span>{category.issues} issues</span>
+                    )}
                   </p>
                 </a>
               </Link>

@@ -66,7 +66,7 @@ const Category = ({
     <>
       <Navbar />
       <main>
-        <Heading title={`${categoryTitle.toUpperCase()}`} />
+        <Heading title={`What can improve ${categoryTitle.toUpperCase()}`} />
         {issues.length === 0 ? (
           <div>No issues</div>
         ) : (
