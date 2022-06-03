@@ -7,7 +7,7 @@ export const useIssueShort = (pageSlug: string | string[]) => {
     },
   });
 
-  const issuesQueryShort = gql`
+  const useIssueShortQuery = gql`
     query ($pageSlug: String!) {
       solutions(where: { categorySlug: $pageSlug }) {
         title
@@ -24,5 +24,5 @@ export const useIssueShort = (pageSlug: string | string[]) => {
     pageSlug,
   };
 
-  return graphQLClient.request(issuesQueryShort, vars);
+  return graphQLClient.request(useIssueShortQuery, vars);
 };

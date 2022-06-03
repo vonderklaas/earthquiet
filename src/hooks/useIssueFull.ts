@@ -7,7 +7,7 @@ export const useIssueFull = (pageSlug: string | string[]) => {
     },
   });
 
-  const issuesQueryFull = gql`
+  const useIssueFullQuery = gql`
     query ($pageSlug: String!) {
       solutions(where: { slug: $pageSlug }) {
         title
@@ -27,5 +27,5 @@ export const useIssueFull = (pageSlug: string | string[]) => {
     pageSlug,
   };
 
-  return graphQLClient.request(issuesQueryFull, vars);
+  return graphQLClient.request(useIssueFullQuery, vars);
 };

@@ -7,7 +7,7 @@ export const useIssuesIds = () => {
     },
   });
 
-  const issuesQuery = gql`
+  const useIssuesIdsQuery = gql`
     query {
       solutions {
         categoryParent {
@@ -17,5 +17,5 @@ export const useIssuesIds = () => {
     }
   `;
 
-  return graphQLClient.request(issuesQuery);
+  return graphQLClient.request(useIssuesIdsQuery);
 };

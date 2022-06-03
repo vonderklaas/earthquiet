@@ -7,7 +7,7 @@ export const useCategoryTitle = (pageSlug: string | string[]) => {
     },
   });
 
-  const categoriesQuery = gql`
+  const useCategoryTitleQuery = gql`
     query ($pageSlug: String!) {
       category(where: { slug: $pageSlug }) {
         title
@@ -19,5 +19,5 @@ export const useCategoryTitle = (pageSlug: string | string[]) => {
     pageSlug,
   };
 
-  return graphQLClient.request(categoriesQuery, vars);
+  return graphQLClient.request(useCategoryTitleQuery, vars);
 };

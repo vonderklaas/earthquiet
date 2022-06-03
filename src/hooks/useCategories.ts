@@ -7,7 +7,7 @@ export const useCategories = () => {
     },
   });
 
-  const categoriesQuery = gql`
+  const useCategoriesQuery = gql`
     query {
       categories {
         title
@@ -21,5 +21,5 @@ export const useCategories = () => {
     }
   `;
 
-  return graphQLClient.request(categoriesQuery);
+  return graphQLClient.request(useCategoriesQuery);
 };
