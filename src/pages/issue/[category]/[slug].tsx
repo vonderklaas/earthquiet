@@ -52,8 +52,8 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
               <div className={styles.timeToRead}>
                 <FaClock />
                 <span>
-                  Time to read: {timeToRead}{' '}
-                  {timeToRead > 1 ? 'minutes' : 'minute'}
+                  {timeToRead}
+                  {timeToRead > 1 ? ' minutes to read' : 'minute to'}
                 </span>
               </div>
               <div className={styles.issueTags}>
@@ -64,7 +64,6 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>
-                  <h3>General</h3>
                   <Reactmarkdown>{issue.generalText}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
@@ -72,7 +71,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   <Reactmarkdown>{issue.consequences}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>Solutions</h3>
+                  <h3>Improvements and Solutions</h3>
                   <Reactmarkdown>{issue.solutions}</Reactmarkdown>
                 </div>
               </div>
@@ -80,7 +79,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
           );
         })}
         <Heading
-          subTitle={'Communicate'}
+          subTitle={'Lets talk'}
           paragraph={`Maybe someone has already created a repo for this?`}
         />
         <div className={styles.comments}>

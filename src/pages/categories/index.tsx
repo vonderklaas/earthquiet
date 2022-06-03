@@ -67,9 +67,9 @@ const Categories = ({ categories }: Categories) => {
                   </div>
                   <p className={styles.categoryIssues}>
                     {category.issues === 1 ? (
-                      <span>{category.issues} issue</span>
+                      <span>{category.issues} improvement</span>
                     ) : (
-                      <span>{category.issues} issues</span>
+                      <span>{category.issues} improvements</span>
                     )}
                   </p>
                 </a>

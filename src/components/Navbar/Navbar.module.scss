@@ -18,9 +18,6 @@
     padding: 10px 20px;
     max-width: 1300px;
     margin: 0 auto;
-    @media only screen and (max-width: 525px) {
-      padding: 7.5px 20px;
-    }
   }
   &Logo {
     display: flex;
@@ -46,7 +43,7 @@
       transition: all 0.3s;
       color: $text-light;
       &:hover {
-        color: $primary-purple;
+        color: $primary-blue;
       }
     }
   }

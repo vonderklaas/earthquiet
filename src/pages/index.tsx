@@ -13,7 +13,7 @@ const Home = () => {
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderHeading}>
           <h1 className={styles.homeHeaderHeadingTitle}>
-            “The greatest danger to our future is apathy.” - Jane Goodall
+            "The greatest danger to our future is apathy" - J. Goodall
           </h1>
           <p className={styles.homeHeaderHeadingParagraph}>
             EARTHQUIET - is a platform that collects global and not only global
@@ -102,10 +102,9 @@ const Home = () => {
           <div className={styles.homeInfoColumn}>
             <h3>Not for money</h3>
             <p>
-              EARTHQUIET is non-profit and s free platform without any
-              privileges and paid options. We exist by our own conscious will
-              and independently, accepting support from enthusiasts and
-              supporters.
+              EARTHQUIET is non-profit and free platform without any privileges
+              and paid options. We exist by our own conscious will and
+              independently, accepting support from enthusiasts and supporters.
             </p>
           </div>
         </div>
