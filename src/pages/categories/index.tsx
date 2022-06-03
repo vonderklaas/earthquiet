@@ -1,4 +1,5 @@
-import { gql, GraphQLClient } from 'graphql-request';
+import { GetStaticProps } from 'next';
+
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -8,46 +9,17 @@ import Image from 'next/image';
 
 import styles from './Categories.module.scss';
 
-import { GetStaticProps } from 'next';
-
 import { Categories, Category } from '../../types/Categories';
 import { IssueId } from '../../types/Issues';
 
+import { useCategories } from '../../hooks/useCategories';
+import { useIssuesIds } from '../../hooks/useIssuesIds';
+
 export const getStaticProps: GetStaticProps = async () => {
-  const url = process.env.API_CONTENT_URL;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: process.env.GRAPH_TOKEN,
-    },
-  });
-
-  const categoriesQuery = gql`
-    query {
-      categories {
-        title
-        slug
-        id
-        description
-        icon {
-          url
-        }
-      }
-    }
-  `;
-
-  const issuesQuery = gql`
-    query {
-      solutions {
-        categoryParent {
-          id
-        }
-      }
-    }
-  `;
-
-  const categoriesData = await graphQLClient.request(categoriesQuery);
-  const issuesData = await graphQLClient.request(issuesQuery);
+  const categoriesData = await useCategories();
   const categories = categoriesData.categories;
+
+  const issuesData = await useIssuesIds();
   const issuesIds = issuesData.solutions;
 
   categories.map((category: Category) => {

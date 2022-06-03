@@ -1,4 +1,3 @@
-import { gql, GraphQLClient } from 'graphql-request';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -11,42 +10,14 @@ import { GetServerSideProps } from 'next';
 
 import { IssueShort, IssuesArray } from '../../types/Issues';
 
+import { useIssueShort } from '../../hooks/useIssueShort';
+import { useCategoryTitle } from '../../hooks/useCategoryTitle';
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const pageSlug = context.query.slug;
-  const url = process.env.API_CONTENT_URL;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: process.env.GRAPH_TOKEN,
-    },
-  });
+  const pageSlug: string | string[] = context.query.slug;
 
-  const issuesQuery = gql`
-    query ($pageSlug: String!) {
-      solutions(where: { categorySlug: $pageSlug }) {
-        title
-        description
-        slug
-        categorySlug
-        date
-        keywords
-      }
-    }
-  `;
-
-  const categoriesQuery = gql`
-    query ($pageSlug: String!) {
-      category(where: { slug: $pageSlug }) {
-        title
-      }
-    }
-  `;
-
-  const vars = {
-    pageSlug,
-  };
-
-  const issuesData = await graphQLClient.request(issuesQuery, vars);
-  const categoriesData = await graphQLClient.request(categoriesQuery, vars);
+  const issuesData = await useIssueShort(pageSlug);
+  const categoriesData = await useCategoryTitle(pageSlug);
   const issues: IssuesArray = issuesData.solutions;
   const categoryTitle = categoriesData.category.title;
 

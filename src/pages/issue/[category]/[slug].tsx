@@ -1,53 +1,22 @@
-import { gql, GraphQLClient } from 'graphql-request';
+import { useEffect, useRef, useState } from 'react';
+import { FaClock } from 'react-icons/fa';
 import Reactmarkdown from 'react-markdown';
+import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
-import Tag from '../../../components/Tag/Tag';
-import styles from './Issue.module.scss';
-
-import { GetServerSideProps } from 'next';
-
 import Comments from '../../../components/Comments';
+import Tag from '../../../components/Tag/Tag';
 
-import { useRouter } from 'next/router';
-
-import { useEffect, useRef, useState } from 'react';
-
-import { FaClock } from 'react-icons/fa';
-
+import styles from './Issue.module.scss';
 import { IssueFull } from '../../../types/Issues';
+import { useIssueFull } from '../../../hooks/useIssueFull';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
-  const url = process.env.API_CONTENT_URL;
-  const graphQLClient = new GraphQLClient(url, {
-    headers: {
-      Authorization: process.env.GRAPH_TOKEN,
-    },
-  });
-
-  const query = gql`
-    query ($pageSlug: String!) {
-      solutions(where: { slug: $pageSlug }) {
-        title
-        description
-        slug
-        generalText
-        consequences
-        solutions
-        date
-        keywords
-        categorySlug
-      }
-    }
-  `;
-
-  const vars = {
-    pageSlug,
-  };
-
-  const issuesData = await graphQLClient.request(query, vars);
+  const issuesData = await useIssueFull(pageSlug);
   const issue = issuesData.solutions;
 
   return {
@@ -59,7 +28,6 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
   const [timeToRead, setTimeToRead] = useState(0);
   const router = useRouter();
   const commentsUrl = `${router.query.category}__${router.query.slug}`;
-
   const issueRef = useRef<HTMLDivElement>(null);
 
   const readingTime = () => {
