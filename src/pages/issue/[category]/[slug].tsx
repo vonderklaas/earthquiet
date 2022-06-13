@@ -20,20 +20,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const issue = issuesData.solutions;
 
   return {
-    props: { pageSlug, issue },
+    props: { issue },
   };
 };
 
-const Issue = ({
-  pageSlug,
-  issue,
-}: {
-  pageSlug: string;
-  issue: IssueFull[];
-}) => {
+const Issue = ({ issue }: { issue: IssueFull[] }) => {
   const [timeToRead, setTimeToRead] = useState(0);
-  const router = useRouter();
-  const commentsUrl = `${router.query.category}__${router.query.slug}`;
   const issueRef = useRef<HTMLDivElement>(null);
 
   const readingTime = () => {
@@ -59,7 +51,7 @@ const Issue = ({
                 <FaClock />
                 <span>
                   {timeToRead}
-                  {timeToRead > 1 ? ' minutes to read' : 'minute to'}
+                  {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
               <div className={styles.issueTags}>
@@ -77,17 +69,14 @@ const Issue = ({
                   <Reactmarkdown>{issue.consequences}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
-                  <h3>Improvements and Solutions</h3>
+                  <h3>Improvements</h3>
                   <Reactmarkdown>{issue.solutions}</Reactmarkdown>
                 </div>
               </div>
             </div>
           );
         })}
-        <Heading
-          subTitle={'Lets talk'}
-          paragraph={`Maybe someone has already created a repo for this?`}
-        />
+        <Heading subTitle={'Lets talk'} />
         <div className={styles.comments}>
           <Comments />
         </div>
