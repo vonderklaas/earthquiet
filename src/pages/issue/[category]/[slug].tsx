@@ -20,11 +20,17 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const issue = issuesData.solutions;
 
   return {
-    props: { issue },
+    props: { pageSlug, issue },
   };
 };
 
-const Issue = ({ issue }: { issue: IssueFull[] }) => {
+const Issue = ({
+  pageSlug,
+  issue,
+}: {
+  pageSlug: string;
+  issue: IssueFull[];
+}) => {
   const [timeToRead, setTimeToRead] = useState(0);
   const router = useRouter();
   const commentsUrl = `${router.query.category}__${router.query.slug}`;
@@ -83,7 +89,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
           paragraph={`Maybe someone has already created a repo for this?`}
         />
         <div className={styles.comments}>
-          <Comments commentsUrl={commentsUrl} />
+          <Comments />
         </div>
       </main>
       <Footer />
