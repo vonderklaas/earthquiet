@@ -1,4 +1,4 @@
-### EARTHQUIET
+# EARTHQUIET
 
 ### URL
 
