@@ -1,12 +1,3 @@
-## Technologies:
-
-- React
-- Typescript
-- Next.js
-- GraphCMS
-- GraphQL
-- SASS
-
-## URL:
+### URL:
 
 https://www.earthquiet.com/
