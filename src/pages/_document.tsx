@@ -6,9 +6,9 @@ class DocumentPage extends Document {
       <Html>
         <Head>
           <link
-            href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap'
+            crossOrigin=''
             rel='stylesheet'
-            crossOrigin='true'
           />
         </Head>
         <body>

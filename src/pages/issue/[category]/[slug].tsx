@@ -54,11 +54,11 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
-              <div className={styles.issueTags}>
+              {/* <div className={styles.issueTags}>
                 {issue.keywords.split(', ').map((tag) => (
                   <Tag key={tag} tag={tag} />
                 ))}
-              </div>
+              </div> */}
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>

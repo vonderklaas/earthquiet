@@ -15,38 +15,43 @@ const Footer = () => {
           <h4>Legal</h4>
           <ul>
             <li>
-              <Link href='/privacy'>
-                <a>Privacy Policy</a>
+              <Link href='/cookies'>
+                <a>cookies</a>
               </Link>
             </li>
             <li>
               <Link href='/terms'>
-                <a>Terms of Use</a>
+                <a>terms of Use</a>
               </Link>
             </li>
             <li>
-              <Link href='/cookies'>
-                <a>Cookies</a>
+              <Link href='/privacy'>
+                <a>privacy Policy</a>
               </Link>
             </li>
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
-          <h4>Support</h4>
+          <h4>General</h4>
           <ul>
             <li>
-              <Link href='/donate'>
-                <a>Donate</a>
+              <Link href='/categories'>
+                <a>categories</a>
               </Link>
             </li>
             <li>
-              <Link href='/docs'>
-                <a>Docs</a>
+              <Link href='/contribute'>
+                <a>contribute</a>
               </Link>
             </li>
             <li>
-              <Link href='/team'>
-                <a>Team</a>
+              <Link href='/about'>
+                <a>about</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/contact'>
+                <a>contact</a>
               </Link>
             </li>
           </ul>
@@ -55,23 +60,18 @@ const Footer = () => {
           <h4>Platform</h4>
           <ul>
             <li>
-              <Link href='/categories'>
-                <a>Categories</a>
+              <Link href='/docs'>
+                <a>docs</a>
               </Link>
             </li>
             <li>
-              <Link href='/contribute'>
-                <a>Contribution</a>
+              <Link href='/team'>
+                <a>team</a>
               </Link>
             </li>
             <li>
-              <Link href='/about'>
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/contact'>
-                <a>Contact</a>
+              <Link href='/donate'>
+                <a>donate</a>
               </Link>
             </li>
           </ul>

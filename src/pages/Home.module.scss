@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 65vh;
   &Heading {
     max-width: 1000px;
     margin-top: 130px;
@@ -32,12 +32,12 @@
   margin: 0 auto;
   padding-top: 50px;
   min-height: 100vh;
+  a {
+    color: $primary-green;
+  }
 
   .homeDescription {
     margin-top: 50px;
-    a {
-      color: $primary-green;
-    }
   }
 
   .homeInfo {

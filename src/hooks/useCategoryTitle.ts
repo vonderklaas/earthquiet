@@ -11,6 +11,7 @@ export const useCategoryTitle = (pageSlug: string | string[]) => {
     query ($pageSlug: String!) {
       category(where: { slug: $pageSlug }) {
         title
+        description
       }
     }
   `;

@@ -3,7 +3,7 @@ import styles from './Banner.module.scss';
 const Banner = () => {
   return (
     <div className={styles.banner}>
-      <span>We Support Ukraine 🇺🇦</span>
+      <span>🇺🇦</span>
       <a
         className={styles.bannerLink}
         target='_blank'

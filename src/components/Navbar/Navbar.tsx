@@ -34,7 +34,7 @@ const Navbar = () => {
                 }
               >
                 <Link href='/categories'>
-                  <a className={styles.navbarMenuLink}>Categories</a>
+                  <a className={styles.navbarMenuLink}>categories</a>
                 </Link>
               </li>
               <li
@@ -43,19 +43,19 @@ const Navbar = () => {
                 }
               >
                 <Link href='/contribute'>
-                  <a className={styles.navbarMenuLink}>Contribute</a>
+                  <a className={styles.navbarMenuLink}>contribute</a>
                 </Link>
               </li>
               <li className={router.pathname == '/about' ? 'active-link' : ''}>
                 <Link href='/about'>
-                  <a className={styles.navbarMenuLink}>About</a>
+                  <a className={styles.navbarMenuLink}>about</a>
                 </Link>
               </li>
               <li
                 className={router.pathname == '/contact' ? 'active-link' : ''}
               >
                 <Link href='/contact'>
-                  <a className={styles.navbarMenuLink}>Contact</a>
+                  <a className={styles.navbarMenuLink}>contact us</a>
                 </Link>
               </li>
             </ul>

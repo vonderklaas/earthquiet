@@ -61,15 +61,15 @@ const Categories = ({ categories }: Categories) => {
                         height='35'
                       />
                     </div>
-                    <p className={styles.categoryDescription}>
+                    {/* <p className={styles.categoryDescription}>
                       {category.description}
-                    </p>
+                    </p> */}
                   </div>
                   <p className={styles.categoryIssues}>
                     {category.issues === 1 ? (
-                      <span>{category.issues} improvement</span>
+                      <span>{category.issues} topic</span>
                     ) : (
-                      <span>{category.issues} improvements</span>
+                      <span>{category.issues} topics</span>
                     )}
                   </p>
                 </a>

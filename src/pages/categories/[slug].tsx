@@ -19,27 +19,32 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const issuesData = await useIssueShort(pageSlug);
   const categoriesData = await useCategoryTitle(pageSlug);
   const issues: IssuesArray = issuesData.solutions;
-  const categoryTitle = categoriesData.category.title;
+  const category = categoriesData.category;
 
   return {
-    props: { issues, categoryTitle },
+    props: { issues, category },
   };
 };
 
 const Category = ({
   issues,
-  categoryTitle,
+  category,
 }: {
   issues: IssueShort[];
-  categoryTitle: string;
+  category: {
+    title: string;
+    description: string;
+  };
 }) => {
+  console.log(category);
   return (
     <>
       <Navbar />
       <main>
-        <Heading title={`What can improve ${categoryTitle.toUpperCase()}`} />
+        <Heading title={`Topics of ${category.title.toUpperCase()}`} />
+        <p>{category.description}</p>
         {issues.length === 0 ? (
-          <div>No issues</div>
+          <div>No topics</div>
         ) : (
           <>
             <div className={styles.issues}>
@@ -50,17 +55,16 @@ const Category = ({
                     href={`/issue/${issue.categorySlug}/${issue.slug}`}
                   >
                     <a className={styles.issue} key={issue.slug}>
-                      <h3 className={styles.issueTitle}>{issue.title}</h3>
+                      <div className={styles.issueWrapper}>
+                        <h3 className={styles.issueTitle}>{issue.title}</h3>
+                        <p className={styles.issueTags}>
+                          {issue.keywords.split(', ').map((tag) => (
+                            <Tag key={tag} tag={tag} />
+                          ))}
+                        </p>
+                      </div>
                       <p className={styles.issueDescription}>
-                        {issue.description}
-                      </p>
-                      <p className={styles.issueTags}>
-                        {issue.keywords.split(', ').map((tag) => (
-                          <Tag key={tag} tag={tag} />
-                        ))}
-                      </p>
-                      <p className={styles.issueDescription}>
-                        Updated: {issue.date}
+                        Last updated {issue.date}
                       </p>
                     </a>
                   </Link>
