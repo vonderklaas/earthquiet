@@ -3,6 +3,7 @@ import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './Home.module.scss';
 
@@ -11,18 +12,19 @@ const Home = () => {
     <>
       <Navbar />
       <div className={styles.homeHeader}>
-        <div className={styles.homeHeaderHeading}>
-          <h1 className={styles.homeHeaderHeadingTitle}>Hello 🌍!</h1>
-          <p className={styles.homeHeaderHeadingParagraph}>
+        <div className={styles.homeHeaderText}>
+          <h1 className={styles.homeHeaderTitle}>Hello visitor!</h1>
+          <p className={styles.homeHeaderParagraph}>
             EARTHQUIET is a platform that collects global problems from all
             around the world into one place. We often provide consequences and
             possible solutions or ideas to explore. We inspire people to think,
             to invest, to research and to act.
           </p>
         </div>
+        <Image width={350} height={350} src={'/human.png'} />
       </div>
       <section className={styles.homeSection}>
-        <Heading subTitle={'Motivation'} />
+        <Heading subTitle={'motivation'} />
         <div className={styles.homeDescription}>
           <p>
             We know from history that technological innovations never came to
@@ -66,41 +68,16 @@ const Home = () => {
             explore problems and ideas, communicate and find like-minded people,
             the future is in our hands, and we need to start today.
           </p>
+        </div>
+
+        <div>
+          {/* <br /> */}
           <p>
             Thank you, EARTHQUIET{' '}
             <Link href='/team'>
               <a>team</a>
             </Link>
           </p>
-        </div>
-        <Heading subTitle={'Vision'} />
-        <div className={styles.homeInfo}>
-          <div className={styles.homeInfoColumn}>
-            <h3>research</h3>
-            <p>
-              Our articles are based only on verified sources. We explore each
-              problem and try to get to the core. We provide consequences and
-              possible solutions as simple and understandable thoughts.
-            </p>
-          </div>
-          <div className={styles.homeInfoColumn}>
-            <h3>contribute</h3>
-            <p>
-              We are not only focusing on organizing the world's problems. We
-              want to inspire people and push them to action. Knowledge is
-              power, but it needs to be used. Feel free to share your ideas,
-              contribute and create.
-            </p>
-          </div>
-          <div className={styles.homeInfoColumn}>
-            <h3>not about money</h3>
-            <p>
-              EARTHQUIET is a non-profit and free platform without any
-              privileges or paid options. We exist only because of our own
-              conscious will. We are independent, but always accept help. Feel
-              free to support us <Link href='/donate'>here</Link>
-            </p>
-          </div>
         </div>
       </section>
       <Footer />

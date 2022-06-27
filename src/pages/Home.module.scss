@@ -1,32 +1,30 @@
 .homeHeader {
-  background: url('../../public/background.webp') no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  margin-top: 150px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 65vh;
-  &Heading {
-    max-width: 1000px;
-    margin-top: 130px;
-    &Title,
-    &Paragraph {
+  flex-direction: row-reverse;
+  align-items: center;
+
+  .homeHeaderText {
+    max-width: 600px;
+    .homeHeaderTitle,
+    .homeHeaderParagraph {
       padding: 10px;
       color: $text-dark;
       background-color: rgba($text-light, 0.85);
     }
-    &Title {
+    .homeHeaderTitle {
       display: inline;
       font-size: 2rem;
     }
-    &Paragraph {
+    .homeHeaderParagraph {
       font-size: 1.1rem;
     }
   }
 }
 
 .homeSection {
-  max-width: 1300px;
+  max-width: 950px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -37,14 +35,16 @@
   }
 
   .homeDescription {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    max-width: 950px;
   }
 
   .homeInfo {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: 20px;
     &Column {
       max-width: 340px;
     }
@@ -53,7 +53,6 @@
 
 @media screen and (max-width: 525px) {
   .homeHeader {
-    background-position: 50% 50%;
     &Heading {
       &Title {
         font-size: 2rem;

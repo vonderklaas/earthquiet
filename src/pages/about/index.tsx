@@ -20,6 +20,35 @@ const About = () => {
           thinking about or want to contribute and make our world a better
           place.`}
         />
+        {/* <Heading subTitle={'our vision'} />
+        <div className={styles.homeInfo}>
+          <div className={styles.homeInfoColumn}>
+            <h3>research</h3>
+            <p>
+              Our articles are based only on verified sources. We explore each
+              problem and try to get to the core. We provide consequences and
+              possible solutions as simple and understandable thoughts.
+            </p>
+          </div>
+          <div className={styles.homeInfoColumn}>
+            <h3>contribute</h3>
+            <p>
+              We are not only focusing on organizing the world's problems. We
+              want to inspire people and push them to action. Knowledge is
+              power, but it needs to be used. Feel free to share your ideas,
+              contribute and create.
+            </p>
+          </div>
+          <div className={styles.homeInfoColumn}>
+            <h3>not about money</h3>
+            <p>
+              EARTHQUIET is a non-profit and free platform without any
+              privileges or paid options. We exist only because of our own
+              conscious will. We are independent, but always accept help. Feel
+              free to support us <Link href='/donate'>here</Link>
+            </p>
+          </div>
+        </div> */}
         <Heading
           subTitle={`Contributors`}
           paragraph={`Our team is very small now, but of course we plan expanding. Our

@@ -54,6 +54,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
+               
               {/* <div className={styles.issueTags}>
                 {issue.keywords.split(', ').map((tag) => (
                   <Tag key={tag} tag={tag} />

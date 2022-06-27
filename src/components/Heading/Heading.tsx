@@ -11,7 +11,7 @@ const Heading = ({ title, subTitle, paragraph }: HeadingProps) => {
     <div className={styles.heading}>
       <div className={styles.headingWrapper}>
         {title && <h1 className={styles.headingTitle}>{title}</h1>}
-        {subTitle && <h3 className={styles.headingSubTitle}>{subTitle}</h3>}
+        {subTitle && <h4 className={styles.headingSubTitle}>{subTitle}</h4>}
       </div>
       {paragraph && <p className={styles.headingParagraph}>{paragraph}</p>}
     </div>
