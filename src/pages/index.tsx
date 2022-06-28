@@ -21,10 +21,10 @@ const Home = () => {
             to invest, to research and to act.
           </p>
         </div>
-        <Image width={350} height={350} src={'/human.png'} />
+        <Image width={260} height={260} src={'/logo.png'} />
       </div>
       <section className={styles.homeSection}>
-        <Heading subTitle={'motivation'} />
+        <Heading subTitle={'Our motivation'} />
         <div className={styles.homeDescription}>
           <p>
             We know from history that technological innovations never came to
@@ -68,14 +68,10 @@ const Home = () => {
             explore problems and ideas, communicate and find like-minded people,
             the future is in our hands, and we need to start today.
           </p>
-        </div>
-
-        <div>
-          {/* <br /> */}
           <p>
             Thank you, EARTHQUIET{' '}
             <Link href='/team'>
-              <a>team</a>
+              <a>Team</a>
             </Link>
           </p>
         </div>

@@ -57,13 +57,10 @@ const Categories = ({ categories }: Categories) => {
                       <Image
                         src={category.icon.url}
                         alt={category.slug}
-                        width='35'
-                        height='35'
+                        width='30'
+                        height='30'
                       />
                     </div>
-                    {/* <p className={styles.categoryDescription}>
-                      {category.description}
-                    </p> */}
                   </div>
                   <p className={styles.categoryIssues}>
                     {category.issues === 1 ? (

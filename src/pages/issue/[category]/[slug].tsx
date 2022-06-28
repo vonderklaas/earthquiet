@@ -55,11 +55,6 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                 </span>
               </div>
                
-              {/* <div className={styles.issueTags}>
-                {issue.keywords.split(', ').map((tag) => (
-                  <Tag key={tag} tag={tag} />
-                ))}
-              </div> */}
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>

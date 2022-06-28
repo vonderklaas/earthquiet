@@ -4,11 +4,9 @@
   flex-wrap: wrap;
 
   .category {
-    flex-grow: 1;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    // width: %;
-    // max-height: 500px;
+    justify-content: space-between;
     border-radius: 10px;
     padding: 15px;
     margin: 15px 8px;
@@ -33,7 +31,6 @@
     &TitleWrapper {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
     }
 
     &Title {
@@ -48,8 +45,9 @@
       overflow: hidden;
     }
     &Issues {
-      margin: 15px 0 0 0;
+      margin: 0;
       color: $primary-green;
+      font-size: 1rem;
     }
   }
 }
@@ -60,7 +58,6 @@
   flex-wrap: wrap;
 
   .issue {
-    // flex-grow: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -85,8 +82,6 @@
     &Title {
       color: $text-dark;
       font-size: 1.5rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
     }
 
     &Description {

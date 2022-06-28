@@ -16,17 +16,17 @@ const Footer = () => {
           <ul>
             <li>
               <Link href='/cookies'>
-                <a>cookies</a>
+                <a>Cookies</a>
               </Link>
             </li>
             <li>
               <Link href='/terms'>
-                <a>terms of Use</a>
+                <a>Terms of Use</a>
               </Link>
             </li>
             <li>
               <Link href='/privacy'>
-                <a>privacy Policy</a>
+                <a>Privacy Policy</a>
               </Link>
             </li>
           </ul>
@@ -36,22 +36,22 @@ const Footer = () => {
           <ul>
             <li>
               <Link href='/categories'>
-                <a>categories</a>
+                <a>Problems</a>
               </Link>
             </li>
             <li>
               <Link href='/contribute'>
-                <a>contribute</a>
+                <a>Contribute</a>
               </Link>
             </li>
             <li>
               <Link href='/about'>
-                <a>about</a>
+                <a>About Us</a>
               </Link>
             </li>
             <li>
               <Link href='/contact'>
-                <a>contact</a>
+                <a>Contact Us</a>
               </Link>
             </li>
           </ul>
@@ -61,17 +61,17 @@ const Footer = () => {
           <ul>
             <li>
               <Link href='/docs'>
-                <a>docs</a>
+                <a>Documentation</a>
               </Link>
             </li>
             <li>
               <Link href='/team'>
-                <a>team</a>
+                <a>Our Team</a>
               </Link>
             </li>
             <li>
               <Link href='/donate'>
-                <a>donate</a>
+                <a>Support Us</a>
               </Link>
             </li>
           </ul>

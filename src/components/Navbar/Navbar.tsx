@@ -15,17 +15,20 @@ const Navbar = () => {
         <nav className={styles.navbar}>
           <div className={styles.navbarContainer}>
             <div className={styles.navbarLogo}>
-              <Link href='/'>
-                <a>
-                  <Image
-                    className={styles.navbarLogoImage}
-                    src='/logo.png'
-                    alt='EARTHQUIET'
-                    width='45'
-                    height='45'
-                  />
-                </a>
-              </Link>
+              {router.pathname !== '/' ? (
+                <Link href='/'>
+                  <a>
+                    <Image
+                      src='/logo.png'
+                      alt='EARTHQUIET'
+                      width='40'
+                      height='40'
+                    />
+                  </a>
+                </Link>
+              ) : (
+                <div></div>
+              )}
             </div>
             <ul className={styles.navbarMenu}>
               <li
@@ -34,7 +37,7 @@ const Navbar = () => {
                 }
               >
                 <Link href='/categories'>
-                  <a className={styles.navbarMenuLink}>categories</a>
+                  <a className={styles.navbarMenuLink}>Problems</a>
                 </Link>
               </li>
               <li
@@ -43,19 +46,19 @@ const Navbar = () => {
                 }
               >
                 <Link href='/contribute'>
-                  <a className={styles.navbarMenuLink}>contribute</a>
+                  <a className={styles.navbarMenuLink}>Contribute</a>
                 </Link>
               </li>
               <li className={router.pathname == '/about' ? 'active-link' : ''}>
                 <Link href='/about'>
-                  <a className={styles.navbarMenuLink}>about</a>
+                  <a className={styles.navbarMenuLink}>About us</a>
                 </Link>
               </li>
               <li
                 className={router.pathname == '/contact' ? 'active-link' : ''}
               >
                 <Link href='/contact'>
-                  <a className={styles.navbarMenuLink}>contact us</a>
+                  <a className={styles.navbarMenuLink}>Contact Us</a>
                 </Link>
               </li>
             </ul>

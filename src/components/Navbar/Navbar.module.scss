@@ -23,13 +23,7 @@
     display: flex;
     align-items: center;
     line-height: 0;
-    &Image {
-      display: block;
-      transition: 2s ease-in-out;
-      &:hover {
-        transform: rotate(360deg);
-      }
-    }
+    height: 40px;
   }
   &Menu {
     display: inline-flex;
@@ -39,7 +33,7 @@
     padding: 0;
     &Link {
       font-size: 1rem;
-      margin: 0 30px;
+      margin-left: 30px;
       transition: all 0.3s;
       color: $text-light;
       &:hover {
