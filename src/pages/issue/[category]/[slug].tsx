@@ -2,13 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { FaClock } from 'react-icons/fa';
 import Reactmarkdown from 'react-markdown';
 import { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
 
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
 import Comments from '../../../components/Comments';
-import Tag from '../../../components/Tag/Tag';
 
 import styles from './Issue.module.scss';
 import { IssueFull } from '../../../types/Issues';

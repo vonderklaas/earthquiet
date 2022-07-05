@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Heading from '../../components/Heading/Heading';
-import Tag from '../../components/Tag/Tag';
 
 import styles from './Categories.module.scss';
 
@@ -57,11 +56,6 @@ const Category = ({
                     <a className={styles.issue} key={issue.slug}>
                       <div className={styles.issueWrapper}>
                         <h3 className={styles.issueTitle}>{issue.title}</h3>
-                        <p className={styles.issueTags}>
-                          {issue.keywords.split(', ').map((tag) => (
-                            <Tag key={tag} tag={tag} />
-                          ))}
-                        </p>
                       </div>
                       <p className={styles.issueDescription}>
                         Last updated {issue.date}
