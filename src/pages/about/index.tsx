@@ -8,7 +8,7 @@ const About = () => {
       <Navbar />
       <main>
         <Heading
-          title={`About`}
+          title={`About Us`}
           paragraph={`Discover more information about us and things we think are important`}
         />
         <Heading

@@ -8,7 +8,7 @@ const Contact = () => {
       <Navbar />
       <main>
         <Heading
-          title={`Contact`}
+          title={`Contact Us`}
           paragraph={`You need to talk with us? Sure!`}
         />
 

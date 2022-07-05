@@ -8,7 +8,7 @@ import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
 import Comments from '../../../components/Comments';
 
-import styles from './Issue.module.scss';
+import styles from './Topics.module.scss';
 import { IssueFull } from '../../../types/Issues';
 import { useIssueFull } from '../../../hooks/useIssueFull';
 

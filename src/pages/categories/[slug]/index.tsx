@@ -1,16 +1,16 @@
 import Link from 'next/link';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
-import Heading from '../../components/Heading/Heading';
-
-import styles from './Categories.module.scss';
-
 import { GetServerSideProps } from 'next';
 
-import { IssueShort, IssuesArray } from '../../types/Issues';
+import Navbar from '../../../components/Navbar/Navbar';
+import Footer from '../../../components/Footer/Footer';
+import Heading from '../../../components/Heading/Heading';
 
-import { useIssueShort } from '../../hooks/useIssueShort';
-import { useCategoryTitle } from '../../hooks/useCategoryTitle';
+import styles from '../Categories.module.scss';
+
+import { IssueShort, IssuesArray } from '../../../types/Issues';
+
+import { useIssueShort } from '../../../hooks/useIssueShort';
+import { useCategoryTitle } from '../../../hooks/useCategoryTitle';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug: string | string[] = context.query.slug;
@@ -51,7 +51,7 @@ const Category = ({
                 return (
                   <Link
                     key={issue.slug}
-                    href={`/issue/${issue.categorySlug}/${issue.slug}`}
+                    href={`/topics/${issue.categorySlug}/${issue.slug}`}
                   >
                     <a className={styles.issue} key={issue.slug}>
                       <div className={styles.issueWrapper}>

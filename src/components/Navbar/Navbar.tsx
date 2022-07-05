@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import NextNProgress from 'nextjs-progressbar';
+import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
@@ -15,20 +16,16 @@ const Navbar = () => {
         <nav className={styles.navbar}>
           <div className={styles.navbarContainer}>
             <div className={styles.navbarLogo}>
-              {router.pathname !== '/' ? (
-                <Link href='/'>
-                  <a>
-                    <Image
-                      src='/logo.png'
-                      alt='EARTHQUIET'
-                      width='40'
-                      height='40'
-                    />
-                  </a>
-                </Link>
-              ) : (
-                <div></div>
-              )}
+              <Link href='/'>
+                <a>
+                  <Image
+                    src='/logo.png'
+                    alt='EARTHQUIET'
+                    width='40'
+                    height='40'
+                  />
+                </a>
+              </Link>
             </div>
             <ul className={styles.navbarMenu}>
               <li
@@ -37,21 +34,21 @@ const Navbar = () => {
                 }
               >
                 <Link href='/categories'>
-                  <a className={styles.navbarMenuLink}>Problems</a>
+                  <a className={styles.navbarMenuLink}>Explore</a>
                 </Link>
               </li>
               <li
                 className={
-                  router.pathname == '/contribute' ? 'active-link' : ''
+                  router.pathname == '/contribution' ? 'active-link' : ''
                 }
               >
                 <Link href='/contribute'>
-                  <a className={styles.navbarMenuLink}>Contribute</a>
+                  <a className={styles.navbarMenuLink}>Contribution</a>
                 </Link>
               </li>
               <li className={router.pathname == '/about' ? 'active-link' : ''}>
                 <Link href='/about'>
-                  <a className={styles.navbarMenuLink}>About us</a>
+                  <a className={styles.navbarMenuLink}>About Us</a>
                 </Link>
               </li>
               <li
@@ -60,6 +57,24 @@ const Navbar = () => {
                 <Link href='/contact'>
                   <a className={styles.navbarMenuLink}>Contact Us</a>
                 </Link>
+              </li>
+              <li>
+                <a
+                  className={styles.navbarMenuSocial}
+                  target='blank'
+                  href='https://twitter.com'
+                >
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a
+                  className={styles.navbarMenuSocial}
+                  target='blank'
+                  href='https://www.linkedin.com/company/earthquiet'
+                >
+                  <FaLinkedinIn />
+                </a>
               </li>
             </ul>
           </div>

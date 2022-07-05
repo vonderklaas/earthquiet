@@ -2,8 +2,6 @@ import Link from 'next/link';
 
 import Banner from '../Banner/Banner';
 
-import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -80,17 +78,6 @@ const Footer = () => {
       <div className={styles.footerLower}>
         <div className={styles.footerLowerCopyright}>
           Copyright &copy;{new Date().getFullYear()} Earthquiet
-        </div>
-        <div className={styles.footerLowerSocials}>
-          <a target='blank' href='https://twitter.com'>
-            <FaTwitter />
-          </a>
-          <a target='blank' href='https://instagram.com'>
-            <FaInstagram />
-          </a>
-          <a target='blank' href='https://www.linkedin.com/company/earthquiet'>
-            <FaLinkedinIn />
-          </a>
         </div>
       </div>
     </footer>
