@@ -13,12 +13,13 @@ const Home = () => {
       <Navbar />
       <div className={styles.homeHeader}>
         <div className={styles.homeHeaderText}>
-          <h1 className={styles.homeHeaderTitle}>Hello visitor!</h1>
+          <h1 className={styles.homeHeaderTitle}>Welcome to EARTHQUIET!</h1>
           <p className={styles.homeHeaderParagraph}>
-            EARTHQUIET is a platform that collects global problems from all
-            around the world into one place. We often provide consequences and
-            possible solutions or ideas to explore. We inspire people to think,
-            to invest, to research and to act.
+            It is a platform where the world's problems are collected, discussed
+            and shared. We provide information about the consequences and
+            solutions to current issues. We inspire people to think, invest,
+            learn and act. Our team feels that together, the impossible is
+            possible.
           </p>
         </div>
         <Image width={260} height={260} src={'/logo.png'} />

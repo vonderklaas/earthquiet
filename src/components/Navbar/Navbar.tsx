@@ -62,7 +62,7 @@ const Navbar = () => {
                 <a
                   className={styles.navbarMenuSocial}
                   target='blank'
-                  href='https://twitter.com'
+                  href='https://twitter.com/garbalau_twitt'
                 >
                   <FaTwitter />
                 </a>

@@ -13,12 +13,12 @@ const EarthquietApp = ({ Component, pageProps }: AppProps) => {
         <meta name='apple-mobile-web-app-title' content='EARTHQUIET' />
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
-          name='keywords'
-          content='EARTH, EARTHQUIET, Global Issues, World, Issues, Solutions, Global Warming, Climate Change, Problems, Solutions, Start-ups, Contribution'
+          name='description'
+          content="It is a platform where the world's problems are collected, discussed and shared. We provide information about the consequences and solutions to current issues. We inspire people to think, invest, learn and act."
         />
         <meta
-          name='description'
-          content='We are free and non-comercial web-based platform of global world problems and solutions, which is maintained by enthusiasts and supporters.'
+          name='keywords'
+          content='EARTH, EARTHQUIET, Global Problems, World, Problems, Solutions, Global Warming, Climate Change'
         />
         <link
           rel='apple-touch-icon'
