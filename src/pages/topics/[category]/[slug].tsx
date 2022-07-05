@@ -15,7 +15,7 @@ import { useIssueFull } from '../../../hooks/useIssueFull';
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const issuesData = await useIssueFull(pageSlug);
-  const issue = issuesData.solutions;
+  const issue = issuesData.improvements;
 
   return {
     props: { issue },
@@ -56,7 +56,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>
                   <h3>General</h3>
-                  <Reactmarkdown>{issue.generalText}</Reactmarkdown>
+                  <Reactmarkdown>{issue.general}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
                   <h3>Consequences</h3>
@@ -64,7 +64,7 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                 </div>
                 <div className={styles.issueBlock}>
                   <h3>Improvements</h3>
-                  <Reactmarkdown>{issue.solutions}</Reactmarkdown>
+                  <Reactmarkdown>{issue.improvements}</Reactmarkdown>
                 </div>
               </div>
             </div>

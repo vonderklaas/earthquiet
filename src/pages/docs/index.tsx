@@ -24,8 +24,8 @@ const Docs = () => {
           presented in their entirety and in all their diversity.`}
         />
         <Heading
-          subTitle={`Solutions`}
-          paragraph={`Solutions are some basic concepts, ideas or activities, the study and use of which can help in solving a 
+          subTitle={`Improvements`}
+          paragraph={`Improvements are some basic concepts, ideas or activities, the study and use of which can help in solving a 
           particular problem. In this category, things can be indicated that each person can do individually, for himself or his 
           circle, or things that a group of people can do and develop. One way or another, these are solutions that will 
           somehow have a positive impact on the solution of the problem, which will be able to break the primary layers of 

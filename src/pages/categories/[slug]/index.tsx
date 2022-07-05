@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   const issuesData = await useIssueShort(pageSlug);
   const categoriesData = await useCategoryTitle(pageSlug);
-  const issues: IssuesArray = issuesData.solutions;
+  const issues: IssuesArray = issuesData.improvements;
   const category = categoriesData.category;
 
   return {

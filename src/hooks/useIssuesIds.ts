@@ -9,7 +9,7 @@ export const useIssuesIds = () => {
 
   const useIssuesIdsQuery = gql`
     query {
-      solutions {
+      improvements {
         categoryParent {
           id
         }

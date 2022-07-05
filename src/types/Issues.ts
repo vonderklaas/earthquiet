@@ -6,7 +6,6 @@ export type IssuesArray = {
       slug: string;
       categorySlug: string;
       date: string;
-      keywords: string;
     }
   ];
 };
@@ -17,18 +16,16 @@ export type IssueShort = {
   slug: string;
   categorySlug: string;
   date: string;
-  keywords: string;
 };
 
 export type IssueFull = {
   title: string;
   description: string;
   slug: string;
-  generalText: string;
+  general: string;
   consequences: string;
-  solutions: string;
+  improvements: string;
   date: string;
-  keywords: string;
   categorySlug: string;
 };
 

@@ -9,15 +9,14 @@ export const useIssueFull = (pageSlug: string | string[]) => {
 
   const useIssueFullQuery = gql`
     query ($pageSlug: String!) {
-      solutions(where: { slug: $pageSlug }) {
+      improvements(where: { slug: $pageSlug }) {
         title
         description
         slug
-        generalText
+        general
         consequences
-        solutions
+        improvements
         date
-        keywords
         categorySlug
       }
     }

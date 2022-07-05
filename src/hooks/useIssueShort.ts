@@ -9,13 +9,12 @@ export const useIssueShort = (pageSlug: string | string[]) => {
 
   const useIssueShortQuery = gql`
     query ($pageSlug: String!) {
-      solutions(where: { categorySlug: $pageSlug }) {
+      improvements(where: { categorySlug: $pageSlug }) {
         title
         description
         slug
         categorySlug
         date
-        keywords
       }
     }
   `;

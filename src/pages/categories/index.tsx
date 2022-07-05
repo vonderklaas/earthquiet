@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const categories = categoriesData.categories;
 
   const issuesData = await useIssuesIds();
-  const issuesIds = issuesData.solutions;
+  const issuesIds = issuesData.improvements;
 
   categories.map((category: Category) => {
     category.issues = 0;
