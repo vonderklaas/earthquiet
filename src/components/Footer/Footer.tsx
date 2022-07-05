@@ -74,10 +74,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
-      <div className={styles.footerLower}>
-        <div className={styles.footerLowerCopyright}>
-          Copyright &copy;{new Date().getFullYear()} Earthquiet
+        <div className={styles.footerUpperItem}>
+          <p className={styles.footerUpperItemCopy}>
+            Copyright &copy;{new Date().getFullYear()} Earthquiet
+          </p>
         </div>
       </div>
     </footer>

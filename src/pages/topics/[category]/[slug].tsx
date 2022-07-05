@@ -52,10 +52,10 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
-               
               <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>
+                  <h3>General</h3>
                   <Reactmarkdown>{issue.generalText}</Reactmarkdown>
                 </div>
                 <div className={styles.issueBlock}>
@@ -70,10 +70,8 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
             </div>
           );
         })}
-        <Heading subTitle={'Lets talk'} />
-        <div className={styles.comments}>
-          <Comments />
-        </div>
+        <h3>What do you think?</h3>
+        <Comments />
       </main>
       <Footer />
     </>

@@ -1,54 +1,40 @@
 .homeHeader {
-  margin-top: 150px;
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
+  max-width: 1000px;
+  margin: 150px auto 0 auto;
 
-  .homeHeaderText {
-    max-width: 600px;
-    margin-left: 50px;
-    .homeHeaderTitle,
-    .homeHeaderParagraph {
+  &Text {
+    margin-left: 30px;
+    &Title,
+    &Paragraph {
       padding: 10px;
       color: $text-dark;
       background-color: rgba($text-light, 0.85);
     }
-    .homeHeaderTitle {
+    &Title {
       display: inline;
       font-size: 2rem;
     }
-    .homeHeaderParagraph {
+    &Paragraph {
       font-size: 1.1rem;
     }
   }
 }
 
 .homeSection {
-  max-width: 950px;
+  max-width: 1300px;
   width: 100%;
-  padding: 0 20px;
+  padding: 50px 20px 0 20px;
   margin: 0 auto;
-  padding-top: 50px;
-  min-height: 100vh;
   a {
     color: $primary-green;
   }
 
   .homeDescription {
     margin-top: 20px;
-    margin-bottom: 50px;
-    max-width: 950px;
-  }
-
-  .homeInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-    &Column {
-      max-width: 340px;
-    }
   }
 }
 

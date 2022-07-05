@@ -42,7 +42,7 @@ const Navbar = () => {
                   router.pathname == '/contribution' ? 'active-link' : ''
                 }
               >
-                <Link href='/contribute'>
+                <Link href='/contribution'>
                   <a className={styles.navbarMenuLink}>Contribution</a>
                 </Link>
               </li>

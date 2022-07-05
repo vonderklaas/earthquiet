@@ -1,8 +1,10 @@
 import Script from 'next/script';
 
+import styles from './Comments.module.scss';
+
 const Comments = () => {
   return (
-    <>
+    <div className={styles.comments}>
       <div id='disqus_thread'></div>
       <Script>
         {`
@@ -29,7 +31,7 @@ const Comments = () => {
           comments powered by Disqus.
         </a>
       </noscript>
-    </>
+    </div>
   );
 };
 

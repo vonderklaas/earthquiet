@@ -4,7 +4,8 @@
   flex-wrap: wrap;
 
   .category {
-    width: 100%;
+    width: 40%;
+    flex-grow: 1;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
@@ -89,8 +90,4 @@
       overflow: hidden;
     }
   }
-}
-
-.comments {
-  margin-top: 50px;
 }
