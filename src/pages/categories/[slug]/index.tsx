@@ -40,7 +40,8 @@ const Category = ({
     <>
       <Navbar />
       <main>
-        <Heading title={`${category.title.toUpperCase()}`} />
+        <Link href={'/'}>Home</Link>
+        <Heading title={`${category.title}`} />
         <p>{category.description}</p>
         {issues.length === 0 ? (
           <div>No topics</div>

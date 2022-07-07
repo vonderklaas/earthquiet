@@ -3,6 +3,8 @@ import { FaClock } from 'react-icons/fa';
 import Reactmarkdown from 'react-markdown';
 import { GetServerSideProps } from 'next';
 
+import Link from 'next/link';
+
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
@@ -23,6 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 const Issue = ({ issue }: { issue: IssueFull[] }) => {
+  const [isComments, setIsComments] = useState(true);
   const [timeToRead, setTimeToRead] = useState(0);
   const issueRef = useRef<HTMLDivElement>(null);
 
@@ -45,6 +48,14 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
         {issue.map((issue: IssueFull) => {
           return (
             <div key={issue.slug}>
+              {/* LINKS */}
+              <div>
+                <Link href={'/'}>Home</Link> /{' '}
+                <Link href={`/categories/${issue.categorySlug}`}>
+                  {issue.categorySlug.charAt(0).toUpperCase() +
+                    issue.categorySlug.slice(1)}
+                </Link>
+              </div>
               <div className={styles.timeToRead}>
                 <FaClock />
                 <span>
@@ -70,8 +81,14 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
             </div>
           );
         })}
-        <h3>What do you think?</h3>
-        <Comments />
+        <Heading title={'Comments'} />
+        <button
+          // className={styles.button}
+          onClick={() => setIsComments(!isComments)}
+        >
+          Hide Comments
+        </button>
+        {isComments && <Comments />}
       </main>
       <Footer />
     </>

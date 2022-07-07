@@ -7,7 +7,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
+  line-height: 1.75;
+  font-weight: 400;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 h1,
@@ -26,18 +32,28 @@ a {
 }
 
 main {
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   padding: 100px 20px 0 20px;
-  height: 100vh;
-  @media only screen and (max-width: 525px) {
-    padding: 80px 20px 0 20px;
-  }
+  min-height: 100vh;
 }
 
 .active-link {
   a {
     color: $primary-blue;
+  }
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 7.5px 15px;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25);
   }
 }

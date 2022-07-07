@@ -1,79 +1,13 @@
-.categories {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-
-  .category {
-    width: 40%;
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 8px;
-    transition: all 0.15s;
-    border: 1px solid #f1f1f1;
-    box-shadow: 2.5px 2.5px 10px #f3f3f3;
-
-    @media only screen and (max-width: 991px) {
-      width: 100%;
-    }
-
-    @media only screen and (max-width: 525px) {
-      padding: 10px;
-      margin: 10px 0;
-    }
-
-    &:hover {
-      box-shadow: 10px 5px 20px #f1f1f1;
-      transform: translateY(-3px);
-    }
-
-    &TitleWrapper {
-      display: flex;
-      align-items: center;
-    }
-
-    &Title {
-      color: $text-dark;
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-
-    &Description {
-      margin: 0;
-      max-height: 290px;
-      overflow: hidden;
-    }
-    &Issues {
-      margin: 0;
-      color: $primary-green;
-      font-size: 1rem;
-    }
-  }
-}
-
 .issues {
-  margin-top: 30px;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 
   .issue {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-    transition: all 0.15s;
-    border: 2px solid #f7f7f7;
-    box-shadow: 5px 5px 10px #f7f7f7;
+    padding: 10px;
     height: 100%;
-
-    &:hover {
-      box-shadow: 10px 5px 20px #f1f1f1;
-      transform: translateY(-3px);
-    }
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 
     .issueWrapper {
       display: flex;

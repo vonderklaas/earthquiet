@@ -32,13 +32,13 @@ const Team = () => {
                 <FaTwitter />
                 <span>https://twitter.com/garbalau_twitt</span>
               </a>
-              <a href='https://github.com/garbalau-github'>
-                <FaGithub />
-                <span>https://github.com/garbalau-github</span>
-              </a>
               <a href='https://www.linkedin.com/in/garbalau-in/'>
                 <FaLinkedinIn />
                 <span> https://www.linkedin.com/in/garbalau-in/</span>
+              </a>
+              <a href='https://github.com/garbalau-github'>
+                <FaGithub />
+                <span>https://github.com/garbalau-github</span>
               </a>
             </div>
           </li>
@@ -56,13 +56,13 @@ const Team = () => {
                 <FaTwitter />
                 <span>https://twitter.com/bakedwithlovemd</span>
               </a>
-              <a href='https://github.com/martiniucanastasia'>
-                <FaGithub />
-                <span>https://github.com/martiniucanastasia</span>
-              </a>
               <a href='https://www.linkedin.com/in/anastasia-martinyk/'>
                 <FaLinkedinIn />
                 <span> https://www.linkedin.com/in/anastasia-martinyk/</span>
+              </a>
+              <a href='https://github.com/martiniucanastasia'>
+                <FaGithub />
+                <span>https://github.com/martiniucanastasia</span>
               </a>
             </div>
           </li>

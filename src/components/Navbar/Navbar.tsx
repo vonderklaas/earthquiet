@@ -30,15 +30,6 @@ const Navbar = () => {
             <ul className={styles.navbarMenu}>
               <li
                 className={
-                  router.pathname == '/categories' ? 'active-link' : ''
-                }
-              >
-                <Link href='/categories'>
-                  <a className={styles.navbarMenuLink}>Explore</a>
-                </Link>
-              </li>
-              <li
-                className={
                   router.pathname == '/contribution' ? 'active-link' : ''
                 }
               >

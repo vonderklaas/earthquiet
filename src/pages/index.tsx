@@ -1,31 +1,37 @@
 import Navbar from '../components/Navbar/Navbar';
+import Categories from '../components/Categories/Categories';
 import Footer from '../components/Footer/Footer';
-import Heading from '../components/Heading/Heading';
+// import Heading from '../components/Heading/Heading';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 import styles from './Home.module.scss';
+import { getCategories } from '../hooks/getCategories';
+import { GetStaticProps } from 'next';
 
-const Home = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const categoriesData = await getCategories();
+  const categories = categoriesData.categories;
+
+  return {
+    props: { categories },
+  };
+};
+
+const Home = ({ categories }) => {
   return (
-    <>
+    <div className={styles.homeWrapper}>
       <Navbar />
+      <Categories categories={categories} />
       <div className={styles.homeHeader}>
-        <div className={styles.homeHeaderText}>
-          <h1 className={styles.homeHeaderTitle}>Welcome to EARTHQUIET!</h1>
-          <p className={styles.homeHeaderParagraph}>
-            It is a platform where the world's problems are collected, discussed
-            and shared. We provide information about the consequences and
-            solutions to current issues. We inspire people to think, invest,
-            learn and act. Our team feels that together, the impossible is
-            possible.
-          </p>
-        </div>
-        <Image width={260} height={260} src={'/logo.png'} />
+        <p className={styles.homeHeaderParagraph}>
+          It is a platform where the world's problems are collected, discussed
+          and shared. We provide information about the consequences and
+          solutions to current issues. We inspire people to think, invest, learn
+          and act. Our team feels that together, the impossible is possible.
+        </p>
       </div>
       <section className={styles.homeSection}>
-        <Heading subTitle={'Our motivation'} />
         <div className={styles.homeDescription}>
           <p>
             We know from history that technological innovations never came to
@@ -78,7 +84,7 @@ const Home = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 

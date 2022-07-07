@@ -10,7 +10,7 @@
 }
 
 .navbar {
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: #000;
   &Container {
     display: flex;
     align-items: center;
@@ -46,16 +46,6 @@
     }
     &Social {
       font-size: 1.2rem;
-    }
-  }
-}
-@media only screen and (max-width: 525px) {
-  .navbar {
-    flex-direction: column;
-    &Menu {
-      &Link {
-        margin: 0 7.5px;
-      }
     }
   }
 }

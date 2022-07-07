@@ -39,11 +39,6 @@ const Footer = () => {
         <div className={styles.footerUpperItem}>
           <ul>
             <li>
-              <Link href='/categories'>
-                <a>Explore</a>
-              </Link>
-            </li>
-            <li>
               <Link href='/contribution'>
                 <a>Contribution</a>
               </Link>
@@ -72,10 +67,6 @@ const Footer = () => {
                 <a>Our Team</a>
               </Link>
             </li>
-          </ul>
-        </div>
-        <div className={styles.footerUpperItem}>
-          <ul>
             <li>
               <Link href='/donate'>
                 <a>Support Us</a>

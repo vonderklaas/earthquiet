@@ -1,17 +1,11 @@
 .banner {
   text-align: center;
-  color: $text-light;
-  background-color: rgb(19, 31, 42);
+  background-color: #000;
   padding: 2.5px 0;
 
-  span {
-    font-size: 1rem;
-  }
-
   &Link {
-    margin-left: 15px;
+    margin-left: 10px;
     color: $primary-green;
-    font-size: 1rem;
   }
 }
 
@@ -22,18 +16,13 @@
 
   &Upper {
     display: flex;
-    align-self: flex-start;
-    justify-content: flex-start;
-    max-width: 1300px;
+    align-self: center;
+    justify-content: space-between;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 
-    @media only screen and (max-width: 991px) {
-      flex-direction: column;
-    }
-
     &Item {
-      padding: 25px 0;
       &:not(:last-of-type) {
         margin-right: 200px;
       }
