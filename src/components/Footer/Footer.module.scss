@@ -1,3 +1,20 @@
+.banner {
+  text-align: center;
+  color: $text-light;
+  background-color: rgb(19, 31, 42);
+  padding: 2.5px 0;
+
+  span {
+    font-size: 1rem;
+  }
+
+  &Link {
+    margin-left: 15px;
+    color: $primary-green;
+    font-size: 1rem;
+  }
+}
+
 .footer {
   margin-top: 50px;
   background-color: rgb(31, 41, 51);
@@ -34,10 +51,15 @@
         padding: 0;
         list-style: none;
       }
+    }
+  }
 
-      &Copy {
-        text-transform: uppercase;
-      }
+  &Lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &Copy {
+      text-transform: uppercase;
     }
   }
 }

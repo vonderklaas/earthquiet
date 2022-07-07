@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import NextNProgress from 'nextjs-progressbar';
-import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
@@ -61,7 +61,7 @@ const Navbar = () => {
               <li>
                 <a
                   className={styles.navbarMenuSocial}
-                  target='blank'
+                  target='_blank'
                   href='https://twitter.com/garbalau_twitt'
                 >
                   <FaTwitter />
@@ -70,10 +70,19 @@ const Navbar = () => {
               <li>
                 <a
                   className={styles.navbarMenuSocial}
-                  target='blank'
+                  target='_blank'
                   href='https://www.linkedin.com/company/earthquiet'
                 >
                   <FaLinkedinIn />
+                </a>
+              </li>
+              <li>
+                <a
+                  className={styles.navbarMenuSocial}
+                  target='_blank'
+                  href='https://github.com/EARTHQUIET/earthquiet'
+                >
+                  <FaGithub />
                 </a>
               </li>
             </ul>

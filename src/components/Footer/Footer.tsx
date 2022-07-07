@@ -1,16 +1,23 @@
 import Link from 'next/link';
 
-import Banner from '../Banner/Banner';
-
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Banner />
+      <div className={styles.banner}>
+        <span>🇺🇦</span>
+        <a
+          className={styles.bannerLink}
+          target='_blank'
+          href='https://supportukrainenow.org/'
+          rel='noreferrer'
+        >
+          <span>supportukrainenow.org</span>
+        </a>
+      </div>
       <div className={styles.footerUpper}>
         <div className={styles.footerUpperItem}>
-          <h4>Legal</h4>
           <ul>
             <li>
               <Link href='/cookies'>
@@ -30,16 +37,15 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
-          <h4>General</h4>
           <ul>
             <li>
               <Link href='/categories'>
-                <a>Problems</a>
+                <a>Explore</a>
               </Link>
             </li>
             <li>
-              <Link href='/contribute'>
-                <a>Contribute</a>
+              <Link href='/contribution'>
+                <a>Contribution</a>
               </Link>
             </li>
             <li>
@@ -55,7 +61,6 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.footerUpperItem}>
-          <h4>Platform</h4>
           <ul>
             <li>
               <Link href='/docs'>
@@ -67,6 +72,10 @@ const Footer = () => {
                 <a>Our Team</a>
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className={styles.footerUpperItem}>
+          <ul>
             <li>
               <Link href='/donate'>
                 <a>Support Us</a>
@@ -74,11 +83,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.footerUpperItem}>
-          <p className={styles.footerUpperItemCopy}>
-            Copyright &copy;{new Date().getFullYear()} Earthquiet
-          </p>
-        </div>
+      </div>
+      <div className={styles.footerLower}>
+        <p className={styles.footerLowerCopy}>
+          &copy;{new Date().getFullYear()} Earthquiet
+        </p>
       </div>
     </footer>
   );
