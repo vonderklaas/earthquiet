@@ -10,9 +10,6 @@ export const getCategories = () => {
         slug
         id
         description
-        icon {
-          url
-        }
       }
     }
   `;

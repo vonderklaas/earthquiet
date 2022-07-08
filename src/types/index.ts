@@ -2,11 +2,7 @@ export type CategoryType = {
   title: string;
   slug: string;
   id: string;
-  topics?: number;
   description: string;
-  icon: {
-    url: string;
-  };
 };
 
 export type CategoryTitleType = {

@@ -3,12 +3,11 @@ import { FaClock } from 'react-icons/fa';
 import Reactmarkdown from 'react-markdown';
 import { GetServerSideProps } from 'next';
 
-import Link from 'next/link';
-
 import Navbar from '../../../components/Navbar/Navbar';
 import Footer from '../../../components/Footer/Footer';
 import Heading from '../../../components/Heading/Heading';
 import Comments from '../../../components/Comments';
+import Bread from '../../../components/Bread/Bread';
 
 import styles from './Topics.module.scss';
 import { TopicLongType } from '../../../types/index';
@@ -42,23 +41,11 @@ const Topic = ({ topic }: { topic: TopicLongType[] }) => {
         {topic.map((topic: TopicLongType) => {
           return (
             <div key={topic.slug}>
-              <div>
-                <Link href={'/'}>&#8617; Home</Link> /{' '}
-                <Link href={`/categories/${topic.categorySlug}`}>
-                  <>
-                    &#8617;{' '}
-                    {topic.categorySlug.charAt(0).toUpperCase() +
-                      topic.categorySlug.slice(1)}
-                  </>
-                </Link>
-              </div>
+              <Bread category={topic} />
               <Heading title={topic.title} paragraph={topic.description} />
               <div className={styles.timeToRead}>
                 <FaClock />
-                <span>
-                  {timeToRead}
-                  {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
-                </span>
+                <span>{timeToRead} min to read</span>
               </div>
               <div ref={topicRef} className={styles.topic}>
                 <div className={styles.topicBlock}>

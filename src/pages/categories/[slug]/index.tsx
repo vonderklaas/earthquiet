@@ -38,8 +38,7 @@ const Category = ({
         <div>
           <Link href={'/'}>&#8617; Home</Link>
         </div>
-        <Heading title={`${category.title}`} />
-        <p>{category.description}</p>
+        <Heading title={`${category.title}`} paragraph={category.description} />
         {topics.length === 0 ? (
           <div>No topics</div>
         ) : (
