@@ -14,7 +14,7 @@ const EarthquietApp = ({ Component, pageProps }: AppProps) => {
         <meta name='viewport' content='width=device-width,initial-scale=1.0' />
         <meta
           name='description'
-          content="It is a platform where the world's problems are collected, discussed and shared. We provide information about the consequences and solutions to current issues. We inspire people to think, invest, learn and act."
+          content="It is a platform where the world's problems are collected, discussed and shared. We provide information about the consequences and solutions to current topics. We inspire people to think, invest, learn and act."
         />
         <meta
           name='keywords'

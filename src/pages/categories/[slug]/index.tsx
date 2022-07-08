@@ -7,58 +7,54 @@ import Heading from '../../../components/Heading/Heading';
 
 import styles from '../Categories.module.scss';
 
-import { IssueShort, IssuesArray } from '../../../types/Issues';
+import { TopicShortType, CategoryTitleType } from '../../../types/index';
 
-import { useIssueShort } from '../../../hooks/useIssueShort';
-import { useCategoryTitle } from '../../../hooks/useCategoryTitle';
+import { getTopicShort } from '../../../hooks/getTopicShort';
+import { getCategoryTitle } from '../../../hooks/getCategoryTitle';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug: string | string[] = context.query.slug;
-
-  const issuesData = await useIssueShort(pageSlug);
-  const categoriesData = await useCategoryTitle(pageSlug);
-  const issues: IssuesArray = issuesData.improvements;
+  const topicsData = await getTopicShort(pageSlug);
+  const categoriesData = await getCategoryTitle(pageSlug);
+  const topics = topicsData.improvements;
   const category = categoriesData.category;
 
   return {
-    props: { issues, category },
+    props: { topics, category },
   };
 };
 
 const Category = ({
-  issues,
+  topics,
   category,
 }: {
-  issues: IssueShort[];
-  category: {
-    title: string;
-    description: string;
-  };
+  topics: TopicShortType[];
+  category: CategoryTitleType;
 }) => {
   return (
     <>
       <Navbar />
       <main>
-        <div className={styles.breadCrumbs}>
-          <Link href={'/'}>Home</Link>
+        <div>
+          <Link href={'/'}>&#8617; Home</Link>
         </div>
         <Heading title={`${category.title}`} />
         <p>{category.description}</p>
-        {issues.length === 0 ? (
+        {topics.length === 0 ? (
           <div>No topics</div>
         ) : (
           <>
-            <div className={styles.issues}>
-              {issues.map((issue) => {
+            <div className={styles.topics}>
+              {topics.map((topic) => {
                 return (
                   <Link
-                    key={issue.slug}
-                    href={`/topics/${issue.categorySlug}/${issue.slug}`}
+                    key={topic.slug}
+                    href={`/topics/${topic.categorySlug}/${topic.slug}`}
                   >
-                    <a className={styles.issue} key={issue.slug}>
-                      <h3 className={styles.issueTitle}>{issue.title}</h3>
-                      <p>{issue.description}</p>
-                      <p className={styles.issueDescription}>{issue.date}</p>
+                    <a className={styles.topic} key={topic.slug}>
+                      <h3 className={styles.topicTitle}>{topic.title}</h3>
+                      <p>{topic.description}</p>
+                      <p className={styles.topicDescription}>{topic.date}</p>
                     </a>
                   </Link>
                 );

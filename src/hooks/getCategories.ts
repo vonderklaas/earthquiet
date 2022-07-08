@@ -1,12 +1,8 @@
-import { gql, GraphQLClient } from 'graphql-request';
+import { gql } from 'graphql-request';
+
+import graphQLClient from '../constants';
 
 export const getCategories = () => {
-  const graphQLClient = new GraphQLClient(process.env.API_CONTENT_URL, {
-    headers: {
-      Authorization: process.env.GRAPH_TOKEN,
-    },
-  });
-
   const getCategoriesQuery = gql`
     query {
       categories {

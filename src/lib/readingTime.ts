@@ -1,6 +1,6 @@
-const readingTime = (issueTextLength: string) => {
+const readingTime = (topicTextLength: string) => {
   const wordsPerMinute = 265;
-  const words = issueTextLength.trim().split(/\s+/).length;
+  const words = topicTextLength.trim().split(/\s+/).length;
   const time = Math.ceil(words / wordsPerMinute);
   return time;
 };

@@ -11,45 +11,48 @@ import Heading from '../../../components/Heading/Heading';
 import Comments from '../../../components/Comments';
 
 import styles from './Topics.module.scss';
-import { IssueFull } from '../../../types/Issues';
-import { useIssueFull } from '../../../hooks/useIssueFull';
+import { TopicLongType } from '../../../types/index';
+import { getTopicLong } from '../../../hooks/getTopicLong';
 
 import readingTime from '../../../lib/readingTime';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
-  const issuesData = await useIssueFull(pageSlug);
-  const issue = issuesData.improvements;
+  const topicData = await getTopicLong(pageSlug);
+  const topic = topicData.improvements;
 
   return {
-    props: { issue },
+    props: { topic },
   };
 };
 
-const Issue = ({ issue }: { issue: IssueFull[] }) => {
+const Topic = ({ topic }: { topic: TopicLongType[] }) => {
   const [isComments, setIsComments] = useState(false);
   const [timeToRead, setTimeToRead] = useState(0);
-  const issueRef = useRef<HTMLDivElement>(null);
+  const topicRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setTimeToRead(readingTime(issueRef.current?.innerText!));
+    setTimeToRead(readingTime(topicRef.current?.innerText!));
   }, []);
 
   return (
     <>
       <Navbar />
       <main>
-        {issue.map((issue: IssueFull) => {
+        {topic.map((topic: TopicLongType) => {
           return (
-            <div key={issue.slug}>
-              <div className={styles.breadCrumbs}>
-                <Link href={'/'}>Home</Link> /{' '}
-                <Link href={`/categories/${issue.categorySlug}`}>
-                  {issue.categorySlug.charAt(0).toUpperCase() +
-                    issue.categorySlug.slice(1)}
+            <div key={topic.slug}>
+              <div>
+                <Link href={'/'}>&#8617; Home</Link> /{' '}
+                <Link href={`/categories/${topic.categorySlug}`}>
+                  <>
+                    &#8617;{' '}
+                    {topic.categorySlug.charAt(0).toUpperCase() +
+                      topic.categorySlug.slice(1)}
+                  </>
                 </Link>
               </div>
-              <Heading title={issue.title} paragraph={issue.description} />
+              <Heading title={topic.title} paragraph={topic.description} />
               <div className={styles.timeToRead}>
                 <FaClock />
                 <span>
@@ -57,18 +60,18 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
-              <div ref={issueRef} className={styles.issue}>
-                <div className={styles.issueBlock}>
+              <div ref={topicRef} className={styles.topic}>
+                <div className={styles.topicBlock}>
                   <h3>General</h3>
-                  <Reactmarkdown>{issue.general}</Reactmarkdown>
+                  <Reactmarkdown>{topic.general}</Reactmarkdown>
                 </div>
-                <div className={styles.issueBlock}>
+                <div className={styles.topicBlock}>
                   <h3>Consequences</h3>
-                  <Reactmarkdown>{issue.consequences}</Reactmarkdown>
+                  <Reactmarkdown>{topic.consequences}</Reactmarkdown>
                 </div>
-                <div className={styles.issueBlock}>
+                <div className={styles.topicBlock}>
                   <h3>Improvements</h3>
-                  <Reactmarkdown>{issue.improvements}</Reactmarkdown>
+                  <Reactmarkdown>{topic.improvements}</Reactmarkdown>
                 </div>
               </div>
             </div>
@@ -85,4 +88,4 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
   );
 };
 
-export default Issue;
+export default Topic;

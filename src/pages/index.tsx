@@ -71,10 +71,12 @@ const Home = ({ categories }) => {
           explore problems and ideas, communicate and find like-minded people,
           the future is in our hands, and we need to start today.
         </p>
-        <p>Thank you</p>
-        <Link href='/team'>
-          <a>Team</a>
-        </Link>
+        <p>
+          Thank you, EARTHQUIET{' '}
+          <Link href='/team'>
+            <a>Team</a>
+          </Link>
+        </p>
       </section>
       <Footer />
     </>

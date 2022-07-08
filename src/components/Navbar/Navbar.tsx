@@ -8,9 +8,11 @@ import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
+import { CategoryType } from '../../types/index';
+
 const Navbar = () => {
   const router = useRouter();
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<CategoryType[]>([]);
 
   useEffect(() => {
     const response = fetch('/api/categories')
@@ -35,7 +37,7 @@ const Navbar = () => {
               <span>Explore</span>
               <div className={styles.dropdownContent}>
                 {categories &&
-                  categories.map((category) => {
+                  categories.map((category: CategoryType) => {
                     return (
                       <Link
                         key={category.slug}
@@ -43,11 +45,6 @@ const Navbar = () => {
                       >
                         <a className={styles.categoryEl}>
                           <p>{category.title}</p>
-                          <Image
-                            width={25}
-                            height={25}
-                            src={category.icon.url}
-                          />
                         </a>
                       </Link>
                     );

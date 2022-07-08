@@ -4,13 +4,13 @@ import { useState } from 'react';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
-  const [isBanner, setIsBanner] = useState(false);
+  const [isBanner, setIsBanner] = useState(true);
 
   return (
     <footer className={styles.footer}>
       {isBanner && (
         <div className={styles.banner}>
-          <span>🇺🇦</span>
+          <span>We Support 🇺🇦</span>
           <a
             className={styles.bannerLink}
             target='_blank'

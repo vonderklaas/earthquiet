@@ -1,8 +1,7 @@
 .homeContainer {
   max-width: 1100px;
-  margin: 50px auto 0 auto;
+  margin: 60px auto 0 auto;
   padding: 0 20px;
-  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,11 +14,9 @@
 .homeSection {
   max-width: 1100px;
   padding: 0 20px;
-  // background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
   font-weight: 300;
   font-size: 20px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   a {
     color: $primary-green;
   }

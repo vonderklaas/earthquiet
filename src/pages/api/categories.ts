@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getCategories } from '../../hooks/getCategories';
+import { getCategoryTitles } from '../../hooks/getCategoryTitles';
 
 const Categories = async (req: NextApiRequest, res: NextApiResponse) => {
-  const categoriesData = await getCategories();
+  const categoriesData = await getCategoryTitles();
   const categories = categoriesData.categories;
   res.status(200).json(categories);
 };

@@ -25,13 +25,16 @@
     &Social {
       margin-right: 40px;
       transition: all 0.3s;
-      // color: $text-light;
+      color: $text-dark;
+      &:hover {
+        color: $primary-indigo;
+      }
     }
     &Link {
-      font-size: 1rem;
+      font-size: 16px;
     }
     &Social {
-      font-size: 1.2rem;
+      font-size: 20px;
     }
   }
 }
@@ -41,31 +44,35 @@
   display: inline-block;
   margin-right: 40px;
   cursor: pointer;
-}
 
-.dropdownContent {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdownContent {
-  display: block;
-}
-
-.categoryEl {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s;
-  padding: 10px 15px;
-  p {
-    margin: 0;
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 150px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
+
   &:hover {
-    background-color: $primary-green;
+    .dropdownContent {
+      display: block;
+    }
+  }
+
+  .categoryEl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    padding: 7.5px 15px;
+    p {
+      color: $text-dark;
+      margin: 0;
+    }
+
+    &:hover p {
+      color: $primary-indigo;
+    }
   }
 }
