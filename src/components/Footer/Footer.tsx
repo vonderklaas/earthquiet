@@ -1,21 +1,27 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+  const [isBanner, setIsBanner] = useState(false);
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.banner}>
-        <span>🇺🇦</span>
-        <a
-          className={styles.bannerLink}
-          target='_blank'
-          href='https://supportukrainenow.org/'
-          rel='noreferrer'
-        >
-          <span>supportukrainenow.org</span>
-        </a>
-      </div>
+      {isBanner && (
+        <div className={styles.banner}>
+          <span>🇺🇦</span>
+          <a
+            className={styles.bannerLink}
+            target='_blank'
+            href='https://supportukrainenow.org/'
+            rel='noreferrer'
+          >
+            <span>supportukrainenow.org</span>
+          </a>
+        </div>
+      )}
+
       <div className={styles.footerUpper}>
         <div className={styles.footerUpperItem}>
           <ul>

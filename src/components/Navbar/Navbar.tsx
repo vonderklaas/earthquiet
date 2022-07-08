@@ -6,79 +6,100 @@ import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const router = useRouter();
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const response = fetch('/api/categories')
+      .then((res) => res.json())
+      .then((res) => setCategories(res));
+    console.log(response);
+  }, []);
 
   return (
-    <header className={styles.header}>
-      <div className={styles.headerContainer}>
-        <nav className={styles.navbar}>
-          <div className={styles.navbarContainer}>
-            <div className={styles.navbarLogo}>
-              <Link href='/'>
-                <a>
-                  <Image
-                    src='/logo.png'
-                    alt='EARTHQUIET'
-                    width='40'
-                    height='40'
-                  />
-                </a>
-              </Link>
+    <nav className={styles.navbar}>
+      <div className={styles.navbarContainer}>
+        <div className={styles.navbarLogo}>
+          <Link href='/'>
+            <a>
+              <Image src='/logo.png' alt='EARTHQUIET' width='40' height='40' />
+            </a>
+          </Link>
+        </div>
+        <ul className={styles.navbarMenu}>
+          <li>
+            <div className={styles.dropdown}>
+              <span>Explore</span>
+              <div className={styles.dropdownContent}>
+                {categories &&
+                  categories.map((category) => {
+                    return (
+                      <Link
+                        key={category.slug}
+                        href={`/categories/${category.slug}`}
+                      >
+                        <a className={styles.categoryEl}>
+                          <p>{category.title}</p>
+                          <Image
+                            width={25}
+                            height={25}
+                            src={category.icon.url}
+                          />
+                        </a>
+                      </Link>
+                    );
+                  })}
+              </div>
             </div>
-            <ul className={styles.navbarMenu}>
-              <li
-                className={
-                  router.pathname == '/contribution' ? 'active-link' : ''
-                }
-              >
-                <Link href='/contribution'>
-                  <a className={styles.navbarMenuLink}>Contribution</a>
-                </Link>
-              </li>
-              <li className={router.pathname == '/about' ? 'active-link' : ''}>
-                <Link href='/about'>
-                  <a className={styles.navbarMenuLink}>About</a>
-                </Link>
-              </li>
-              <li
-                className={router.pathname == '/contact' ? 'active-link' : ''}
-              >
-                <Link href='/contact'>
-                  <a className={styles.navbarMenuLink}>Contact</a>
-                </Link>
-              </li>
-              <li>
-                <a
-                  className={styles.navbarMenuSocial}
-                  target='_blank'
-                  href='https://twitter.com/garbalau_twitt'
-                >
-                  <FaTwitter />
-                </a>
-              </li>
-              <li>
-                <a
-                  className={styles.navbarMenuSocial}
-                  target='_blank'
-                  href='https://www.linkedin.com/company/earthquiet'
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a
-                  className={styles.navbarMenuSocial}
-                  target='_blank'
-                  href='https://github.com/EARTHQUIET/earthquiet'
-                >
-                  <FaGithub />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+          </li>
+          <li
+            className={router.pathname == '/contribution' ? 'active-link' : ''}
+          >
+            <Link href='/contribution'>
+              <a className={styles.navbarMenuLink}>Contribution</a>
+            </Link>
+          </li>
+          <li className={router.pathname == '/about' ? 'active-link' : ''}>
+            <Link href='/about'>
+              <a className={styles.navbarMenuLink}>About</a>
+            </Link>
+          </li>
+          <li className={router.pathname == '/contact' ? 'active-link' : ''}>
+            <Link href='/contact'>
+              <a className={styles.navbarMenuLink}>Contact</a>
+            </Link>
+          </li>
+          <li>
+            <a
+              className={styles.navbarMenuSocial}
+              target='_blank'
+              href='https://twitter.com/garbalau_twitt'
+            >
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.navbarMenuSocial}
+              target='_blank'
+              href='https://www.linkedin.com/company/earthquiet'
+            >
+              <FaLinkedinIn />
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.navbarMenuSocial}
+              target='_blank'
+              href='https://github.com/EARTHQUIET/earthquiet'
+            >
+              <FaGithub />
+            </a>
+          </li>
+        </ul>
       </div>
       <NextNProgress
         color='rgb(43, 153, 122)'
@@ -87,7 +108,7 @@ const Navbar = () => {
         height={5}
         showOnShallow={true}
       />
-    </header>
+    </nav>
   );
 };
 

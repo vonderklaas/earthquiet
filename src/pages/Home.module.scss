@@ -1,37 +1,26 @@
-.homeHeader,
+.homeContainer {
+  max-width: 1100px;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &Text {
+    max-width: 600px;
+  }
+}
+
 .homeSection {
   max-width: 1100px;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 20px;
+  // background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
+  font-weight: 300;
+  font-size: 20px;
   margin: 50px auto 0 auto;
-}
-
-.homeHeader {
-  // height: 100vh;
-  &Title,
-  &Paragraph {
-    color: $text-dark;
-    font-size: 1.1rem;
-  }
-  &Title {
-    font-size: 2rem;
-  }
-}
-
-.homeSection {
   a {
     color: $primary-green;
   }
-}
-
-.homeImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-}
-
-.homeDescription {
-  padding: 5px 0;
 }

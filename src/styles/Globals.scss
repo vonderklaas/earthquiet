@@ -6,14 +6,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.75;
-  font-weight: 400;
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+  // font-weight: 300;
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(238, 174, 202, 1) 0%,
+  //   rgba(148, 187, 233, 1) 100%
+  // );
+  background: rgb(255, 232, 205);
 }
 
 h1,
