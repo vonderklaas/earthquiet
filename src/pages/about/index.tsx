@@ -28,7 +28,7 @@ const About = () => {
           possible solutions as simple and understandable thoughts.`}
         />
         <Heading
-          subTitle={`Not about money`}
+          subTitle={`Not about cash`}
           paragraph={`EARTHQUIET is a non-profit and free platform without any
           privileges or paid options. We exist only because of our own
           conscious will. We are independent, but always accept help. Feel
