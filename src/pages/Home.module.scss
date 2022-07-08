@@ -8,15 +8,14 @@
 }
 
 .homeHeader {
+  // height: 100vh;
   &Title,
   &Paragraph {
     color: $text-dark;
+    font-size: 1.1rem;
   }
   &Title {
     font-size: 2rem;
-  }
-  &Paragraph {
-    font-size: 1.1rem;
   }
 }
 
@@ -24,4 +23,15 @@
   a {
     color: $primary-green;
   }
+}
+
+.homeImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.homeDescription {
+  padding: 5px 0;
 }

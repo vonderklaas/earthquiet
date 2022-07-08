@@ -35,12 +35,13 @@ const Category = ({
     description: string;
   };
 }) => {
-  console.log(category);
   return (
     <>
       <Navbar />
       <main>
-        <Link href={'/'}>Home</Link>
+        <div className={styles.breadCrumbs}>
+          <Link href={'/'}>Home</Link>
+        </div>
         <Heading title={`${category.title}`} />
         <p>{category.description}</p>
         {issues.length === 0 ? (
@@ -55,12 +56,9 @@ const Category = ({
                     href={`/topics/${issue.categorySlug}/${issue.slug}`}
                   >
                     <a className={styles.issue} key={issue.slug}>
-                      <div className={styles.issueWrapper}>
-                        <h3 className={styles.issueTitle}>{issue.title}</h3>
-                      </div>
-                      <p className={styles.issueDescription}>
-                        Last updated {issue.date}
-                      </p>
+                      <h3 className={styles.issueTitle}>{issue.title}</h3>
+                      <p>{issue.description}</p>
+                      <p className={styles.issueDescription}>{issue.date}</p>
                     </a>
                   </Link>
                 );

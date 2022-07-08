@@ -14,6 +14,8 @@ import styles from './Topics.module.scss';
 import { IssueFull } from '../../../types/Issues';
 import { useIssueFull } from '../../../hooks/useIssueFull';
 
+import readingTime from '../../../lib/readingTime';
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const issuesData = await useIssueFull(pageSlug);
@@ -25,20 +27,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 const Issue = ({ issue }: { issue: IssueFull[] }) => {
-  const [isComments, setIsComments] = useState(true);
+  const [isComments, setIsComments] = useState(false);
   const [timeToRead, setTimeToRead] = useState(0);
   const issueRef = useRef<HTMLDivElement>(null);
 
-  const readingTime = () => {
-    const wordsPerMinute = 265;
-    const issueText = issueRef.current?.innerText!;
-    const words = issueText.trim().split(/\s+/).length;
-    const time = Math.ceil(words / wordsPerMinute);
-    return time;
-  };
-
   useEffect(() => {
-    setTimeToRead(readingTime());
+    setTimeToRead(readingTime(issueRef.current?.innerText!));
   }, []);
 
   return (
@@ -48,14 +42,14 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
         {issue.map((issue: IssueFull) => {
           return (
             <div key={issue.slug}>
-              {/* LINKS */}
-              <div>
+              <div className={styles.breadCrumbs}>
                 <Link href={'/'}>Home</Link> /{' '}
                 <Link href={`/categories/${issue.categorySlug}`}>
                   {issue.categorySlug.charAt(0).toUpperCase() +
                     issue.categorySlug.slice(1)}
                 </Link>
               </div>
+              <Heading title={issue.title} paragraph={issue.description} />
               <div className={styles.timeToRead}>
                 <FaClock />
                 <span>
@@ -63,7 +57,6 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
                   {timeToRead > 1 ? ' minutes to read' : 'minute to read'}
                 </span>
               </div>
-              <Heading title={issue.title} paragraph={issue.description} />
               <div ref={issueRef} className={styles.issue}>
                 <div className={styles.issueBlock}>
                   <h3>General</h3>
@@ -82,11 +75,8 @@ const Issue = ({ issue }: { issue: IssueFull[] }) => {
           );
         })}
         <Heading title={'Comments'} />
-        <button
-          // className={styles.button}
-          onClick={() => setIsComments(!isComments)}
-        >
-          Hide Comments
+        <button onClick={() => setIsComments(!isComments)}>
+          {isComments ? 'Hide Comments' : 'Show Comments'}
         </button>
         {isComments && <Comments />}
       </main>

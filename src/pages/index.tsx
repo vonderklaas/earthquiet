@@ -3,6 +3,8 @@ import Categories from '../components/Categories/Categories';
 import Footer from '../components/Footer/Footer';
 // import Heading from '../components/Heading/Heading';
 
+import Image from 'next/image';
+
 import Link from 'next/link';
 
 import styles from './Home.module.scss';
@@ -23,16 +25,19 @@ const Home = ({ categories }) => {
     <div className={styles.homeWrapper}>
       <Navbar />
       <Categories categories={categories} />
-      <div className={styles.homeHeader}>
+      {/* <div className={styles.homeHeader}>
+        <h1>Change World Now</h1>
         <p className={styles.homeHeaderParagraph}>
-          It is a platform where the world's problems are collected, discussed
-          and shared. We provide information about the consequences and
-          solutions to current issues. We inspire people to think, invest, learn
-          and act. Our team feels that together, the impossible is possible.
+          EARTHQUIET is a platform where the world's problems are collected,
+          discussed and shared. We provide information about the consequences
+          and solutions to current issues. We inspire people to think, invest,
+          learn and act. Our team feels that together, the impossible is
+          possible.
         </p>
-      </div>
+      </div> */}
       <section className={styles.homeSection}>
         <div className={styles.homeDescription}>
+          <h4>Motivation</h4>
           <p>
             We know from history that technological innovations never came to
             humanity on their own, over time, someone has to work on it. Today,

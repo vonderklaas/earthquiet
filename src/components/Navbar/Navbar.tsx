@@ -39,14 +39,14 @@ const Navbar = () => {
               </li>
               <li className={router.pathname == '/about' ? 'active-link' : ''}>
                 <Link href='/about'>
-                  <a className={styles.navbarMenuLink}>About Us</a>
+                  <a className={styles.navbarMenuLink}>About</a>
                 </Link>
               </li>
               <li
                 className={router.pathname == '/contact' ? 'active-link' : ''}
               >
                 <Link href='/contact'>
-                  <a className={styles.navbarMenuLink}>Contact Us</a>
+                  <a className={styles.navbarMenuLink}>Contact</a>
                 </Link>
               </li>
               <li>
