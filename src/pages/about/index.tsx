@@ -41,7 +41,7 @@ const About = () => {
           authors, developers, editors, and contributors collect and present
           important information about world issues in a convenient (as it
           seems to us) format. We do research and analyse of everything we
-          want to share, and strive to provide best experience for our users.`}
+          want to share, and strive to provide best experience for our users and lovers.`}
         />
         <Heading
           subTitle={`Mindset`}
