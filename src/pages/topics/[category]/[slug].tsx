@@ -13,8 +13,6 @@ import styles from './Topics.module.scss';
 import { TopicLongType } from '../../../types/index';
 import { getTopicLong } from '../../../hooks/getTopicLong';
 
-import readingTime from '../../../lib/readingTime';
-
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const pageSlug = context.query.slug;
   const topicData = await getTopicLong(pageSlug);
@@ -29,6 +27,11 @@ const Topic = ({ topic }: { topic: TopicLongType[] }) => {
   const [isComments, setIsComments] = useState(false);
   const [timeToRead, setTimeToRead] = useState(0);
   const topicRef = useRef<HTMLDivElement>(null);
+
+  const readingTime = (topicTextLength: string) => {
+    const words = topicTextLength.trim().split(/\s+/).length;
+    return Math.ceil(words / 265);
+  };
 
   useEffect(() => {
     setTimeToRead(readingTime(topicRef.current?.innerText!));
