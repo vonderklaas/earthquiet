@@ -11,7 +11,6 @@ const Contact = () => {
           title={`Contact Us`}
           paragraph={`You need to talk with us? Sure!`}
         />
-
         <a href='mailto:earthquiet.com@gmail.com'>earthquiet.com@gmail.com</a>
       </main>
       <Footer />

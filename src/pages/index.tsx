@@ -2,14 +2,11 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 
-import Image from 'next/image';
-
 import Link from 'next/link';
 
 import styles from './Home.module.scss';
 
 const Home = ({ categories }) => {
-  console.log(categories);
   return (
     <>
       <Navbar />
@@ -23,7 +20,9 @@ const Home = ({ categories }) => {
         you and navigate!'
           />
         </div>
-        <Image width={350} height={550} src={'/contribute.png'} />
+        <div className={styles.homeContainerImage}>
+          <img src='/contribute.png' alt='EARTHQUIET' />
+        </div>
       </div>
       <div className={styles.homeContainer}>
         <Heading title='Motivation' />

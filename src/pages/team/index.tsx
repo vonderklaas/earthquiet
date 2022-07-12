@@ -2,8 +2,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Heading from '../../components/Heading/Heading';
 
-import Image from 'next/image';
-
 import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Team.module.scss';
@@ -19,12 +17,10 @@ const Team = () => {
         />
         <ul className={styles.team}>
           <li className={styles.teamMember}>
-            <Image
+            <img
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/53371076?v=4'
               alt='Nick'
-              width='75'
-              height='75'
             />
             <h3>Founder</h3>
             <div className={styles.teamMemberLinks}>
@@ -43,12 +39,10 @@ const Team = () => {
             </div>
           </li>
           <li className={styles.teamMember}>
-            <Image
+            <img
               className={styles.teamMemberImage}
               src='https://avatars.githubusercontent.com/u/86486215?v=4'
               alt='Anastasia'
-              width='75'
-              height='75'
             />
             <h3>Co-Founder</h3>
             <div className={styles.teamMemberLinks}>

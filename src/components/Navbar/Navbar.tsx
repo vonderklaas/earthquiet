@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 import NextNProgress from 'nextjs-progressbar';
-import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import styles from './Navbar.module.scss';
 import { useRouter } from 'next/router';
@@ -15,10 +13,9 @@ const Navbar = () => {
   const [categories, setCategories] = useState<CategoryType[]>([]);
 
   useEffect(() => {
-    const response = fetch('/api/categories')
+    fetch('/api/categories')
       .then((res) => res.json())
       .then((res) => setCategories(res));
-    console.log(response);
   }, []);
 
   return (
@@ -27,7 +24,7 @@ const Navbar = () => {
         <div className={styles.navbarLogo}>
           <Link href='/'>
             <a>
-              <Image src='/logo.png' alt='EARTHQUIET' width='40' height='40' />
+              <img src='/logo.png' alt='EARTHQUIET' />
             </a>
           </Link>
         </div>
@@ -69,41 +66,14 @@ const Navbar = () => {
               <a className={styles.navbarMenuLink}>Contact</a>
             </Link>
           </li>
-          <li>
-            <a
-              className={styles.navbarMenuSocial}
-              target='_blank'
-              href='https://twitter.com/garbalau_twitt'
-            >
-              <FaTwitter />
-            </a>
-          </li>
-          <li>
-            <a
-              className={styles.navbarMenuSocial}
-              target='_blank'
-              href='https://www.linkedin.com/company/earthquiet'
-            >
-              <FaLinkedinIn />
-            </a>
-          </li>
-          <li>
-            <a
-              className={styles.navbarMenuSocial}
-              target='_blank'
-              href='https://github.com/EARTHQUIET/earthquiet'
-            >
-              <FaGithub />
-            </a>
-          </li>
         </ul>
       </div>
       <NextNProgress
         color='rgb(43, 153, 122)'
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={5}
-        showOnShallow={true}
+        startPosition={0}
+        stopDelayMs={0}
+        height={4}
+        showOnShallow={false}
       />
     </nav>
   );

@@ -9,6 +9,13 @@
   &Text {
     max-width: 600px;
   }
+
+  &Image {
+    img {
+      max-width: 400px;
+      max-height: 600px;
+    }
+  }
 }
 
 .homeSection {
